@@ -45,7 +45,7 @@ a {
 
 .eyebrow {
   margin: 0 0 36px;
-  transform: translateY(-04px);
+  transform: translateY(-01px);
   color: var(--muted);
   font-size: 0.9rem;
   letter-spacing: 0.14em;
@@ -80,7 +80,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .primary-button,
