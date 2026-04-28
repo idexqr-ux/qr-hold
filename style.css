@@ -40,12 +40,12 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 24px 0 120px;
+  padding: 24px 0 85px;
 }
 
 .eyebrow {
   margin: 0 0 36px;
-  transform: translateY(-08px);
+  transform: translateY(-04px);
   color: var(--muted);
   font-size: 0.9rem;
   letter-spacing: 0.14em;
@@ -80,7 +80,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .primary-button,
