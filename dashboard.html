@@ -1,23 +1,95 @@
-2. dashboard.html — Northgate Warehouse Dashboard
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hold Dashboard — Northgate Warehouse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-Purpose: manager-at-desk view.
+<body>
+  <div class="dashboard-layout">
 
-Sections:
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="sidebar-eyebrow">Hold</p>
+        <h2>Operations Hub</h2>
+      </div>
 
-Top bar: Hold / Operations Hub
-Sidebar navigation
-Summary cards:
-Operational Points
-QRs Deployed
-Scheduled Updates
-Review Queue
-Dashboard panels:
-Operational Overview
-Upcoming Scheduled Changes
-Review / Validation Queue
-Recent Activity
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="#">Operational Points</a>
+        <a href="#">Scheduled Updates</a>
+        <a href="#">QR Management</a>
+        <a href="#">Reports <span>Coming Soon</span></a>
+        <a href="#">Audit Trail <span>Coming Soon</span></a>
+        <a href="#">Settings <span>Coming Soon</span></a>
+      </nav>
+    </aside>
 
-Clickable demo records:
+    <main class="dashboard-main">
 
-Bay A12 → bay-a12.html
-Forklift 03 → forklift-03.html
+      <header class="dashboard-header">
+        <div>
+          <p class="dashboard-label">Northgate Warehouse Demo</p>
+          <h1>Dashboard</h1>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>Operational Points</h3>
+          <p>10 Active</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>QRs Deployed</h3>
+          <p>10 / 10 Live</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Scheduled Updates</h3>
+          <p>2 Pending</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Review Queue</h3>
+          <p>3 Due This Week</p>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel">
+          <h3>Operational Overview</h3>
+          <p>Storage Bays — 3</p>
+          <p>Equipment — 2</p>
+          <p>Process Stations — 2</p>
+          <p>Safety Points — 2</p>
+          <p>Dispatch Points — 1</p>
+        </div>
+
+        <div class="panel">
+          <h3>Upcoming Scheduled Changes</h3>
+          <p>01 May — Bay B04 Seasonal Overflow Update</p>
+          <p>03 May — Forklift 03 Maintenance Revision</p>
+        </div>
+
+        <div class="panel">
+          <h3>Review / Validation Queue</h3>
+          <p>Fire Exit East — H&amp;S Review</p>
+          <p>Bay A12 — Content Validation</p>
+          <p>Conveyor Line 1 — Operational Review</p>
+        </div>
+
+        <div class="panel">
+          <h3>Recent Activity</h3>
+          <p>Bay A12 Updated — 09:42</p>
+          <p>Forklift 03 QR Reissued — 08:15</p>
+          <p>New Operational Point Created — Yesterday</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
