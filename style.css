@@ -451,3 +451,13 @@ h2 {
     padding: 24px;
   }
 }
+
+.panel a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 45, 42, 0.18);
+}
+
+.panel a:hover {
+  border-bottom-color: var(--ink);
+}
