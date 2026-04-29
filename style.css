@@ -461,3 +461,73 @@ h2 {
 .panel a:hover {
   border-bottom-color: var(--ink);
 }
+
+.qr-map-panel {
+  grid-column: span 2;
+}
+
+.warehouse-map {
+  position: relative;
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(90deg, rgba(221, 227, 223, 0.55) 1px, transparent 1px),
+    linear-gradient(rgba(221, 227, 223, 0.55) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.72);
+  background-size: 48px 48px;
+  overflow: hidden;
+}
+
+.map-point {
+  position: absolute;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--celadon-soft);
+  border: 1px solid var(--celadon);
+  color: var(--ink);
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.map-point:hover {
+  background: #ffffff;
+}
+
+.bay-a12 {
+  top: 46px;
+  left: 54px;
+}
+
+.bay-b04 {
+  top: 46px;
+  left: 210px;
+}
+
+.forklift-03 {
+  top: 142px;
+  left: 130px;
+}
+
+.fire-exit {
+  top: 198px;
+  right: 42px;
+}
+
+.loading-bay {
+  top: 72px;
+  right: 58px;
+}
+
+.map-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .qr-map-panel {
+    grid-column: span 1;
+  }
+}
