@@ -769,3 +769,38 @@ h2 {
     grid-row: auto;
   }
 }
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+}
+
+.status-active {
+  background: #e6f3ec;
+  color: #2d5a3d;
+  border-color: #c8e3d0;
+}
+
+.status-review {
+  background: #fdf4df;
+  color: #8a6418;
+  border-color: #f0ddb0;
+}
+
+.status-pending {
+  background: #eef1f6;
+  color: #4f627a;
+  border-color: #d8dee8;
+}
+
+.status-overdue {
+  background: #fbe9e7;
+  color: #8c3d33;
+  border-color: #efc4bc;
+}
