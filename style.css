@@ -806,7 +806,8 @@ h2 {
 }
 
 .warning-note {
-  margin-top: 22px;
+  display: block;
+  margin-top: 28px;
   font-size: 0.95rem;
   color: #8c3d33;
   font-weight: 600;
