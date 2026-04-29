@@ -1,119 +1,52 @@
-/* ==============================
-   OPERATIONAL RECORD PAGES
-   ============================== */
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forklift 03 Scan — Hold Operations Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-.record-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 28px;
-}
+<body class="scan-body">
+  <main class="scan-shell">
 
-.record-header h1 {
-  margin: 0 0 10px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.05;
-}
+    <section class="scan-card">
 
-.record-subtitle {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1rem;
-}
+      <p class="scan-eyebrow">Hold / Staff Scan View</p>
 
-.record-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-end;
-}
+      <header class="scan-header">
+        <h1>Forklift 03</h1>
+        <p>Equipment · Main Floor / Charging Area</p>
+        <span class="status-pill">Active</span>
+      </header>
 
-.record-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 18px;
-}
+      <section class="scan-section">
+        <h2>Current Use</h2>
+        <p>Primary electric forklift for pallet movement on the warehouse floor.</p>
+      </section>
 
-.record-card {
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: var(--shadow);
-}
+      <section class="scan-section">
+        <h2>Instructions</h2>
+        <ul>
+          <li>Conduct pre-use visual inspection before operation.</li>
+          <li>Return to charging bay after shift.</li>
+          <li>Report faults immediately if warning light is displayed.</li>
+        </ul>
+      </section>
 
-.record-card.large {
-  grid-row: span 3;
-}
+      <section class="scan-section muted-section">
+        <h2>Additional Notes</h2>
+        <p>Authorised operators only.</p>
+      </section>
 
-.record-card h2 {
-  margin: 0 0 16px;
-  font-size: 1.35rem;
-  line-height: 1.2;
-}
+      <footer class="scan-footer">
+        <p>Last updated 22 April 2026</p>
+        <p>Managed via Hold / Operations Hub</p>
+        <a href="forklift-03.html">Manager record view</a>
+      </footer>
 
-.record-card h3 {
-  margin: 24px 0 10px;
-  font-size: 1.05rem;
-  line-height: 1.25;
-}
+    </section>
 
-.record-card p,
-.record-card li,
-.record-card dd {
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.record-card ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.record-card dl {
-  margin: 0;
-}
-
-.record-card dl div {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(221, 227, 223, 0.72);
-}
-
-.record-card dl div:last-child {
-  border-bottom: 0;
-}
-
-.record-card dt {
-  margin-bottom: 4px;
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
-.record-card dd {
-  margin: 0;
-  color: var(--ink);
-}
-
-.scheduled-item {
-  margin: 0;
-}
-
-@media (max-width: 900px) {
-  .record-header {
-    flex-direction: column;
-  }
-
-  .record-actions {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .record-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .record-card.large {
-    grid-row: auto;
-  }
-}
+  </main>
+</body>
+</html>
