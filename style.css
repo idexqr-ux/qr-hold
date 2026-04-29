@@ -531,3 +531,121 @@ h2 {
     grid-column: span 1;
   }
 }
+
+/* ==============================
+   STAFF SCAN VIEW
+   ============================== */
+
+.scan-body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(201, 213, 208, 0.65), transparent 42%),
+    #f7f6f2;
+}
+
+.scan-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+}
+
+.scan-card {
+  width: min(100%, 460px);
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.scan-eyebrow {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.scan-header {
+  text-align: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.scan-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.35rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.scan-header p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.status-pill {
+  display: inline-flex;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--celadon-soft);
+  border: 1px solid var(--celadon);
+  font-size: 0.82rem;
+  color: var(--ink);
+}
+
+.scan-section {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(221, 227, 223, 0.78);
+}
+
+.scan-section h2 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.scan-section p,
+.scan-section li {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.scan-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.muted-section {
+  background: rgba(230, 238, 234, 0.38);
+  margin: 0 -14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 18px;
+}
+
+.scan-footer {
+  padding-top: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.scan-footer p {
+  margin: 0 0 6px;
+}
+
+.scan-footer a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(31, 45, 42, 0.22);
+}
