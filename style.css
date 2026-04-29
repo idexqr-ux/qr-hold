@@ -40,12 +40,12 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 24px 0 85px;
+  padding: 24px 0 75px;
 }
 
 .eyebrow {
   margin: 0 0 36px;
-  transform: translateY(-01px);
+  transform: translateY(-6px);
   color: var(--muted);
   font-size: 0.9rem;
   letter-spacing: 0.14em;
@@ -121,7 +121,7 @@ h1 {
 
 .content-section,
 .cta-section {
-  margin: 18px 0;
+  margin: 16px 0;
   padding: clamp(28px, 5vw, 52px);
   border: 1px solid var(--line);
   border-radius: 32px;
