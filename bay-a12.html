@@ -3,50 +3,106 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bay A12 Scan — Hold Operations Hub</title>
+  <title>Bay A12 — Hold Operations Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="scan-body">
-  <main class="scan-shell">
+<body>
+  <div class="dashboard-layout">
 
-    <section class="scan-card">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="sidebar-eyebrow">Hold</p>
+        <h2>Operations Hub</h2>
+      </div>
 
-      <p class="scan-eyebrow">Hold / Staff Scan View</p>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="bay-a12.html" class="active">Operational Points</a>
+        <a href="#">Scheduled Updates</a>
+        <a href="#">QR Management</a>
+      </nav>
+    </aside>
 
-      <header class="scan-header">
-  <h1>Bay A12</h1>
-  <p>Storage Bay · Zone A / Row 3</p>
-  <span class="status-pill status-pending">Validation</span>
-</header>
+    <main class="dashboard-main">
 
-      <section class="scan-section">
-        <h2>Current Use</h2>
-        <p>Primary storage location for boxed electrical components.</p>
+      <header class="record-header">
+        <div>
+          <p class="dashboard-label">Northgate Warehouse Demo</p>
+          <h1>Bay A12</h1>
+          <p class="record-subtitle">Storage Bay · Zone A / Row 3</p>
+        </div>
+
+        <div class="record-actions">
+          <a href="scan-bay-a12.html" class="secondary-button">View Staff Scan</a>
+          <a href="dashboard.html" class="primary-button">Back to Dashboard</a>
+        </div>
+      </header>
+
+      <section class="record-grid">
+
+        <article class="record-card large">
+          <h2>Description</h2>
+          <p>Primary storage location for boxed electrical components.</p>
+
+          <h3>Instructions / Guidance</h3>
+          <ul>
+            <li>Store palletised stock only.</li>
+            <li>Do not exceed marked height line.</li>
+            <li>Keep aisle access clear at all times.</li>
+          </ul>
+
+          <h3>Supporting Notes</h3>
+          <p>Fragile contents in upper tier. Use pallet truck for retrieval where possible.</p>
+        </article>
+
+        <article class="record-card">
+          <h2>Management Information</h2>
+          <dl>
+            <div>
+              <dt>Assigned Owner</dt>
+              <dd>Warehouse Supervisor</dd>
+            </div>
+            <div>
+              <dt>Review Date</dt>
+              <dd>28 April 2026</dd>
+            </div>
+            <div>
+              <dt>Last Updated</dt>
+              <dd>20 April 2026</dd>
+            </div>
+            <div>
+              <dt>Validated By</dt>
+              <dd>Warehouse Supervisor</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd><span class="status-pill status-pending">Validation</span></dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="record-card">
+          <h2>QR Deployment</h2>
+          <dl>
+            <div>
+              <dt>QR ID</dt>
+              <dd>NGW-BA12-001</dd>
+            </div>
+            <div>
+              <dt>Deployment Status</dt>
+              <dd>Active</dd>
+            </div>
+            <div>
+              <dt>Placement Notes</dt>
+              <dd>Mounted at front-left upright of bay.</dd>
+            </div>
+          </dl>
+        </article>
+
       </section>
 
-      <section class="scan-section">
-        <h2>Instructions</h2>
-        <ul>
-          <li>Store palletised stock only.</li>
-          <li>Do not exceed marked height line.</li>
-          <li>Keep aisle access clear at all times.</li>
-        </ul>
-      </section>
-
-      <section class="scan-section muted-section">
-        <h2>Additional Notes</h2>
-        <p>Fragile contents in upper tier. Use pallet truck for retrieval where possible.</p>
-      </section>
-
-      <footer class="scan-footer">
-        <p>Last updated 20 April 2026</p>
-        <p>Managed via Hold / Operations Hub</p>
-        <a href="bay-a12.html">Manager record view</a>
-      </footer>
-
-    </section>
-
-  </main>
+    </main>
+  </div>
 </body>
 </html>
