@@ -589,14 +589,8 @@ h2 {
   line-height: 1.45;
 }
 
-.status-pill {
-  display: inline-flex;
-  padding: 7px 13px;
-  border-radius: 999px;
-  background: var(--celadon-soft);
-  border: 1px solid var(--celadon);
-  font-size: 0.82rem;
-  color: var(--ink);
+.scan-header .status-pill {
+  margin-bottom: 10px;
 }
 
 .scan-section {
@@ -773,9 +767,9 @@ h2 {
 .status-pill {
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
+  padding: 7px 13px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   border: 1px solid transparent;
