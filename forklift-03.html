@@ -1,10 +1,115 @@
-4. forklift-03.html — Second Operational Point Detail
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forklift 03 — Hold Operations Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-Purpose: prove the flexible template works for equipment too.
+<body>
+  <div class="dashboard-layout">
 
-Same structure as Bay A12, but with forklift-specific content.
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="sidebar-eyebrow">Hold</p>
+        <h2>Operations Hub</h2>
+      </div>
 
-Buttons:
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="forklift-03.html" class="active">Operational Points</a>
+        <a href="#">Scheduled Updates</a>
+        <a href="#">QR Management</a>
+        <a href="#">Reports <span>Coming Soon</span></a>
+        <a href="#">Audit Trail <span>Coming Soon</span></a>
+        <a href="#">Settings <span>Coming Soon</span></a>
+      </nav>
+    </aside>
 
-View Staff Scan → scan-forklift-03.html
-Back to Dashboard
+    <main class="dashboard-main">
+
+      <header class="record-header">
+        <div>
+          <p class="dashboard-label">Northgate Warehouse Demo</p>
+          <h1>Forklift 03</h1>
+          <p class="record-subtitle">Equipment · Main Floor / Charging Area · Active</p>
+        </div>
+
+        <div class="record-actions">
+          <a href="scan-forklift-03.html" class="secondary-button">View Staff Scan</a>
+          <a href="dashboard.html" class="primary-button">Back to Dashboard</a>
+        </div>
+      </header>
+
+      <section class="record-grid">
+
+        <article class="record-card large">
+          <h2>Description</h2>
+          <p>Primary electric forklift for pallet movement on warehouse floor.</p>
+
+          <h3>Instructions / Guidance</h3>
+          <ul>
+            <li>Conduct pre-use visual inspection before operation.</li>
+            <li>Return to charging bay after shift.</li>
+            <li>Report faults immediately if warning light displayed.</li>
+          </ul>
+
+          <h3>Supporting Notes</h3>
+          <p>Authorised operators only.</p>
+        </article>
+
+        <article class="record-card">
+          <h2>Management Information</h2>
+          <dl>
+            <div>
+              <dt>Assigned Owner</dt>
+              <dd>Fleet Supervisor</dd>
+            </div>
+            <div>
+              <dt>Review Date</dt>
+              <dd>01 May 2026</dd>
+            </div>
+            <div>
+              <dt>Last Updated</dt>
+              <dd>22 April 2026</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Active</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="record-card">
+          <h2>QR Deployment</h2>
+          <dl>
+            <div>
+              <dt>QR ID</dt>
+              <dd>NGW-FL03-001</dd>
+            </div>
+            <div>
+              <dt>Deployment Status</dt>
+              <dd>Active</dd>
+            </div>
+            <div>
+              <dt>Placement Notes</dt>
+              <dd>Mounted beside operator access panel.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="record-card">
+          <h2>Scheduled Changes</h2>
+          <p class="scheduled-item">
+            <strong>03 May 2026</strong><br>
+            Maintenance instruction revision.
+          </p>
+        </article>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
