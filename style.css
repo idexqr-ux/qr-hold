@@ -804,3 +804,20 @@ h2 {
   color: #8c3d33;
   border-color: #efc4bc;
 }
+
+.warning-note {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: #8c3d33;
+  font-weight: 500;
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
+@keyframes warningPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
