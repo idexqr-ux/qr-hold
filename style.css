@@ -954,14 +954,15 @@ h2 {
   text-transform: uppercase;
 }
 
-.detail-grid strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: normal;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.detail-grid p {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--ink);
 }
 
 .workflow-list {
