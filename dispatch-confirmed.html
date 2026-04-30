@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dispatch Confirmed — Hold</title>
+  <meta name="description" content="Confirmed outbound dispatch workflow for Northgate Warehouse." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="hero page-hero">
+      <p class="eyebrow">Northgate Warehouse / Goods Out</p>
+      <h1>Dispatch confirmed.</h1>
+      <p class="sub">
+        Consignment OUT-2048 has been released, logged, and synced with connected business systems.
+      </p>
+    </header>
+
+    <section class="panel">
+      <span class="status-pill">Dispatched</span>
+
+      <h2>Dispatch Record</h2>
+
+      <div class="detail-grid">
+        <p>
+          <strong>Dispatch Ref</strong>
+          <span class="value value-key">OUT-2048</span>
+        </p>
+
+        <p>
+          <strong>Customer</strong>
+          <span class="value">Core Retail Group</span>
+        </p>
+
+        <p>
+          <strong>Pallet ID</strong>
+          <span class="value value-key">NW-0428-A</span>
+        </p>
+
+        <p>
+          <strong>Carrier</strong>
+          <span class="value">DHL Freight</span>
+        </p>
+
+        <p>
+          <strong>Destination</strong>
+          <span class="value">Birmingham DC</span>
+        </p>
+
+        <p>
+          <strong>Timestamp</strong>
+          <span class="value">08:34</span>
+        </p>
+
+        <p>
+          <strong>Next Action</strong>
+          <span class="value">Carrier Collection Logged</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="panel soft-panel">
+      <h2>Workflow Progress</h2>
+
+      <ol class="workflow-list">
+        <li><strong>Dispatch Confirmed</strong> — consignment released to carrier</li>
+        <li><strong>Inventory Reduced</strong> — stock movement recorded</li>
+        <li><strong>Carrier Record Updated</strong> — DHL Freight collection logged</li>
+        <li><strong>Business Systems Sync</strong> — ERP and finance records updated</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Integration Status</h2>
+
+      <div class="detail-grid">
+        <p>
+          <strong>Inventory</strong>
+          <span class="value">Reduced</span>
+        </p>
+
+        <p>
+          <strong>Dispatch Record</strong>
+          <span class="value">Updated</span>
+        </p>
+
+        <p>
+          <strong>Finance System</strong>
+          <span class="value">Synced</span>
+        </p>
+
+        <p>
+          <strong>Carrier</strong>
+          <span class="value value-key">DHL Freight logged</span>
+        </p>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a class="quiet-button" href="goods-out.html">Return to Goods Out</a>
+      <a class="text-link" href="warehouse.html">Back to Warehouse</a>
+    </div>
+
+  </main>
+</body>
+</html>
