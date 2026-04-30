@@ -965,6 +965,11 @@ h2 {
   color: var(--ink);
 }
 
+.detail-grid .value {
+  font-weight: 600;
+  color: var(--ink);
+}
+
 .workflow-list {
   margin: 0;
   padding-left: 22px;
