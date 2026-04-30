@@ -833,7 +833,10 @@ h2 {
 }
 
 .page-hero .eyebrow {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  opacity: 0.72;
 }
 
 .page-hero h1 {
