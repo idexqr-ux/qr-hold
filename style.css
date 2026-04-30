@@ -966,8 +966,12 @@ h2 {
 }
 
 .detail-grid .value {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink);
+}
+
+.detail-grid .value-key {
+  font-weight: 600;
 }
 
 .workflow-list {
