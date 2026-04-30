@@ -211,6 +211,7 @@ h2 {
   font-size: 1.08rem;
   line-height: 1.25;
   font-weight: normal;
+  text-align: center;
 }
 
 .feature-card p,
@@ -218,6 +219,7 @@ h2 {
   color: var(--muted);
   font-size: 0.96rem;
   line-height: 1.55;
+  text-align: center;
 }
 
 .feature-card.compact {
