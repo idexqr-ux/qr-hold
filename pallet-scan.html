@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pallet Scan — Hold</title>
+  <meta name="description" content="Scanned pallet acceptance screen for Northgate Warehouse." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="hero">
+      <p class="eyebrow">Northgate Warehouse / Pallet Scan</p>
+      <h1>Pallet NW-0428-A</h1>
+      <p class="sub">
+        Delivery record found. Confirm receipt or flag an issue before moving this pallet into workflow.
+      </p>
+    </header>
+
+    <section class="panel">
+      <span class="status-pill">Awaiting Acceptance</span>
+
+      <h2>Delivery Details</h2>
+
+      <div class="detail-grid">
+        <p><strong>Delivery Ref:</strong> DEL-1042</p>
+        <p><strong>Supplier:</strong> Alpha Components Ltd</p>
+        <p><strong>Contents:</strong> Electrical Components</p>
+        <p><strong>Quantity:</strong> 48 Units</p>
+        <p><strong>Weight:</strong> 620kg</p>
+        <p><strong>Assigned Zone:</strong> B12</p>
+      </div>
+    </section>
+
+    <section class="panel soft-panel">
+      <h2>Workflow Notes</h2>
+      <p>
+        Once accepted, this pallet will be logged as received, queued for robotic collection,
+        and synced with connected inventory and finance systems.
+      </p>
+    </section>
+
+    <div class="button-row">
+      <a class="quiet-button" href="pallet-accepted.html">Accept Delivery</a>
+      <a class="text-link" href="goods-in.html">Flag Issue</a>
+      <a class="text-link" href="goods-in.html">Back to Goods In</a>
+    </div>
+
+  </main>
+</body>
+</html>
