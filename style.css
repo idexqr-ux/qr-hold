@@ -176,9 +176,12 @@ h2 {
 .section-copy,
 .cta-section p {
   max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.65;
+  text-align: center;
 }
 
 .feature-grid,
