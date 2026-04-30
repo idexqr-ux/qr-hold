@@ -27,6 +27,42 @@ a {
   color: inherit;
 }
 
+/* ==============================
+   TYPOGRAPHY SYSTEM
+   ============================== */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-weight: normal;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}
+
+p,
+li,
+dd {
+  color: var(--muted);
+  letter-spacing: 0;
+}
 .hold-shell {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
@@ -50,13 +86,6 @@ a {
   font-size: 0.9rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
 }
 
 h1 {
@@ -413,7 +442,8 @@ h2 {
 
 .panel h3 {
   margin-bottom: 18px;
-  font-size: 1.2rem;
+  font-size: 1.16rem;
+  line-height: 1.25;
 }
 
 .panel p {
@@ -868,8 +898,8 @@ h2 {
 
 .card h3 {
   margin: 14px 0 10px;
-  font-size: 1.2rem;
-  font-weight: normal;
+  font-size: 1.16rem;
+  line-height: 1.25;
 }
 
 .card p {
