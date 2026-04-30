@@ -944,15 +944,14 @@ h2 {
   gap: 14px 24px;
 }
 
-.detail-grid p {
-  margin: 0;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 0.96rem;
-  line-height: 1.45;
-  color: var(--ink);
+.detail-grid strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .detail-grid strong {
