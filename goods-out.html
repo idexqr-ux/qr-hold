@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goods Out — Hold</title>
+  <meta name="description" content="Northgate Warehouse outbound dispatch dashboard." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="hero page-hero">
+      <p class="eyebrow">Northgate Warehouse / Goods Out</p>
+      <h1>Outbound consignments awaiting dispatch.</h1>
+      <p class="sub">
+        Confirm outbound goods, prepare consignments, and complete dispatch workflow before carrier collection.
+      </p>
+    </header>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <h3>3</h3>
+        <p>Ready for Dispatch</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>1</h3>
+        <p>Picking in Progress</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>2</h3>
+        <p>Awaiting Carrier</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>08:30</h3>
+        <p>Next Collection</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Dispatch Queue</h2>
+
+      <div class="delivery-list">
+
+        <article class="delivery-card">
+          <div>
+            <strong>OUT-2048</strong><br>
+            Core Retail Group
+          </div>
+          <span class="status-pill">Ready</span>
+          <a class="quiet-button" href="dispatch-scan.html">Process Dispatch</a>
+        </article>
+
+        <article class="delivery-card">
+          <div>
+            <strong>OUT-2049</strong><br>
+            Delta Wholesale
+          </div>
+          <span class="status-pill">Picking</span>
+        </article>
+
+        <article class="delivery-card">
+          <div>
+            <strong>OUT-2050</strong><br>
+            Northshore Trade
+          </div>
+          <span class="status-pill">Awaiting Carrier</span>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a class="text-link" href="warehouse.html">Back to Warehouse</a>
+    </div>
+
+  </main>
+</body>
+</html>
