@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Management — Hold</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="dashboard-layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <p class="sidebar-eyebrow">Hold</p>
+        <h2>Operations Hub</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="operations-points.html">Operational Points</a>
+        <a href="scheduled-updates.html">Scheduled Updates</a>
+        <a href="qr-management.html" class="active">QR Management</a>
+        <a href="#">Reports <span>Coming Soon</span></a>
+        <a href="#">Audit Trail <span>Coming Soon</span></a>
+        <a href="#">Settings <span>Coming Soon</span></a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+
+      <header class="dashboard-header">
+        <div>
+          <p class="dashboard-label">Northgate Warehouse Demo</p>
+          <h1>QR Management</h1>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>QRs Deployed</h3>
+          <p>10 / 10</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Live Records</h3>
+          <p>8</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Pending Changes</h3>
+          <p>2</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Reissued Today</h3>
+          <p>1</p>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+
+        <div class="panel">
+          <h3>QR Estate</h3>
+
+          <p>
+            <a href="bay-a12.html">Bay A12</a>
+            <span class="status-pill status-active">Live</span>
+          </p>
+
+          <p>
+            Bay B04
+            <span class="status-pill status-review">Update Pending</span>
+          </p>
+
+          <p>
+            <a href="forklift-03.html">Forklift 03</a>
+            <span class="status-pill status-overdue">Reissue Required</span>
+          </p>
+
+          <p>
+            Loading Bay 4
+            <span class="status-pill status-active">Live</span>
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Management Actions</h3>
+          <p>Create new QR-linked operational record</p>
+          <p>Edit linked destination or record details</p>
+          <p>Archive retired QR point</p>
+          <p>Reissue QR after equipment or location change</p>
+        </div>
+
+        <div class="panel">
+          <h3>Recent QR Activity</h3>
+          <p><a href="forklift-03.html">Forklift 03</a> QR reissued — 08:15</p>
+          <p>Bay A12 record updated — 09:42</p>
+          <p>Loading Bay 4 dispatch record checked — Yesterday</p>
+        </div>
+
+        <div class="panel">
+          <h3>Control Notes</h3>
+          <p>QR Management provides central control over deployed operational touchpoints.</p>
+          <p>Records can be updated without replacing every physical QR code.</p>
+          <p>Where a physical asset changes, a QR can be reissued and tracked.</p>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
