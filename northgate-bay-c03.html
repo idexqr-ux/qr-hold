@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bay C03 — Hold</title>
+  <meta
+    name="description"
+    content="A Northgate Warehouse dispatch and outbound consignments record for Bay C03, powered by Hold."
+  />
+
+  <style>
+    :root {
+      --bg: #f7f8f6;
+      --card: #ffffff;
+      --soft: #eef3f0;
+      --soft-2: #f3f1ea;
+      --line: #d8dedb;
+      --ink: #1f2a27;
+      --muted: #64716c;
+      --celadon: #c9d8d2;
+      --celadon-deep: #9fb7ae;
+      --sapphire: #1f4f82;
+      --warning-bg: #f7efe3;
+      --warning-line: #dfc9a6;
+      --good-bg: #e9f1ec;
+      --good-line: #bfd2c8;
+      --shadow: 0 18px 45px rgba(31, 42, 39, 0.08);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(201, 216, 210, 0.45), transparent 34rem),
+        linear-gradient(180deg, #f8f9f7 0%, #eef3f0 100%);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .page-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 42px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .top-link:hover {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .record-hero {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(216, 222, 219, 0.9);
+      border-radius: var(--radius);
+      padding: clamp(26px, 4vw, 44px);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.15rem, 7vw, 4rem);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      line-height: 1.2;
+    }
+
+    .status-pill strong { font-weight: 700; }
+    .status-pill.active { background: var(--good-bg); border-color: var(--good-line); }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #6f9f86;
+      box-shadow: 0 0 0 4px rgba(111, 159, 134, 0.14);
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 22px;
+      margin-top: 24px;
+      align-items: start;
+    }
+
+    .main-stack,
+    .side-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .record-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: clamp(20px, 3vw, 28px);
+      box-shadow: 0 10px 30px rgba(31, 42, 39, 0.05);
+    }
+
+    .record-card h2,
+    .record-card h3 {
+      margin: 0 0 14px;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+    }
+
+    .record-card h2 { font-size: 1.55rem; }
+    .record-card h3 { font-size: 1.18rem; }
+
+    .record-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .record-card p:last-child { margin-bottom: 0; }
+
+    .procedure-list,
+    .plain-list {
+      margin: 0;
+      padding-left: 1.35rem;
+      color: var(--ink);
+    }
+
+    .procedure-list li,
+    .plain-list li {
+      margin: 0 0 10px;
+      padding-left: 4px;
+    }
+
+    .procedure-list li:last-child,
+    .plain-list li:last-child { margin-bottom: 0; }
+
+    .warning-card {
+      background: var(--warning-bg);
+      border-color: var(--warning-line);
+    }
+
+    .dispatch-steps {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .dispatch-step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(216, 222, 219, 0.9);
+      border-radius: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+
+    .step-number {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .meta-list li {
+      display: grid;
+      gap: 3px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .meta-value {
+      color: var(--ink);
+      font-size: 0.96rem;
+    }
+
+    .document-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .document-list a {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--soft-2);
+      text-decoration: none;
+      font-size: 0.93rem;
+    }
+
+    .document-list a:hover {
+      background: #ffffff;
+      border-color: var(--celadon-deep);
+    }
+
+    .small-note {
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .small-note strong { color: var(--ink); }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .quiet-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 17px;
+      border-radius: 999px;
+      background: var(--celadon);
+      border: 1px solid var(--celadon-deep);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.94rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+    }
+
+    .quiet-button:hover {
+      transform: translateY(-1px);
+      background: #d7e3df;
+    }
+
+    .quiet-button.secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+    .quiet-button.secondary:hover {
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    .quiet-button.sapphire { color: var(--sapphire); }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    sup {
+      font-size: 0.48em;
+      line-height: 0;
+      vertical-align: super;
+      margin-left: 1px;
+    }
+
+    @media (max-width: 860px) {
+      .layout-grid { grid-template-columns: 1fr; }
+      .side-stack { order: -1; }
+    }
+
+    @media (max-width: 560px) {
+      .page-shell {
+        width: min(100% - 22px, 1120px);
+        padding-top: 20px;
+      }
+
+      .record-hero,
+      .record-card { border-radius: 20px; }
+
+      .status-row,
+      .action-row { flex-direction: column; }
+
+      .status-pill,
+      .quiet-button { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-shell" id="top">
+    <a class="top-link" href="operations-points.html">← Back to Operational Points</a>
+
+    <section class="record-hero" aria-labelledby="record-title">
+      <p class="eyebrow">Hold / Northgate Warehouse</p>
+      <h1 id="record-title">Bay C03</h1>
+      <p class="subtitle">
+        Dispatch bay guidance for outbound consignments, carrier handover, and release checks before goods leave Northgate Warehouse.
+      </p>
+
+      <div class="status-row" aria-label="Record status summary">
+        <span class="status-pill active"><span class="status-dot" aria-hidden="true"></span><strong>Status:</strong> Active</span>
+        <span class="status-pill"><strong>QR Point:</strong> PD-01</span>
+        <span class="status-pill"><strong>Function:</strong> Dispatch Bay</span>
+        <span class="status-pill"><strong>Version:</strong> 1.6</span>
+        <span class="status-pill"><strong>Next Review:</strong> 28 July 2026</span>
+      </div>
+    </section>
+
+    <div class="layout-grid">
+      <section class="main-stack" aria-label="Operational record content">
+        <article class="record-card">
+          <h2>Dispatch Procedure</h2>
+          <p>Complete these checks before releasing any outbound consignment from Bay C03.</p>
+
+          <div class="dispatch-steps" aria-label="Dispatch procedure steps">
+            <div class="dispatch-step">
+              <span class="step-number">1</span>
+              <span>Verify consignment reference against the outbound dispatch manifest.</span>
+            </div>
+            <div class="dispatch-step">
+              <span class="step-number">2</span>
+              <span>Confirm pallets, parcels, or cages are correctly labelled and secure for transport.</span>
+            </div>
+            <div class="dispatch-step">
+              <span class="step-number">3</span>
+              <span>Check carrier, vehicle, and collection slot match the scheduled dispatch record.</span>
+            </div>
+            <div class="dispatch-step">
+              <span class="step-number">4</span>
+              <span>Scan goods out only once the consignment is ready for loading.</span>
+            </div>
+            <div class="dispatch-step">
+              <span class="step-number">5</span>
+              <span>Confirm loading complete and retain handover record for audit trail.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="record-card">
+          <h2>Release Checks</h2>
+          <ul class="plain-list">
+            <li>Consignment matches dispatch manifest and customer reference.</li>
+            <li>Packaging is intact, labelled, and suitable for onward transport.</li>
+            <li>No visible damage, leakage, or instability before loading.</li>
+            <li>Carrier paperwork and collection details are complete.</li>
+            <li>Any held or quarantined stock is excluded from dispatch.</li>
+          </ul>
+        </article>
+
+        <article class="record-card warning-card">
+          <h2>Dispatch Holds &amp; Exceptions</h2>
+          <p>If a consignment cannot be released safely or accurately, hold the shipment before loading.</p>
+          <ul class="plain-list">
+            <li>Move affected goods to the dispatch hold area beside Bay C03.</li>
+            <li>Apply a <strong>Hold / Do Not Dispatch</strong> label.</li>
+            <li>Use the <strong>Report an Issue</strong> button below to log the exception against the consignment reference.</li>
+            <li>Notify the Dispatch Supervisor for release, rework, or carrier escalation decision.</li>
+            <li>Do not scan goods out until the hold has been resolved and approved.</li>
+          </ul>
+        </article>
+
+        <article class="record-card">
+          <h2>Carrier Cut-off Guidance</h2>
+          <ul class="plain-list">
+            <li>Standard parcel carrier collection closes at <strong>15:30</strong>.</li>
+            <li>Pallet freight release closes at <strong>16:00</strong>.</li>
+            <li>Same-day exception approval must be confirmed by the Dispatch Supervisor before loading.</li>
+          </ul>
+        </article>
+
+        <article class="record-card">
+          <h2>Linked Documents</h2>
+          <ul class="document-list">
+            <li><a href="#"><span>Outbound Dispatch Manifest Procedure</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="#"><span>Carrier Handover Checklist</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="#"><span>Dispatch Exception Log</span><span aria-hidden="true">→</span></a></li>
+          </ul>
+        </article>
+
+        <div class="action-row" aria-label="Record actions">
+          <a class="quiet-button" href="#">Report an Issue</a>
+          <a class="quiet-button secondary" href="#">Request Amendment</a>
+          <a class="quiet-button secondary sapphire" href="operations-points.html">Back to Operational Points</a>
+        </div>
+      </section>
+
+      <aside class="side-stack" aria-label="Record governance information">
+        <article class="record-card">
+          <h3>Record Control</h3>
+          <ul class="meta-list">
+            <li>
+              <span class="meta-label">Owner</span>
+              <span class="meta-value">Dispatch Supervisor</span>
+            </li>
+            <li>
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Dispatch Zone — Bay C03</span>
+            </li>
+            <li>
+              <span class="meta-label">Last Reviewed</span>
+              <span class="meta-value">28 April 2026</span>
+            </li>
+            <li>
+              <span class="meta-label">Next Review</span>
+              <span class="meta-value">28 July 2026</span>
+            </li>
+            <li>
+              <span class="meta-label">Approval Status</span>
+              <span class="meta-value">Published / Active</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="record-card">
+          <h3>Recent Update</h3>
+          <p>
+            Dispatch hold wording updated following carrier handover review.
+          </p>
+        </article>
+
+        <article class="record-card">
+          <h3>Current Operating Note</h3>
+          <p>
+            Bay C03 is assigned to outbound consignments and should not be used for inbound intake or quarantine storage.
+          </p>
+        </article>
+
+        <div class="small-note">
+          <strong>Hold workflow signal:</strong> outbound points can combine release checks, carrier handover guidance, exception handling, and audit-ready review control.
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <p><strong>Powered by IdexQR<sup>®</sup></strong> — calm, connected operational information.</p>
+    </footer>
+  </main>
+</body>
+</html>
