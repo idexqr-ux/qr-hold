@@ -1,1 +1,225 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Training & Competency Register — Hold</title>
+  <meta
+    name="description"
+    content="A Northgate Warehouse manager view for training, competency and authorised operator governance, powered by Hold."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <main class="wrap" id="top">
+
+    <a class="text-link" href="dashboard.html">← Back to Dashboard</a>
+
+    <section class="page-hero">
+      <p class="eyebrow">Hold / Personnel Governance</p>
+      <h1>Training &amp; Competency Register</h1>
+      <p class="sub">
+        Manager view for tracking staff training, equipment authorisations,
+        refresher dates, restrictions and competency gaps across Northgate Warehouse.
+      </p>
+
+      <div class="button-row">
+        <span class="status-pill status-active">Live Register</span>
+        <span class="status-pill status-pending">3 Reviews Due</span>
+        <span class="status-pill status-review">Audit Enabled</span>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Staff Records</h3>
+        <p>24</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Fully Current</h3>
+        <p>18</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Expiring Soon</h3>
+        <p>3</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Restricted</h3>
+        <p>1</p>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <article class="card soft-panel">
+        <h3>Active Competency Register</h3>
+
+        <div class="delivery-list">
+
+          <article class="delivery-card">
+            <div>
+              <strong>Samira Haddad</strong><br />
+              Goods In · Dispatch · First Aid<br />
+              <span class="muted-text">Status: Current · Next review 12 August 2026</span>
+            </div>
+            <span class="status-pill status-active">Current</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>Piotr Kowalski</strong><br />
+              Forklift Operator · Dispatch Loading<br />
+              <span class="muted-text">Forklift authorisation expires 21 May 2026</span>
+            </div>
+            <span class="status-pill status-review">Expiring Soon</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>Aisha Rahman</strong><br />
+              Goods In · Hold Area Review<br />
+              <span class="muted-text">Status: Current · Authorised for exception handling</span>
+            </div>
+            <span class="status-pill status-active">Current</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>Mateusz Zielinski</strong><br />
+              Forklift Operator<br />
+              <span class="muted-text">Restriction active pending refresher training</span>
+            </div>
+            <span class="status-pill status-overdue">Restricted</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>Mei Chen</strong><br />
+              Fire Marshal · Safety Inspection Support<br />
+              <span class="muted-text">Fire safety refresher due 02 June 2026</span>
+            </div>
+            <span class="status-pill status-review">Due Soon</span>
+          </article>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Authorisation Categories</h3>
+        <ul class="workflow-list">
+          <li><strong>Equipment:</strong> forklift, pallet truck, charging station access.</li>
+          <li><strong>Operational:</strong> goods in, dispatch, hold area review.</li>
+          <li><strong>Safety:</strong> first aid, fire marshal, inspection support.</li>
+          <li><strong>Restricted:</strong> role or equipment temporarily unavailable pending review.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Competency Actions</h3>
+        <p>
+          Use these actions to update authorisations and preserve manager oversight.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button" href="#">Record Training Complete</a>
+          <a class="quiet-button" href="#">Add Authorisation</a>
+          <a class="quiet-button" href="#">Schedule Refresher</a>
+          <a class="quiet-button" href="#">Restrict Operator</a>
+          <a class="quiet-button" href="#">Remove Restriction</a>
+          <a class="quiet-button secondary" href="#">Other Competency Issue</a>
+        </div>
+      </article>
+
+      <article class="card warning-card">
+        <h3>Expiry &amp; Restriction Control</h3>
+        <p>
+          Staff should not operate equipment or perform controlled tasks where
+          required training is expired, restricted or awaiting manager review.
+        </p>
+        <ul class="workflow-list">
+          <li>Expiry warnings appear before authorisation lapses.</li>
+          <li>Restrictions remain visible until removed by an authorised manager.</li>
+          <li>Refresher training should be scheduled before controlled access is lost.</li>
+          <li>Authorisation changes are retained in the audit trail.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Recent Competency Updates</h3>
+        <div class="delivery-list">
+
+          <article class="delivery-card">
+            <div>
+              <strong>03 May 2026</strong><br />
+              Samira Haddad — First Aid refresher recorded<br />
+              <span class="muted-text">Updated by H&amp;S Coordinator</span>
+            </div>
+            <span class="status-pill status-active">Recorded</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>01 May 2026</strong><br />
+              Piotr Kowalski — Forklift refresher scheduled<br />
+              <span class="muted-text">Due before 21 May expiry</span>
+            </div>
+            <span class="status-pill status-review">Scheduled</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>28 April 2026</strong><br />
+              Mateusz Zielinski — temporary restriction applied<br />
+              <span class="muted-text">Pending supervised refresher assessment</span>
+            </div>
+            <span class="status-pill status-overdue">Restricted</span>
+          </article>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Workflow Notes</h3>
+        <ul class="workflow-list">
+          <li>Managers retain oversight of who is authorised to use equipment or perform controlled tasks.</li>
+          <li>Competency restrictions can affect operational access where required.</li>
+          <li>Training records support audit, insurance and incident review requirements.</li>
+          <li>Expired or restricted authorisations remain visible until formally resolved.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Linked Records</h3>
+        <ul class="document-list">
+          <li><a href="northgate-forklift-03.html"><span>Forklift 03 — Equipment Governance</span><span>→</span></a></li>
+          <li><a href="northgate-first-aid-station.html"><span>First Aid Station — H&amp;S</span><span>→</span></a></li>
+          <li><a href="northgate-fire-exit-east.html"><span>Fire Exit East — Safety Compliance</span><span>→</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Record Control</h3>
+        <div class="detail-grid">
+          <p><strong>Owner</strong><span class="value">Operations Manager</span></p>
+          <p><strong>View Type</strong><span class="value">Personnel Governance</span></p>
+          <p><strong>Last Updated</strong><span class="value">10:52</span></p>
+          <p><strong>Audit Status</strong><span class="value">Enabled</span></p>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Powered by IdexQR<sup>®</sup></strong>
+        <span class="footer-sub">Calm, connected operational information.</span>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
