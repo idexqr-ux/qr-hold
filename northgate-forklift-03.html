@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forklift 03 — Hold</title>
+  <meta
+    name="description"
+    content="A Northgate Warehouse equipment governance record for Forklift 03, powered by Hold."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap" id="top">
+
+    <a class="text-link" href="dashboard.html">← Back to Dashboard</a>
+
+    <section class="page-hero">
+      <p class="eyebrow">Hold / Northgate Warehouse</p>
+      <h1>Forklift 03</h1>
+      <p class="sub">
+        Equipment governance record for daily pre-use checks, fault reporting,
+        maintenance visibility and out-of-service control.
+      </p>
+
+      <div class="button-row">
+        <span class="status-pill status-active">Active</span>
+        <span class="status-pill status-pending">Equipment</span>
+        <span class="status-pill status-review">Audit Enabled</span>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <article class="card soft-panel">
+        <h3>Operational Snapshot</h3>
+        <div class="detail-grid">
+          <p><strong>Status</strong><span class="value value-key">Available for Use</span></p>
+          <p><strong>Assigned Area</strong><span class="value">Warehouse Floor</span></p>
+          <p><strong>Last Pre-Use Check</strong><span class="value">Today · 06:14</span></p>
+          <p><strong>Next Service Due</strong><span class="value">18 May 2026</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Pre-Use Inspection Status</h3>
+        <ul class="workflow-list">
+          <li>Tyres and wheels checked.</li>
+          <li>Forks, mast and carriage inspected.</li>
+          <li>Hydraulics checked for visible leaks.</li>
+          <li>Lights, horn and warning beacon tested.</li>
+          <li>Battery level and charging condition checked.</li>
+        </ul>
+      </article>
+
+      <article class="card soft-panel">
+        <h3>Current Advisory</h3>
+        <p>
+          <strong>No active safety fault recorded.</strong>
+          Operator to continue standard pre-use checks before each shift.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Equipment Actions</h3>
+        <p>
+          Use these actions to update equipment status and preserve the audit trail.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button" href="#">Confirm Pre-Use Check Complete</a>
+          <a class="quiet-button" href="#">Report Fault / Damage</a>
+          <a class="quiet-button" href="#">Mark Out of Service</a>
+          <a class="quiet-button" href="#">Request Maintenance</a>
+          <a class="quiet-button" href="#">Escalate Safety Concern</a>
+          <a class="quiet-button secondary" href="#">Other Equipment Issue</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Maintenance History</h3>
+        <div class="delivery-list">
+          <article class="delivery-card">
+            <div>
+              <strong>03 May 2026</strong><br />
+              Battery charging guidance reviewed<br />
+              <span class="muted-text">Updated after charging bay inspection</span>
+            </div>
+            <span class="status-pill status-review">Updated</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>21 April 2026</strong><br />
+              Routine inspection completed<br />
+              <span class="muted-text">No safety-critical defect recorded</span>
+            </div>
+            <span class="status-pill status-active">Complete</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>05 April 2026</strong><br />
+              Rear warning beacon replaced<br />
+              <span class="muted-text">Maintenance action closed</span>
+            </div>
+            <span class="status-pill status-active">Closed</span>
+          </article>
+        </div>
+      </article>
+
+      <article class="card warning-card">
+        <h3>Out-of-Service Control</h3>
+        <p>
+          If Forklift 03 is unsafe, damaged or showing a safety-critical fault,
+          mark it out of service before further use.
+        </p>
+        <ul class="workflow-list">
+          <li>Stop using the forklift immediately.</li>
+          <li>Apply an <strong>Out of Service</strong> tag where visible.</li>
+          <li>Use <strong>Mark Out of Service</strong> to update Hold.</li>
+          <li>Notify maintenance or the warehouse supervisor.</li>
+          <li>Do not return equipment to use until release has been recorded.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Workflow Notes</h3>
+        <ul class="workflow-list">
+          <li>Faults raised from Forklift 03 appear in the central operational review queue.</li>
+          <li>Out-of-service status remains visible until formally resolved.</li>
+          <li>Maintenance updates should be added to preserve the equipment audit trail.</li>
+          <li>Equipment must not be returned to service without authorised release.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Linked Documents</h3>
+        <ul class="document-list">
+          <li><a href="#"><span>Daily Forklift Pre-Use Checklist</span><span>→</span></a></li>
+          <li><a href="#"><span>Forklift Battery Charging Guidance</span><span>→</span></a></li>
+          <li><a href="#"><span>Equipment Fault Reporting Procedure</span><span>→</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Record Control</h3>
+        <div class="detail-grid">
+          <p><strong>Owner</strong><span class="value">Warehouse Maintenance Lead</span></p>
+          <p><strong>Asset Type</strong><span class="value">Forklift Truck</span></p>
+          <p><strong>Record Version</strong><span class="value">1.0</span></p>
+          <p><strong>Audit Status</strong><span class="value">Enabled</span></p>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Powered by IdexQR<sup>®</sup></strong>
+        <span class="footer-sub">Calm, connected operational information.</span>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
