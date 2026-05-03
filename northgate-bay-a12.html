@@ -3,176 +3,198 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Delivery Intake Station — Hold</title>
+  <title>Bay A12 — Hold</title>
   <meta
     name="description"
-    content="A Northgate Warehouse process record for Delivery Intake Station, powered by Hold."
+    content="A Northgate Warehouse goods received and delivery intake record for Bay A12, powered by Hold."
   />
-
-  <style>
-    :root {
-      --bg: #f7f8f6;
-      --card: #ffffff;
-      --soft: #eef3f0;
-      --soft-2: #f3f1ea;
-      --line: #d8dedb;
-      --ink: #1f2a27;
-      --muted: #64716c;
-      --celadon: #c9d8d2;
-      --celadon-deep: #9fb7ae;
-      --sapphire: #1f4f82;
-      --warning-bg: #f7efe3;
-      --warning-line: #dfc9a6;
-      --good-bg: #e9f1ec;
-      --good-line: #bfd2c8;
-      --shadow: 0 18px 45px rgba(31, 42, 39, 0.08);
-      --radius: 26px;
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: radial-gradient(circle at top left, rgba(201,216,210,.45), transparent 34rem), linear-gradient(180deg,#f8f9f7 0%,#eef3f0 100%);
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.65;
-    }
-    a { color: inherit; }
-    .page-shell { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:34px 0 42px; }
-    .top-link { display:inline-flex; gap:8px; margin-bottom:22px; color:var(--muted); text-decoration:none; font-size:.94rem; }
-    .record-hero,.record-card { background:rgba(255,255,255,.9); border:1px solid var(--line); border-radius:24px; }
-    .record-hero { padding:clamp(26px,4vw,44px); box-shadow:var(--shadow); }
-    .record-card { padding:clamp(20px,3vw,28px); box-shadow:0 10px 30px rgba(31,42,39,.05); }
-    .eyebrow,.meta-label { font-family:Arial,Helvetica,sans-serif; text-transform:uppercase; }
-    .eyebrow { margin:0 0 12px; color:var(--muted); font-size:.78rem; font-weight:700; letter-spacing:.16em; }
-    h1 { margin:0; font-size:clamp(2.15rem,7vw,4rem); line-height:1.03; letter-spacing:-.045em; font-weight:500; }
-    h2,h3 { margin:0 0 14px; line-height:1.15; font-weight:500; letter-spacing:-.025em; }
-    h2 { font-size:1.55rem; }
-    h3 { font-size:1.18rem; }
-    .subtitle { margin:18px 0 0; color:var(--muted); font-size:1.08rem; max-width:760px; }
-    .status-row,.action-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-    .status-pill,.quiet-button { font-family:Arial,Helvetica,sans-serif; }
-    .status-pill { display:inline-flex; gap:8px; padding:8px 13px; border-radius:999px; background:var(--soft); border:1px solid var(--line); font-size:.82rem; }
-    .status-pill.active { background:var(--good-bg); border-color:var(--good-line); }
-    .status-dot { width:9px; height:9px; border-radius:999px; background:#6f9f86; box-shadow:0 0 0 4px rgba(111,159,134,.14); }
-    .layout-grid { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:22px; margin-top:24px; }
-    .main-stack,.side-stack { display:grid; gap:18px; }
-    .procedure-list,.plain-list,.meta-list,.document-list { margin:0; }
-    .procedure-list,.plain-list { padding-left:1.35rem; }
-    .procedure-list li,.plain-list li { margin:0 0 10px; }
-    .meta-list,.document-list { padding:0; list-style:none; font-family:Arial,Helvetica,sans-serif; }
-    .meta-list li { padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--line); }
-    .meta-list li:last-child { margin-bottom:0; padding-bottom:0; border-bottom:0; }
-    .meta-label { color:var(--muted); font-size:.76rem; font-weight:700; letter-spacing:.1em; }
-    .meta-value { font-size:.96rem; }
-    .document-list { display:grid; gap:10px; }
-    .document-list a { display:flex; justify-content:space-between; padding:12px 13px; border:1px solid var(--line); border-radius:16px; background:var(--soft-2); text-decoration:none; }
-    .warning-card { background:var(--warning-bg); border-color:var(--warning-line); }
-    .quiet-button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 17px; border-radius:999px; background:var(--celadon); border:1px solid var(--celadon-deep); text-decoration:none; font-size:.94rem; font-weight:700; }
-    .quiet-button.secondary { background:transparent; border-color:var(--line); color:var(--muted); }
-    .small-note { padding:14px 15px; border-radius:18px; background:var(--soft); border:1px solid var(--line); color:var(--muted); font-family:Arial,Helvetica,sans-serif; font-size:.92rem; }
-    .footer { margin-top:32px; padding-top:24px; border-top:1px solid var(--line); text-align:center; color:var(--muted); font-size:.92rem; }
-    sup { font-size:.48em; }
-    @media (max-width:860px){ .layout-grid{grid-template-columns:1fr;} .side-stack{order:-1;} }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main class="page-shell">
-    <a class="top-link" href="operations-points.html">← Back to Operational Points</a>
+  <main class="wrap" id="top">
 
-    <section class="record-hero">
+    <a class="text-link" href="operations-points.html">← Back to Operational Points</a>
+
+    <section class="page-hero">
       <p class="eyebrow">Hold / Northgate Warehouse</p>
-      <h1>Delivery Intake Station</h1>
-      <p class="subtitle">Operational guidance for receiving inbound deliveries, validating shipment condition, and escalating intake discrepancies.</p>
+      <h1>Bay A12</h1>
+      <p class="sub">
+        Goods received intake point for inbound deliveries, delivery checks,
+        discrepancy reporting, quarantine routing and audit-ready intake control.
+      </p>
 
-      <div class="status-row">
-        <span class="status-pill active"><span class="status-dot"></span><strong>Status:</strong> Active</span>
-        <span class="status-pill"><strong>QR Point:</strong> GI-01</span>
-        <span class="status-pill"><strong>Version:</strong> 2.1</span>
-        <span class="status-pill"><strong>Next Review:</strong> 21 July 2026</span>
+      <div class="button-row">
+        <span class="status-pill status-active">Receiving Active</span>
+        <span class="status-pill status-pending">Goods In</span>
+        <span class="status-pill status-review">Audit Enabled</span>
       </div>
     </section>
 
-    <div class="layout-grid">
-      <section class="main-stack">
-        <article class="record-card">
-          <h2>Delivery Intake Process</h2>
-          <ol class="procedure-list">
-            <li>Confirm delivery reference against scheduled inbound manifest.</li>
-            <li>Inspect vehicle seal and trailer condition before unloading.</li>
-            <li>Unload goods into designated intake zone.</li>
-            <li>Check pallet count and packaging condition against delivery note.</li>
-            <li>Record shortages, damage, or discrepancies before acceptance.</li>
-            <li>Apply intake status label and route goods for inspection/storage.</li>
-          </ol>
-        </article>
+    <section class="grid">
 
-        <article class="record-card">
-          <h2>Acceptance Criteria</h2>
-          <ul class="plain-list">
-            <li>Packaging intact and free from visible water damage.</li>
-            <li>Pallet stable and safe to move.</li>
-            <li>Correct quantity received against manifest.</li>
-            <li>No signs of tampering or broken seal where applicable.</li>
-          </ul>
-        </article>
-
-        <article class="record-card warning-card">
-          <h2>Damage &amp; Discrepancy Handling</h2>
-          <p>If goods arrive damaged, short, unstable, or different from the manifest, record the issue before the stock enters normal workflow.</p>
-          <ul class="plain-list">
-            <li>Photograph damaged or suspect goods before unloading further.</li>
-            <li>Quarantine affected stock in <strong>Intake Hold Area B</strong>.</li>
-            <li>Apply a <strong>Damaged / Pending Review</strong> label to the pallet or item.</li>
-            <li>Use the <strong>Report an Issue</strong> button below to log the discrepancy against the delivery reference.</li>
-            <li>Notify the Goods In Supervisor for acceptance, rejection, or supplier escalation decision.</li>
-            <li>Do not book stock into inventory until the discrepancy is resolved.</li>
-          </ul>
-        </article>
-
-        <article class="record-card">
-          <h2>Linked Documents</h2>
-          <ul class="document-list">
-            <li><a href="#"><span>Inbound Manifest Procedure</span><span>→</span></a></li>
-            <li><a href="#"><span>Damaged Goods Workflow</span><span>→</span></a></li>
-            <li><a href="#"><span>Supplier Discrepancy Form</span><span>→</span></a></li>
-          </ul>
-        </article>
-
-        <div class="action-row">
-          <a class="quiet-button" href="#">Report an Issue</a>
-          <a class="quiet-button secondary" href="#">Request Amendment</a>
-          <a class="quiet-button secondary" href="operations-points.html">Back to Operational Points</a>
+      <article class="card soft-panel">
+        <h3>Operational Snapshot</h3>
+        <div class="detail-grid">
+          <p><strong>Supervisor</strong><span class="value">L. Bennett</span></p>
+          <p><strong>Shift Window</strong><span class="value">06:00 – 14:00</span></p>
+          <p><strong>Bay Status</strong><span class="value value-key">Receiving Active</span></p>
+          <p><strong>Last Updated</strong><span class="value">08:25</span></p>
         </div>
-      </section>
+      </article>
 
-      <aside class="side-stack">
-        <article class="record-card">
-          <h3>Record Control</h3>
-          <ul class="meta-list">
-            <li><span class="meta-label">Owner</span><span class="meta-value">Warehouse Operations Manager</span></li>
-            <li><span class="meta-label">Location</span><span class="meta-value">Goods In — Intake Bay 1</span></li>
-            <li><span class="meta-label">Last Reviewed</span><span class="meta-value">21 April 2026</span></li>
-            <li><span class="meta-label">Next Review</span><span class="meta-value">21 July 2026</span></li>
-            <li><span class="meta-label">Approval Status</span><span class="meta-value">Published / Active</span></li>
-          </ul>
-        </article>
+      <article class="card">
+        <h3>Inbound Delivery Queue</h3>
 
-        <article class="record-card">
-          <h3>Recent Update</h3>
-          <p>Supplier discrepancy workflow updated following Q1 audit of intake delays.</p>
-        </article>
+        <div class="delivery-list">
+          <article class="delivery-card">
+            <div>
+              <strong>IN-1186</strong><br />
+              Milton Components<br />
+              <span class="muted-text">Status: Unloading · Delivery note received</span>
+            </div>
+            <span class="status-pill status-active">In Progress</span>
+          </article>
 
-        <div class="small-note">
-          <strong>Hold workflow signal:</strong> process records can guide live operational steps while linking directly to issue escalation and downstream workflows.
+          <article class="delivery-card">
+            <div>
+              <strong>IN-1187</strong><br />
+              Ashwell Packaging<br />
+              <span class="muted-text">Status: Awaiting intake check</span>
+            </div>
+            <span class="status-pill status-pending">Waiting</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>IN-1188</strong><br />
+              Vale Industrial Supplies<br />
+              <span class="muted-text">Status: Due 11:00 · Vehicle not arrived</span>
+            </div>
+            <span class="status-pill status-review">Expected</span>
+          </article>
         </div>
-      </aside>
-    </div>
+      </article>
+
+      <article class="card">
+        <h3>Delivery Documentation Status</h3>
+        <ul class="workflow-list">
+          <li><strong>IN-1186:</strong> Delivery note received — held at Goods In desk.</li>
+          <li><strong>IN-1187:</strong> Supplier paperwork awaiting check.</li>
+          <li><strong>IN-1188:</strong> Delivery documentation not yet received.</li>
+        </ul>
+      </article>
+
+      <h2 class="section-heading">Goods In Workflow</h2>
+
+      <article class="card">
+        <h3>Intake Guidance</h3>
+        <ul class="workflow-list">
+          <li>Receive goods in the inbound queue order shown in Hold unless supervisor priority is updated.</li>
+          <li>Manually verify delivery reference, pallet count and visible condition before selecting <strong>Intake Checked / Ready</strong>.</li>
+          <li>Photograph visible damage before goods are moved into normal workflow.</li>
+          <li>Do not book damaged, short, unstable or disputed stock into inventory until resolved.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Goods In Actions</h3>
+        <p>
+          Use these actions to update the operational queue and create an audit trail.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button" href="#">Intake Checked / Ready</a>
+          <a class="quiet-button" href="#">Goods Accepted</a>
+          <a class="quiet-button" href="#">Report Intake Issue</a>
+          <a class="quiet-button" href="#">Move to Quarantine</a>
+          <a class="quiet-button" href="#">Supplier / Carrier Discrepancy</a>
+          <a class="quiet-button" href="#">Request Supervisor</a>
+          <a class="quiet-button secondary" href="#">Other Operational Issue</a>
+        </div>
+      </article>
+
+      <article class="card warning-card">
+        <h3>Damage &amp; Discrepancy Handling</h3>
+        <p>
+          If goods arrive damaged, short, unstable or different from the manifest,
+          record the issue before the stock enters normal workflow.
+        </p>
+        <ul class="workflow-list">
+          <li>Photograph damaged or suspect goods before unloading further.</li>
+          <li>Move affected goods to <strong>Intake Hold Area B</strong>.</li>
+          <li>Apply a <strong>Damaged / Pending Review</strong> label.</li>
+          <li>Log the issue against the delivery reference using <strong>Report Intake Issue</strong>.</li>
+          <li>Do not book stock into inventory until the discrepancy is resolved.</li>
+        </ul>
+
+        <div class="button-row">
+          <a class="quiet-button secondary" href="bay-a12-map.html">View Goods In Area Map</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Acceptance Criteria</h3>
+        <ul class="workflow-list">
+          <li>Packaging intact and free from visible water damage.</li>
+          <li>Pallet stable and safe to move.</li>
+          <li>Correct quantity received against manifest or delivery note.</li>
+          <li>No signs of tampering or broken seal where applicable.</li>
+        </ul>
+      </article>
+
+      <article class="card soft-panel">
+        <h3>Temporary Notice</h3>
+        <p>
+          <strong>Goods In Desk Printer Intermittent.</strong>
+          If intake labels fail to print, collect replacement labels from the
+          warehouse office before routing goods to storage.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button secondary" href="bay-a12-map.html">View Goods In Area Map</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Workflow Notes</h3>
+        <ul class="workflow-list">
+          <li>Issues raised from Bay A12 appear in the central operational queue.</li>
+          <li>Open intake issues persist across shifts until formally resolved.</li>
+          <li>Updates and comments should be visible to relevant staff.</li>
+          <li>Goods should be marked as Accepted once intake checks are complete and stock can enter normal workflow.</li>
+          <li>Resolved items remain available for audit and review.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Linked Documents</h3>
+        <ul class="document-list">
+          <li><a href="#"><span>Inbound Manifest Procedure</span><span>→</span></a></li>
+          <li><a href="#"><span>Damaged Goods Workflow</span><span>→</span></a></li>
+          <li><a href="#"><span>Supplier Discrepancy Form</span><span>→</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Record Control</h3>
+        <div class="detail-grid">
+          <p><strong>Owner</strong><span class="value">Goods In Supervisor</span></p>
+          <p><strong>Record Version</strong><span class="value">2.2</span></p>
+          <p><strong>Last Reviewed</strong><span class="value">3 May 2026</span></p>
+          <p><strong>Next Review</strong><span class="value">21 July 2026</span></p>
+        </div>
+      </article>
+
+    </section>
 
     <footer class="footer">
-      <p><strong>Powered by IdexQR<sup>®</sup></strong> — calm, connected operational information.</p>
+      <p>
+        <strong>Powered by IdexQR<sup>®</sup></strong>
+        <span class="footer-sub">Calm, connected operational information.</span>
+      </p>
     </footer>
+
   </main>
 </body>
 </html>
