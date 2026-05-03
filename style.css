@@ -1,4 +1,16 @@
 /* ==============================
+   BAY A12 — RECIEVED 
+   TEMP BUILD SECTION
+   (To refactor into shared/global later)
+============================== */
+.section-heading {
+  grid-column: 1 / -1;
+  margin: 10px 0 -4px;
+  text-align: center;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+/* ==============================
    BAY C03 — DISPATCH
    TEMP BUILD SECTION
    (To refactor into shared/global later)
