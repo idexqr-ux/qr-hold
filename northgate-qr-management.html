@@ -1,1 +1,197 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Management — Hold</title>
+  <meta
+    name="description"
+    content="A Northgate Warehouse QR registry and governance page for managing operational QR points through Hold."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <main class="wrap" id="top">
+
+    <a class="text-link" href="dashboard.html">← Back to Dashboard</a>
+
+    <section class="page-hero">
+      <p class="eyebrow">Hold / Platform Governance</p>
+      <h1>QR Management</h1>
+      <p class="sub">
+        Registry and governance view for operational QR points, including live status,
+        assigned records, physical locations, replacement requests and audit control.
+      </p>
+
+      <div class="button-row">
+        <span class="status-pill status-active">10 Live QRs</span>
+        <span class="status-pill status-pending">2 Requests Pending</span>
+        <span class="status-pill status-review">QR Audit Enabled</span>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <article class="card soft-panel">
+        <h3>QR Estate Snapshot</h3>
+        <div class="detail-grid">
+          <p><strong>Live QRs</strong><span class="value value-key">10</span></p>
+          <p><strong>Pending Requests</strong><span class="value">2</span></p>
+          <p><strong>Reprints Needed</strong><span class="value">1</span></p>
+          <p><strong>Retired QRs</strong><span class="value">3</span></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Active QR Registry</h3>
+
+        <div class="delivery-list">
+
+          <article class="delivery-card">
+            <div>
+              <strong>QR-GI-01</strong><br />
+              Bay A12 — Goods In Operational Record<br />
+              <span class="muted-text">Location: Goods In · Status: Live · Updated 08:25</span>
+            </div>
+            <span class="status-pill status-active">Live</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>QR-EX-02</strong><br />
+              Hold Area B — Exception Governance Record<br />
+              <span class="muted-text">Location: Shared Hold Area · Status: Live · Updated 09:40</span>
+            </div>
+            <span class="status-pill status-active">Live</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>QR-DO-01</strong><br />
+              Bay C03 — Dispatch Operational Record<br />
+              <span class="muted-text">Location: Dispatch Zone · Status: Live · Updated 08:42</span>
+            </div>
+            <span class="status-pill status-active">Live</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>QR-EQ-03</strong><br />
+              Forklift 03 — Equipment Governance Record<br />
+              <span class="muted-text">Location: Warehouse Floor · Status: Live · Updated 06:14</span>
+            </div>
+            <span class="status-pill status-active">Live</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>QR-HS-01</strong><br />
+              First Aid Station — Health &amp; Safety Record<br />
+              <span class="muted-text">Location: Welfare Corridor · Status: Live · Updated 07:25</span>
+            </div>
+            <span class="status-pill status-active">Live</span>
+          </article>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>QR Requests</h3>
+
+        <div class="delivery-list">
+
+          <article class="delivery-card">
+            <div>
+              <strong>REQ-014</strong><br />
+              New QR requested for PPE Issue Point<br />
+              <span class="muted-text">Requested by: Warehouse Supervisor · Awaiting approval</span>
+            </div>
+            <span class="status-pill status-pending">Pending</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>REQ-015</strong><br />
+              Replacement QR requested for Fire Exit East<br />
+              <span class="muted-text">Reason: label worn / scan reliability reduced</span>
+            </div>
+            <span class="status-pill status-review">Review</span>
+          </article>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>QR Management Actions</h3>
+        <p>
+          Use these actions to manage QR estate changes while preserving governance and audit history.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button" href="#">Request New QR</a>
+          <a class="quiet-button" href="#">Approve QR Request</a>
+          <a class="quiet-button" href="#">Issue Replacement QR</a>
+          <a class="quiet-button" href="#">Retire QR</a>
+          <a class="quiet-button" href="#">Reassign QR</a>
+          <a class="quiet-button secondary" href="#">Other QR Issue</a>
+        </div>
+      </article>
+
+      <article class="card warning-card">
+        <h3>QR Control Rules</h3>
+        <p>
+          Operational QR points should not be moved, copied or replaced without
+          an approved Hold record update.
+        </p>
+        <ul class="workflow-list">
+          <li>New QR requests require approval before deployment.</li>
+          <li>Replacement QRs should preserve the same record link unless formally reassigned.</li>
+          <li>Retired QR codes remain visible in audit history.</li>
+          <li>Damaged, missing or unreliable QR labels should be reported immediately.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Workflow Notes</h3>
+        <ul class="workflow-list">
+          <li>QR requests can be raised from operational pages where staff identify missing point-of-need guidance.</li>
+          <li>Approved QR changes update the registry and remain visible for audit.</li>
+          <li>QR estate management supports continuity when labels are damaged, relocated or retired.</li>
+          <li>QR governance helps ensure physical scan points remain aligned with current operational records.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Linked Records</h3>
+        <ul class="document-list">
+          <li><a href="northgate-bay-a12.html"><span>Bay A12 — Goods In</span><span>→</span></a></li>
+          <li><a href="northgate-bay-c03.html"><span>Bay C03 — Dispatch</span><span>→</span></a></li>
+          <li><a href="hold-area-b.html"><span>Hold Area B — Exceptions</span><span>→</span></a></li>
+          <li><a href="northgate-forklift-03.html"><span>Forklift 03 — Equipment</span><span>→</span></a></li>
+          <li><a href="northgate-first-aid-station.html"><span>First Aid Station — H&amp;S</span><span>→</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Record Control</h3>
+        <div class="detail-grid">
+          <p><strong>Owner</strong><span class="value">Operations Administrator</span></p>
+          <p><strong>View Type</strong><span class="value">Platform Governance</span></p>
+          <p><strong>Last Updated</strong><span class="value">10:35</span></p>
+          <p><strong>Audit Status</strong><span class="value">Enabled</span></p>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Powered by IdexQR<sup>®</sup></strong>
+        <span class="footer-sub">Calm, connected operational information.</span>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
