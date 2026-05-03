@@ -1,1 +1,194 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Operational Review Queue — Hold</title>
+  <meta
+    name="description"
+    content="A Northgate Warehouse manager view for reviewing operational issues, exceptions and workflow actions raised through Hold."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <main class="wrap" id="top">
+
+    <a class="text-link" href="dashboard.html">← Back to Dashboard</a>
+
+    <section class="page-hero">
+      <p class="eyebrow">Hold / Northgate Warehouse</p>
+      <h1>Operational Review Queue</h1>
+      <p class="sub">
+        Office and manager view for monitoring live operational issues, assigning ownership,
+        tracking progress and closing workflow actions raised from the warehouse floor.
+      </p>
+
+      <div class="button-row">
+        <span class="status-pill status-active">Live Queue</span>
+        <span class="status-pill status-pending">7 Open Items</span>
+        <span class="status-pill status-review">Audit Enabled</span>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Open Items</h3>
+        <p>7</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>High Priority</h3>
+        <p>2</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Awaiting Review</h3>
+        <p>3</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Oldest Open</h3>
+        <p>4h 15m</p>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <article class="card soft-panel">
+        <h3>Active Operational Queue</h3>
+
+        <div class="delivery-list">
+
+          <article class="delivery-card">
+            <div>
+              <strong>HOLD-302</strong><br />
+              Dispatch quantity discrepancy<br />
+              <span class="muted-text">
+                Source: Bay C03 · Open 42 mins · Assigned: Dispatch Supervisor
+              </span>
+            </div>
+            <span class="status-pill status-review">Decision Needed</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>ISSUE-118</strong><br />
+              Carrier delay / no-show<br />
+              <span class="muted-text">
+                Source: Bay C03 · Open 1h 10m · Assigned: Dispatch Team
+              </span>
+            </div>
+            <span class="status-pill status-pending">In Progress</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>HOLD-301</strong><br />
+              Damaged inbound pallet<br />
+              <span class="muted-text">
+                Source: Bay A12 · Open 2h 05m · Assigned: Goods In Supervisor
+              </span>
+            </div>
+            <span class="status-pill status-review">Awaiting Review</span>
+          </article>
+
+          <article class="delivery-card">
+            <div>
+              <strong>ISSUE-119</strong><br />
+              Goods In printer intermittent<br />
+              <span class="muted-text">
+                Source: Bay A12 · Open 4h 15m · Assigned: Warehouse Office
+              </span>
+            </div>
+            <span class="status-pill status-overdue">Overdue</span>
+          </article>
+
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Priority Triage</h3>
+        <ul class="workflow-list">
+          <li><strong>High:</strong> Safety, blocked bay, dispatch-critical issue or stock control risk.</li>
+          <li><strong>Medium:</strong> Requires action but does not stop current operations.</li>
+          <li><strong>Low:</strong> Informational, minor or scheduled follow-up.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Latest Updates</h3>
+        <ul class="workflow-list">
+          <li><strong>09:48:</strong> Carrier contacted for ISSUE-118 — revised ETA requested.</li>
+          <li><strong>09:34:</strong> HOLD-301 photos reviewed by Goods In Supervisor.</li>
+          <li><strong>09:12:</strong> ISSUE-119 reassigned to Warehouse Office after printer fault continued.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Manager Actions</h3>
+        <p>
+          Use these actions to progress items while preserving the workflow audit trail.
+        </p>
+
+        <div class="button-row">
+          <a class="quiet-button" href="#">Assign Owner</a>
+          <a class="quiet-button" href="#">Add Update</a>
+          <a class="quiet-button" href="#">Mark In Progress</a>
+          <a class="quiet-button" href="#">Escalate</a>
+          <a class="quiet-button" href="#">Close / Resolve</a>
+          <a class="quiet-button secondary" href="#">Other Management Action</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Cross-Shift Visibility</h3>
+        <ul class="workflow-list">
+          <li>Open items remain visible until formally resolved.</li>
+          <li>Unresolved items carry forward into the next shift handover.</li>
+          <li>Issue age and progress status help prevent items becoming background noise.</li>
+          <li>Visible updates help ground staff see that reported issues are being handled.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Governance Notes</h3>
+        <ul class="workflow-list">
+          <li>Actions raised from Bay A12, Bay C03 and Hold Area B feed into this review queue.</li>
+          <li>Role-based visibility prevents workflows depending on one named person being present.</li>
+          <li>Updates, reassignment and closure are retained for audit and operational review.</li>
+          <li>Issue reporting should close the loop so staff understand what happened next.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Linked Views</h3>
+        <ul class="document-list">
+          <li><a href="northgate-bay-a12.html"><span>Bay A12 — Goods In</span><span>→</span></a></li>
+          <li><a href="northgate-bay-c03.html"><span>Bay C03 — Dispatch</span><span>→</span></a></li>
+          <li><a href="hold-area-b.html"><span>Hold Area B — Exceptions</span><span>→</span></a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Record Control</h3>
+        <div class="detail-grid">
+          <p><strong>Owner</strong><span class="value">Operations Manager</span></p>
+          <p><strong>View Type</strong><span class="value">Manager / Office</span></p>
+          <p><strong>Last Updated</strong><span class="value">09:52</span></p>
+          <p><strong>Audit Status</strong><span class="value">Enabled</span></p>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Powered by IdexQR<sup>®</sup></strong>
+        <span class="footer-sub">Calm, connected operational information.</span>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
