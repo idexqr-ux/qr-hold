@@ -4,6 +4,12 @@
    (To refactor into shared/global later)
 ============================== */
 
+.muted-text {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
 :root {
   --bg: #f7f6f2;
   --card: #ffffff;
