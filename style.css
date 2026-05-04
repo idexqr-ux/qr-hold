@@ -1,4 +1,9 @@
 /* Group dashboard */
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
 
 .entity-list {
   display: grid;
