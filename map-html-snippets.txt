@@ -1,0 +1,19 @@
+<!-- Add these to the relevant Hold pages after the page-header or stats-grid section -->
+
+<!-- estates-boundary-maps.html -->
+<figure class="map-card">
+  <img src="images/estate-boundary-map.svg" alt="Illustrative estate boundary map showing ownership parcels, rights of way, easements, a ransom strip and shared responsibility zones." />
+  <figcaption>Illustrative boundary layer showing ownership, access and responsibility context.</figcaption>
+</figure>
+
+<!-- estates-utility-maps.html -->
+<figure class="map-card">
+  <img src="images/estate-utility-map.svg" alt="Illustrative utility infrastructure map showing water, gas, electrical and fibre routes, isolators and an unknown duct requiring survey." />
+  <figcaption>Illustrative utility layer showing buried services, isolators and survey risks.</figcaption>
+</figure>
+
+<!-- estates-car-park-access.html -->
+<figure class="map-card">
+  <img src="images/estate-car-park-access-map.svg" alt="Illustrative car park and access map showing parking zones, contractor routes, shared ownership areas and restricted estate tracks." />
+  <figcaption>Illustrative access layer showing parking rights, permit zones and restricted routes.</figcaption>
+</figure>
