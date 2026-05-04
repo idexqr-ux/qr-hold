@@ -1,1 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hold — Group Dashboard</title>
+  <link rel="stylesheet" href="style.css?v=20" />
+</head>
 
+<body>
+  <div class="app-shell">
+
+    <aside class="sidebar">
+      <div class="brand-block">
+        <h1>Hold</h1>
+        <p>Group Governance</p>
+      </div>
+
+      <nav class="side-nav" aria-label="Hold navigation">
+        <a href="group-dashboard.html" class="active">Group Dashboard</a>
+        <a href="index.html">Operations Hub</a>
+        <a href="dashboard.html">Northgate Warehouse</a>
+        <a href="#">Entities</a>
+        <a href="#">Alerts & Risks</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="page-header">
+        <p class="eyebrow">Holding Company View</p>
+        <h2>Group Dashboard</h2>
+        <p>
+          Central visibility across all managed entities, helping leadership monitor operational
+          risk, compliance, reviews, and governance without removing local management control.
+        </p>
+      </section>
+
+      <section class="stats-grid" aria-label="Group overview">
+        <article class="stat-card">
+          <span>Total entities</span>
+          <strong>4</strong>
+          <p>Businesses connected to Hold</p>
+        </article>
+
+        <article class="stat-card warning">
+          <span>Active risk alerts</span>
+          <strong>7</strong>
+          <p>Items requiring leadership visibility</p>
+        </article>
+
+        <article class="stat-card overdue">
+          <span>Overdue reviews</span>
+          <strong>12</strong>
+          <p>Across assets, exits, and procedures</p>
+        </article>
+
+        <article class="stat-card">
+          <span>Group compliance</span>
+          <strong>91%</strong>
+          <p>Current operational governance score</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel large-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Entity Oversight</p>
+              <h3>Managed entities</h3>
+            </div>
+          </div>
+
+          <div class="entity-list">
+            <a href="dashboard.html" class="entity-row">
+              <div>
+                <strong>Northgate Warehouse</strong>
+                <p>Distribution and dispatch operations</p>
+              </div>
+              <span class="status-pill active">Healthy</span>
+            </a>
+
+            <div class="entity-row">
+              <div>
+                <strong>Quarry Division</strong>
+                <p>Extraction, weighbridge, plant and site safety</p>
+              </div>
+              <span class="status-pill review">Attention</span>
+            </div>
+
+            <div class="entity-row">
+              <div>
+                <strong>Estates Division</strong>
+                <p>Buildings, contractors, inspections and statutory notices</p>
+              </div>
+              <span class="status-pill active">Healthy</span>
+            </div>
+
+            <div class="entity-row">
+              <div>
+                <strong>Manufacturing Site A</strong>
+                <p>Production floor, equipment, access and safety controls</p>
+              </div>
+              <span class="status-pill pending">Onboarding</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Group Risk Feed</p>
+          <h3>Items needing attention</h3>
+
+          <ul class="activity-list">
+            <li>
+              <strong>Insurance-notifiable works pending</strong>
+              <span>Manufacturing Site A — Today</span>
+            </li>
+            <li>
+              <strong>Weighbridge accuracy review overdue</strong>
+              <span>Quarry Division — 2 days overdue</span>
+            </li>
+            <li>
+              <strong>Fire exit review missed</strong>
+              <span>Estates Division — Yesterday</span>
+            </li>
+            <li>
+              <strong>Forklift operator certificate expiring</strong>
+              <span>Northgate Warehouse — 14 days</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <p class="eyebrow">Governance View</p>
+          <h3>What leadership can see</h3>
+
+          <ul class="check-list">
+            <li>Which entities are up to date</li>
+            <li>Which reviews are overdue</li>
+            <li>Which risks have been escalated</li>
+            <li>Which works may need insurer notification</li>
+            <li>Which staff qualifications are expiring</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Local Control</p>
+          <h3>What entity managers keep</h3>
+
+          <ul class="check-list">
+            <li>Day-to-day site ownership</li>
+            <li>Local operational records</li>
+            <li>Staff-facing scan views</li>
+            <li>Entity-specific procedures</li>
+            <li>QR point management</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <p>Hold — governed operational visibility across connected entities.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
