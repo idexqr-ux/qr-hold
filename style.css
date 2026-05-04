@@ -1,4 +1,16 @@
 /* Group dashboard */
+.workflow-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.workflow-link:hover {
+  border-color: rgba(80, 110, 100, 0.35);
+  background: rgba(255, 255, 255, 0.78);
+}
+
 .breadcrumb {
   font-size: 0.82rem;
   color: var(--muted);
