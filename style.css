@@ -16,6 +16,15 @@
   box-shadow: 0 14px 28px rgba(70, 85, 78, 0.08);
 }
 
+.safety-map {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(28, 45, 39, 0.12);
+}
+
 .map-card img {
   width: 100%;
   display: block;
