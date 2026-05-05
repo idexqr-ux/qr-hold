@@ -1,4 +1,12 @@
-/* Maps */
+.forklift-03 {
+  left: 44%;
+  top: 52%;
+}
+
+.forklift-04 {
+  left: 58%;
+  top: 48%;
+}/* Maps */
 .map-card {
   margin: 24px 0;
   padding: 14px;
@@ -659,8 +667,13 @@ h2 {
 }
 
 .forklift-03 {
-  top: 142px;
-  left: 130px;
+  left: 420px;
+  top: 185px;
+}
+
+.forklift-04 {
+  left: 510px;
+  top: 210px;
 }
 
 .fire-exit-east {
