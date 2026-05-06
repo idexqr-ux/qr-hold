@@ -9,8 +9,8 @@
   line-height: 1.5;
 }
 
-.summary-card.warning {
-  border-left: 4px solid #d4a017;
+.stat-card.warning {
+  border-top: 3px solid #d4a017;
 }
 
 /* ==============================
