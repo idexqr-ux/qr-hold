@@ -9,8 +9,9 @@
   line-height: 1.5;
 }
 
-.stat-card.warning {
-  border-top: 3px solid #d4a017;
+.stat-card.feature-highlight {
+  border-left: 4px solid #7b9e87;
+  background: #f7fbf8;
 }
 
 /* ==============================
