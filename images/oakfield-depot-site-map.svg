@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Oakfield Depot operational site map</title>
+  <desc id="desc">Illustrative operational depot map showing buildings, drainage areas, utility corridor, access routes and QR operational points.</desc>
+
+  <rect width="1000" height="620" fill="#edf3ef"></rect>
+
+  <rect x="60" y="60" width="880" height="500" rx="28" fill="#f9fbf9" stroke="#bcc9c0" stroke-width="4"></rect>
+
+  <text x="85" y="42" font-family="Georgia, serif" font-size="28" fill="#31433b">
+    Oakfield Depot — Operational Access &amp; Infrastructure Map
+  </text>
+
+  <!-- access road -->
+  <path d="M40 500 H960" stroke="#718176" stroke-width="28" stroke-linecap="round"></path>
+
+  <text x="90" y="485" font-family="Arial" font-size="16" fill="#31433b">
+    Shared Access Route
+  </text>
+
+  <!-- depot building -->
+  <rect x="140" y="150" width="220" height="120" rx="12" fill="#d8e6de" stroke="#9db2a7"></rect>
+
+  <text x="190" y="215" font-family="Arial" font-size="20" fill="#31433b">
+    Main Depot
+  </text>
+
+  <!-- utility compound -->
+  <rect x="430" y="130" width="180" height="110" rx="12" fill="#e5e0d5" stroke="#b8aa86"></rect>
+
+  <text x="455" y="190" font-family="Arial" font-size="18" fill="#4d4738">
+    Utility Compound
+  </text>
+
+  <!-- drainage area -->
+  <ellipse cx="760" cy="210" rx="120" ry="70" fill="#dce8ef" stroke="#9db6c5"></ellipse>
+
+  <text x="700" y="215" font-family="Arial" font-size="18" fill="#344652">
+    Drainage Area
+  </text>
+
+  <!-- turning area -->
+  <rect x="310" y="360" width="280" height="100" rx="16" fill="#ece7dc" stroke="#c2b498"></rect>
+
+  <text x="365" y="418" font-family="Arial" font-size="18" fill="#534939">
+    Turning Area
+  </text>
+
+  <!-- eastern verge -->
+  <rect x="760" y="340" width="120" height="120" rx="14" fill="#dce9d8" stroke="#9fb59e"></rect>
+
+  <text x="785" y="405" font-family="Arial" font-size="16" fill="#31433b">
+    Soft Verge
+  </text>
+
+  <!-- QR points -->
+
+  <!-- QR1 -->
+  <circle cx="220" cy="290" r="16" fill="#5d7f6a"></circle>
+  <text x="248" y="296" font-family="Arial" font-size="15" fill="#31433b">
+    QR1 — Contractor Works
+  </text>
+
+  <!-- QR2 -->
+  <circle cx="520" cy="260" r="16" fill="#8b7754"></circle>
+  <text x="548" y="266" font-family="Arial" font-size="15" fill="#31433b">
+    QR2 — Utility Isolation
+  </text>
+
+  <!-- QR3 -->
+  <circle cx="760" cy="300" r="16" fill="#5d7890"></circle>
+  <text x="788" y="306" font-family="Arial" font-size="15" fill="#31433b">
+    QR3 — Drainage Inspection
+  </text>
+
+  <!-- QR4 -->
+  <circle cx="470" cy="500" r="16" fill="#8c6757"></circle>
+  <text x="498" y="506" font-family="Arial" font-size="15" fill="#31433b">
+    QR4 — Access Guidance
+  </text>
+
+  <!-- low-loader arrow -->
+  <path d="M160 520 C260 520 300 470 360 430" fill="none" stroke="#ba7f4e" stroke-width="8" stroke-linecap="round"></path>
+
+  <polygon points="350,418 382,425 360,448" fill="#ba7f4e"></polygon>
+
+  <text x="125" y="555" font-family="Arial" font-size="16" fill="#6c4425">
+    Suggested low-loader access route
+  </text>
+
+</svg>
