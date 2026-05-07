@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Millbrook Yard site map</title>
+  <desc id="desc">Illustrative map showing tenant units, shared parking, contractor entrance, welfare block, meter cabinet, loading area and left-turn-only exit.</desc>
+
+  <rect width="1000" height="620" fill="#eef4ef"></rect>
+
+  <rect x="70" y="70" width="860" height="470" rx="28" fill="#f8fbf8" stroke="#b9c9bf" stroke-width="4"></rect>
+
+  <text x="90" y="45" font-family="Georgia, serif" font-size="28" fill="#2f3f38">Millbrook Yard — Site Access &amp; Shared Responsibilities</text>
+
+  <rect x="120" y="120" width="150" height="100" rx="10" fill="#d9e7df" stroke="#9fb5aa"></rect>
+  <text x="145" y="175" font-family="Arial" font-size="18" fill="#2f3f38">Unit 1</text>
+
+  <rect x="290" y="120" width="150" height="100" rx="10" fill="#d9e7df" stroke="#9fb5aa"></rect>
+  <text x="315" y="175" font-family="Arial" font-size="18" fill="#2f3f38">Unit 2</text>
+
+  <rect x="460" y="120" width="150" height="100" rx="10" fill="#d9e7df" stroke="#9fb5aa"></rect>
+  <text x="485" y="175" font-family="Arial" font-size="18" fill="#2f3f38">Unit 3</text>
+
+  <rect x="630" y="120" width="150" height="100" rx="10" fill="#d9e7df" stroke="#9fb5aa"></rect>
+  <text x="655" y="175" font-family="Arial" font-size="18" fill="#2f3f38">Unit 4</text>
+
+  <rect x="120" y="250" width="660" height="95" rx="16" fill="#e9eee9" stroke="#b8c2bb"></rect>
+  <text x="145" y="305" font-family="Arial" font-size="18" fill="#3e4d46">Shared Circulation / Loading Area</text>
+
+  <rect x="120" y="380" width="290" height="90" rx="14" fill="#f2ead8" stroke="#cab98d"></rect>
+  <text x="145" y="430" font-family="Arial" font-size="18" fill="#4c4635">Visitor / Shared Parking</text>
+
+  <rect x="440" y="380" width="160" height="90" rx="14" fill="#e0e9f0" stroke="#a8bac8"></rect>
+  <text x="462" y="418" font-family="Arial" font-size="16" fill="#32434f">Welfare</text>
+  <text x="462" y="440" font-family="Arial" font-size="16" fill="#32434f">Facilities</text>
+
+  <rect x="630" y="380" width="150" height="90" rx="14" fill="#f1e0dd" stroke="#c6a6a0"></rect>
+  <text x="652" y="418" font-family="Arial" font-size="16" fill="#553b37">Meter</text>
+  <text x="652" y="440" font-family="Arial" font-size="16" fill="#553b37">Cabinet</text>
+
+  <path d="M70 505 H930" stroke="#6d7d73" stroke-width="22" stroke-linecap="round"></path>
+  <text x="105" y="495" font-family="Arial" font-size="16" fill="#2f3f38">Estate Access Road</text>
+
+  <path d="M930 505 C970 505 970 465 930 455" fill="none" stroke="#b77c4a" stroke-width="10" stroke-linecap="round"></path>
+  <text x="710" y="555" font-family="Arial" font-size="18" fill="#6a3f24">Exit: left turn only into traffic flow</text>
+
+  <polygon points="904,450 940,455 913,480" fill="#b77c4a"></polygon>
+
+  <circle cx="115" cy="505" r="18" fill="#6f8f7a"></circle>
+  <text x="145" y="512" font-family="Arial" font-size="16" fill="#2f3f38">Contractor / Visitor Entrance</text>
+
+  <circle cx="705" cy="380" r="9" fill="#8f5a50"></circle>
+  <text x="720" y="365" font-family="Arial" font-size="14" fill="#553b37">Sub-meter verification point</text>
+
+  <circle cx="520" cy="380" r="9" fill="#57758a"></circle>
+  <text x="535" y="365" font-family="Arial" font-size="14" fill="#32434f">Shared welfare responsibility</text>
+
+  <circle cx="270" cy="380" r="9" fill="#9b7d3b"></circle>
+  <text x="285" y="365" font-family="Arial" font-size="14" fill="#4c4635">Parking pressure area</text>
+</svg>
