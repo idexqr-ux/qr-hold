@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">South Meadow Storage operational map</title>
+  <desc id="desc">Illustrative outdoor storage map showing historic fence line, current storage markers, neighbour access track and QR operational points.</desc>
+
+  <rect width="1000" height="620" fill="#eef3ee"></rect>
+
+  <rect x="60" y="60" width="880" height="500" rx="26" fill="#f8faf8" stroke="#bcc8be" stroke-width="4"></rect>
+
+  <text x="90" y="42" font-family="Georgia, serif" font-size="28" fill="#31433b">
+    South Meadow Storage — Operational Boundary &amp; Access Map
+  </text>
+
+  <!-- historic fence line -->
+  <path d="M150 120 L840 120 L870 240 L850 420 L170 460 L130 310 Z" fill="none" stroke="#8f8f8f" stroke-width="5" stroke-dasharray="14 10"></path>
+
+  <text x="690" y="100" font-family="Arial" font-size="16" fill="#666">
+    Historic fence line
+  </text>
+
+  <!-- current marker line -->
+  <path d="M220 170 L760 170 L790 250 L770 390 L240 420 L210 300 Z" fill="none" stroke="#5f7d68" stroke-width="6"></path>
+
+  <text x="620" y="155" font-family="Arial" font-size="16" fill="#31513c">
+    Current operational markers
+  </text>
+
+  <!-- neighbour track -->
+  <rect x="70" y="500" width="860" height="40" rx="14" fill="#8d8d8d"></rect>
+
+  <text x="360" y="527" font-family="Arial" font-size="18" fill="#fff">
+    Shared Neighbour Access Track
+  </text>
+
+  <!-- storage containers -->
+  <rect x="280" y="220" width="120" height="70" rx="8" fill="#d9e4dc" stroke="#a6b6ac"></rect>
+
+  <rect x="450" y="260" width="120" height="70" rx="8" fill="#d9e4dc" stroke="#a6b6ac"></rect>
+
+  <rect x="610" y="210" width="120" height="70" rx="8" fill="#d9e4dc" stroke="#a6b6ac"></rect>
+
+  <text x="300" y="260" font-family="Arial" font-size="16" fill="#31433b">
+    Container Area
+  </text>
+
+  <!-- overgrown edge -->
+  <ellipse cx="820" cy="340" rx="80" ry="55" fill="#d8e7d5" stroke="#a3b59f"></ellipse>
+
+  <text x="775" y="345" font-family="Arial" font-size="16" fill="#3d5a41">
+    Overgrown Edge
+  </text>
+
+  <!-- soft ground -->
+  <ellipse cx="270" cy="380" rx="90" ry="45" fill="#e5dfcf" stroke="#c4b89c"></ellipse>
+
+  <text x="225" y="385" font-family="Arial" font-size="16" fill="#6b5a3e">
+    Soft Ground
+  </text>
+
+  <!-- shared gate -->
+  <rect x="470" y="500" width="60" height="40" fill="#5e6f61"></rect>
+
+  <text x="435" y="570" font-family="Arial" font-size="16" fill="#31433b">
+    Shared Gate
+  </text>
+
+  <!-- QR points -->
+
+  <!-- QR1 -->
+  <circle cx="760" cy="180" r="16" fill="#6c7f71"></circle>
+  <text x="790" y="186" font-family="Arial" font-size="15" fill="#31433b">
+    QR1 — Boundary Marker
+  </text>
+
+  <!-- QR2 -->
+  <circle cx="530" cy="470" r="16" fill="#707f91"></circle>
+  <text x="560" y="476" font-family="Arial" font-size="15" fill="#31433b">
+    QR2 — Access Track
+  </text>
+
+  <!-- QR3 -->
+  <circle cx="440" cy="210" r="16" fill="#8a7554"></circle>
+  <text x="470" y="216" font-family="Arial" font-size="15" fill="#31433b">
+    QR3 — Storage Zone
+  </text>
+
+  <!-- QR4 -->
+  <circle cx="830" cy="250" r="16" fill="#8d6057"></circle>
+  <text x="860" y="256" font-family="Arial" font-size="15" fill="#31433b">
+    QR4 — Shared Gate
+  </text>
+
+</svg>
