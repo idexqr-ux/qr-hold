@@ -12,6 +12,12 @@
   padding: 0.9rem 1rem;
 }
 
+.app-logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
 /* ==============================
    STRATA ESTATES
    ============================== */
