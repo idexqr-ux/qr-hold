@@ -1263,3 +1263,16 @@ h2 {
   font-size: 0.82rem;
   opacity: 0.75;
 }
+
+.notice-panel {
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  background: #f7fbf8;
+  border-left: 4px solid #7b9e87;
+  margin-bottom: 1.5rem;
+}
+
+.notice-panel p {
+  margin: 0;
+  line-height: 1.6;
+}
