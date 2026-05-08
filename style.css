@@ -1264,15 +1264,30 @@ h2 {
   opacity: 0.75;
 }
 
+/* ==============================
+   OPERATIONAL NOTICE PANELS
+   ============================== */
+
 .notice-panel {
   padding: 1rem 1.25rem;
   border-radius: 18px;
   background: #f7fbf8;
+  border: 1px solid rgba(123, 158, 135, 0.28);
   border-left: 4px solid #7b9e87;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.notice-panel .eyebrow {
+  margin: 0 0 0.5rem;
+}
+
+.notice-panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
 }
 
 .notice-panel p {
   margin: 0;
   line-height: 1.6;
+  color: var(--muted);
 }
