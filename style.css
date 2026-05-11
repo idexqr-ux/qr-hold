@@ -689,7 +689,7 @@ h2 {
 .dashboard-header h1 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.05;
+  line-height: 1.20;
 }
 
 .stats-grid {
