@@ -640,6 +640,14 @@ h2 {
   margin: 0;
 }
 
+.sidebar-sync-note {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #6b7d86;
+}
+
 .dashboard-main {
   padding: 36px;
 }
