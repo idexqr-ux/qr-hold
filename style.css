@@ -866,9 +866,13 @@ h2 {
   display: block;
   margin-top: 28px;
   font-size: 0.95rem;
-   color: #8f3428;
+  color: #8c3d33;
   font-weight: 600;
   animation: warningPulse 2s ease-in-out infinite;
+}
+
+.scan-header .restriction-note {
+  color: #8c3d33;
 }
 
 .scan-body {
