@@ -862,6 +862,15 @@ h2 {
    STAFF SCAN VIEW
    ============================== */
 
+.restriction-note {
+  display: block;
+  margin-top: 28px;
+  font-size: 0.95rem;
+  color: #8c3d33;
+  font-weight: 600;
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
 .scan-body {
   min-height: 100vh;
   margin: 0;
