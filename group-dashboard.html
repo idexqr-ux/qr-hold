@@ -27,8 +27,14 @@
   <a href="#">Reports <span>In Development</span></a>
   <a href="#">Settings <span>In Development</span></a>
   <a href="#">Hold Signal <span>In Development</span></a>
-</nav>
-    </aside>
+  </nav>
+
+  <div class="sidebar-operational-time">
+    <p class="sidebar-time-label">Operational time</p>
+    <p id="currentTime">Loading current time…</p>
+  </div>
+
+  </aside>
 
     <main class="main-content">
       <section class="page-header">
@@ -197,5 +203,24 @@
       </footer>
     </main>
   </div>
+  <script>
+  function updateOperationalTime() {
+    const now = new Date();
+
+    const formatted = now.toLocaleString("en-GB", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+
+    document.getElementById("currentTime").textContent = formatted;
+  }
+
+  updateOperationalTime();
+  setInterval(updateOperationalTime, 60000);
+</script>
 </body>
 </html>
