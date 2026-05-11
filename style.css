@@ -191,7 +191,7 @@
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  align-items: center;
+ align-items: flex-start;
   padding: 16px;
   border: 1px solid rgba(120, 135, 130, 0.22);
   border-radius: 18px;
