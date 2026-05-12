@@ -145,5 +145,19 @@
     Powered by IdexQR<sup>®</sup>
   </footer>
 
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const activeSite = params.get("site");
+
+  if (activeSite) {
+    const grid = document.querySelector(".dashboard-panels");
+    const selectedCard = document.querySelector(`[data-site="${activeSite}"]`);
+
+    if (grid && selectedCard) {
+      grid.prepend(selectedCard);
+    }
+  }
+</script>
+  
 </body>
 </html>
