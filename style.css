@@ -182,6 +182,26 @@
   margin-bottom: 12px;
 }
 
+.entity-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.entity-link-text {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.entity-row small {
+  display: block;
+  margin-top: 8px;
+  color: #8a9692;
+  font-size: 0.78rem;
+}
+
 .entity-list {
   display: grid;
   gap: 12px;
