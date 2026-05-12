@@ -51,7 +51,7 @@
 
       <section class="page-header">
         <p class="eyebrow">Portfolio Governance</p>
-        <h2>Operational Points</h2>
+        <h2 id="operationalTitle">Operational Points</h2>
         <p>
           QR-linked operational guidance across managed estate environments,
           supporting contractor activity, utilities oversight, access governance,
@@ -156,6 +156,21 @@
     if (grid && selectedCard) {
       grid.prepend(selectedCard);
     }
+  }
+</script>
+
+<script>
+  const siteTitles = {
+    "oakfield-depot": "Oakfield Depot Operational Points",
+    "millbrook-yard": "Millbrook Yard Operational Points",
+    "old-works-unit-7": "Old Works Unit 7 Operational Points",
+    "south-meadow": "South Meadow Storage Operational Points"
+  };
+
+  const title = document.getElementById("operationalTitle");
+
+  if (activeSite && siteTitles[activeSite] && title) {
+    title.textContent = siteTitles[activeSite];
   }
 </script>
   
