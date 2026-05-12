@@ -23,10 +23,11 @@
         <a href="group-dashboard.html">Group Dashboard</a>
 
         <p class="sidebar-section-label">Managed Sites</p>
-        <a href="millbrook-yard.html" data-site-link="millbrook-yard">Millbrook Yard</a>
+
+<a href="millbrook-yard.html" data-site-link="millbrook-yard">Millbrook Yard</a>
 <a href="oakfield-depot.html" data-site-link="oakfield-depot">Oakfield Depot</a>
 <a href="old-works-unit-7.html" data-site-link="old-works-unit-7">Old Works Unit 7</a>
-<a href="south-meadow-storage.html" data-site-link="south-meadow">South Meadow Storage</a>       
+<a href="south-meadow-storage.html" data-site-link="south-meadow">South Meadow Storage</a>  
         <a href="#">Scheduled Updates<span>In Development</span></a>  
         <a href="#">Emergency Response Pack <span>In Development</span></a>
         <a href="#">QR Management <span>In Development</span></a>       
@@ -146,24 +147,27 @@
     if (grid && selectedCard) {
       grid.prepend(selectedCard);
     }
+
+    const activeSidebarLink = document.querySelector(`[data-site-link="${activeSite}"]`);
+
+    if (activeSidebarLink) {
+      activeSidebarLink.classList.add("active");
+    }
+
+    const siteTitles = {
+      "oakfield-depot": "Oakfield Depot Operational Points",
+      "millbrook-yard": "Millbrook Yard Operational Points",
+      "old-works-unit-7": "Old Works Unit 7 Operational Points",
+      "south-meadow-storage": "South Meadow Storage Operational Points"
+    };
+
+    const title = document.getElementById("operationalTitle");
+
+    if (siteTitles[activeSite] && title) {
+      title.textContent = siteTitles[activeSite];
+    }
   }
 </script>
-
-<script>
-  const siteTitles = {
-    "oakfield-depot": "Oakfield Depot Operational Points",
-    "millbrook-yard": "Millbrook Yard Operational Points",
-    "old-works-unit-7": "Old Works Unit 7 Operational Points",
-    "south-meadow": "South Meadow Storage Operational Points"
-  };
-
-  const title = document.getElementById("operationalTitle");
-
-  if (activeSite && siteTitles[activeSite] && title) {
-    title.textContent = siteTitles[activeSite];
-  }
-</script>
-
 <script>
   const params = new URLSearchParams(window.location.search);
   const activeSite = params.get("site");
