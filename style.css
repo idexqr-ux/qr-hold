@@ -182,6 +182,21 @@
   margin-bottom: 12px;
 }
 
+.entity-row.entity-active {
+  background: rgba(230, 243, 236, 0.72);
+  border-color: #c8e3d0;
+}
+
+.entity-row.entity-review {
+  background: rgba(253, 244, 223, 0.72);
+  border-color: #f0ddb0;
+}
+
+.entity-row.entity-overdue {
+  background: rgba(251, 233, 231, 0.72);
+  border-color: #efc4bc;
+}
+
 .entity-meta {
   display: flex;
   flex-direction: column;
