@@ -305,5 +305,26 @@
 
     </main>
   </div>
+
+ <script>
+  function updateOperationalTime() {
+    const now = new Date();
+
+    const formatted = now.toLocaleString("en-GB", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+
+    document.getElementById("currentTime").textContent = formatted;
+  }
+
+  updateOperationalTime();
+  setInterval(updateOperationalTime, 60000);
+</script>
+    
 </body>
 </html>
