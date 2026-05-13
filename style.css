@@ -3,6 +3,13 @@
  --hold-operational-blue: #48616d;
 }
 
+.live-note {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #7a858a;
+}
+
 .demo-alert-button {
   margin: 0 0 1.5rem;
   padding: 0.6rem 1rem;
