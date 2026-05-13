@@ -3,6 +3,35 @@
  --hold-operational-blue: #48616d;
 }
 
+.alert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.alert-card {
+  border-left: 6px solid transparent;
+}
+
+.amber-alerts {
+  border-left-color: #c8912f;
+}
+
+.red-alerts {
+  border-left-color: #a94442;
+}
+
+.alert-card p {
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .alert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sidebar-group {
   margin: 1.2rem 0;
   padding-top: 0.9rem;
