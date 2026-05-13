@@ -3,434 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hold Dashboard — Strata Logistics</title>
-  <link rel="stylesheet" href="style.css?v=29" />
-</head>
-
-<body>
-  <div class="dashboard-layout">
-
-    <aside class="sidebar">
-      <div class="sidebar-brand">
-        <p class="sidebar-eyebrow">Hold</p>
-        <h2>Governance Platform</h2>
-        <p class="sidebar-entity">Strata Logistics</p>
-      </div>
-
-      <nav class="sidebar-nav">
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Operations</p>
-
-    <a href="dashboard.html" class="active">Entity Dashboard</a>
-    <a href="group-dashboard.html">Group Dashboard</a>
-    <a href="strata-logistics-operational-review.html">Operational Points</a>
-  </div>
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Operational Access</p>
-
-    <a href="scan-bay-a12.html">Bay A12 Scan View</a>
-    <a href="scan-bay-c03-driver.html">Bay C03 Driver View</a>
-    <a href="scan-forklift-03.html">Forklift 03 Scan View</a>
-  </div>
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Governance</p>
-
-    <a href="strata-logistics-operational-review-queue.html">Operational Review Queue</a>
-    <a href="strata-logistics-personnel-governance.html">Personnel Governance</a>
-     <a href="strata-logistics-training-competency-register.html">Training & Compentency Register</a>
-  </div>
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Equipment Governance</p>
-
-    <a href="strata-logistics-forklift-03.html">Forklift 03</a>
-    <a href="strata-logistics-forklift-04.html">Forklift 04</a>
-    <a href="strata-logistics-forklift-charging.html">Forklift Charging</a>
-  </div>
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Safety & Compliance</p>    
-    <a href="images/site-safety-evacuation-map.png">Emergency Evacuation Plan</a>
-    <a href="strata-logistics-fire-exit-east.html">Fire Exit East</a>
-    <a href="strata-logistics-first-aid-station.html">First Aid Station</a>
-    </div>
-
-  <div class="sidebar-group">
-    <p class="sidebar-label">Platform Governance</p>
-
-    <a href="strata-logistics-qr-management.html">QR Management</a>
-    <a href="scheduled-updates.html">Scheduled Updates</a>
-    <a href="strata-logistics-emergency-response-pack.html">Emergency Response Pack</a>
-  </div>
-
-  <p class="sidebar-section-label">Platform</p>
-
-  <a href="#">Reports <span>In Development</span></a>
-  <a href="#">Audit Trail <span>In Development</span></a>
-  <a href="#">Settings <span>In Development</span></a>
-  <a href="#">Hold Signal <span>In Development</span></a>
-
-</nav>
-      
-  <div class="sidebar-operational-time">
-    <p class="sidebar-time-label">Operational time</p>
-    <p id="currentTime">Loading current time…</p>
-  </div>
- 
-  </aside>
-
-    <main class="dashboard-main">
-
-      <div class="dashboard-header">
-
-  <p class="dashboard-breadcrumb">
-    Hold / Group Dashboard / Strata Logistics
-  </p>
-
-  <div class="dashboard-title-row">
-    <div>
-      <h1>Strata Logistics</h1>
-      <p class="dashboard-subtitle">
-        Managed under Hold Group Governance
-      </p>
-    </div>
-
-    <span class="dashboard-status-pill">
-      Operations Hub
-    </span>
-  </div>
-
-</div>
-      
-<section class="alert-grid">
-
-  <article class="dashboard-card alert-card amber-alerts">
-    <p class="section-kicker">Amber alerts</p>
-    <h2>Operational watch</h2>
-    <p class="section-intro">
-    <span class="alert-pill amber-pill">2 Active</span>
-    <p class="section-intro">Items affecting today’s shift that require awareness or follow-up.</p>
-
-    <div id="amberAlerts">
-      <p>Surface water build-up near outbound route — estates inspection pending.</p>
-      <p>Forklift 03 under temporary restriction — monitor dispatch recovery.</p>
-    </div>
-  </article>
-
-  <article class="dashboard-card alert-card red-alerts">
-    <p class="section-kicker">Red alerts</p>
-    <h2>Immediate attention</h2>
-    <p class="section-intro">
-    <span class="alert-pill red-pill">1 Active</span>
-
-    <p class="section-intro">Items requiring urgent operational response.</p>
-
-    <div id="redAlerts">
-      <p>No red alerts currently active.</p>
-    </div>
-  </article>
-
-</section>
-
-      <button class="demo-alert-button" onclick="moveDispatchToAmber()">
-  Demo: move dispatch issue to amber
-</button>
-      
-      <section class="dashboard-panels">
-       
-        <!-- SHIFT ORIENTATION LAYER -->
-
-<section class="dashboard-layer">
-
-  <div class="top-shift-grid">
-
-    <!-- TODAY'S OPERATIONAL ATTENTION -->
-
-    <section class="dashboard-card operational-attention">
-      <p class="section-kicker">Start of shift</p>
-      <h2>Today’s operational attention</h2>
-      <p class="section-intro">
-        Current operational conditions, restrictions and active issues affecting today’s shift.
-      </p>
-
-      <div class="attention-item">
-        <h3>Surface water build-up near outbound route</h3>
-        <p>
-          Heavy overnight rainfall has reduced drainage flow near the south loading lane,
-          causing standing surface water and slower outbound vehicle movement.
-        </p>
-        <p class="next-action">
-          <strong>Next action:</strong> Estates inspection due this morning (time TBC).
-        </p>
-      </div>
-
-      <div class="attention-item">
-        <h3>Forklift 03 under temporary restriction</h3>
-        <p>
-          Hydraulic inspection pending. Temporary routing adjustments remain active
-          during peak outbound loading.
-        </p>
-      </div>
-
-      <div class="attention-item">
-        <h3>Dispatch route adjustment</h3>
-        <p>
-          Bay C03 operating reduced dispatch volume during shutter maintenance works.
-          Temporary forklift diversion route active via the north aisle.
-        </p>
-      </div>
-    </section>
-
-    <!-- CURRENT SHIFT FLOW -->
-
-    <section class="dashboard-card shift-flow">
-      <p class="section-kicker">Warehouse flow</p>
-      <h2>Current shift flow</h2>
-      <p class="section-intro">
-        Live operational movement and warehouse activity during the current shift.
-      </p>
-
-      <div class="flow-item">
-        <h3>Inbound movement</h3>
-        <p>
-          Morning intake running steadily. Peak aggregate arrivals expected between 10:00–11:30.
-        </p>
-      </div>
-
-      <div class="flow-item">
-        <h3>Outbound dispatch</h3>
-        <p>
-          Recovery loading continuing through early shift following overnight backlog reduction.
-          Four delayed consignments remain active for morning dispatch.
-        </p>
-      </div>
-
-      <div class="flow-item">
-        <h3>Yard flow</h3>
-        <p>
-          Temporary one-way routing active around Bay C03 during maintenance works.
-          Minor outbound slowing expected during peak movement periods.
-        </p>
-      </div>
-
-      <div class="flow-item">
-        <h3>Shift continuity</h3>
-        <p>
-          Night shift reduced delayed outbound backlog from 14 loads to 4 following
-          extended overnight recovery loading.
-        </p>
-        <p class="next-action">
-          <strong>Day shift focus:</strong> Prioritise remaining consignments before midday intake peak.
-        </p>
-      </div>
-
-    </section>
-
-  </div>
-</section>
-
-
-<!-- EXPECTED MOVEMENTS -->
-
-<section class="dashboard-card expected-movements">
-  <p class="section-kicker">Operational workload</p>
-  <h2>Today’s expected movements</h2>
-  <p class="section-intro">
-    Planned inbound and outbound operational activity expected during the current shift.
-  </p>
-
-  <div class="movement-table">
-
-    <div class="movement-row">
-      <span class="movement-time">07:00–09:00</span>
-      <span class="movement-detail">
-        Recovery loading continuing from overnight shift backlog reduction.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">10:00–11:30</span>
-      <span class="movement-detail">
-        Peak aggregate intake expected across inbound bays.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">11:30–13:00</span>
-      <span class="movement-detail">
-        Increased outbound dispatch activity expected following morning intake.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">Afternoon</span>
-      <span class="movement-detail">
-        Reduced yard congestion expected following completion of peak loading period.
-      </span>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SHIFT OPERATIONAL CAPABILITY -->
-
-<section class="dashboard-card operational-capability">
-  <p class="section-kicker">Shift capability</p>
-  <h2>Current operational capability</h2>
-  <p class="section-intro">
-    Workforce, equipment and operational support currently available to sustain today’s shift.
-  </p>
-
-  <div class="capability-grid">
-
-    <!-- WORKFORCE -->
-
-    <div class="capability-card">
-      <h3>Workforce</h3>
-
-      <ul>
-        <li>Supervisor cover confirmed for early shift</li>
-        <li>Reduced forklift-certified availability until 09:30</li>
-        <li>Agency induction completed for two temporary operatives</li>
-      </ul>
-    </div>
-
-    <!-- EQUIPMENT -->
-
-    <div class="capability-card">
-      <h3>Equipment & vehicles</h3>
-
-      <ul>
-        <li>Forklift 03 operating under temporary restriction</li>
-        <li>Temporary forklift hire under review</li>
-        <li>Yard marshal vehicle unavailable pending maintenance review</li>
-      </ul>
-    </div>
-
-    <!-- SUPPORT -->
-
-    <div class="capability-card">
-      <h3>Operational support</h3>
-
-      <ul>
-        <li>Maintenance lead on-site from 08:15</li>
-        <li>Estates inspection pending (time TBC)</li>
-        <li>Drainage review to determine temporary ground reinforcement needs</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-       
-<!-- OPERATIONAL OVERVIEW -->
-
-<section class="dashboard-card operational-overview">
-  <p class="section-kicker">Platform overview</p>
-  <h2>Operational overview</h2>
-
-  <div class="overview-inline">
-
-    <div class="overview-item">
-      <span class="overview-label">Operational Points</span>
-      <span class="overview-value">10 Active</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">QR Deployments</span>
-      <span class="overview-value">10 / 10 Live</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">Scheduled Updates</span>
-      <span class="overview-value">2 Pending</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">Review Queue</span>
-      <span class="overview-value">3 Due This Week</span>
-    </div>
-
-  </div>
-</section>
-        
-    </main>
-  </div>
-
-  <footer class="footer">
-    Powered by IdexQR<sup>®</sup>
-  </footer>
-  
-<button onclick="escalateForklift()">Demo: escalate Forklift 03</button>
-
-<script>
-function escalateForklift() {
-  const amber = document.getElementById("amberAlerts");
-  const red = document.getElementById("redAlerts");
-
-  amber.innerHTML = `
-    <p>Surface water build-up near outbound route — estates inspection pending.</p>
-  `;
-
-  red.innerHTML = `
-    <p><strong>Forklift 03 breakdown reported.</strong> Outbound dispatch capacity reduced. Temporary hire decision required.</p>
-  `;
-}
-</script>
-  
-  <script>
-  function updateOperationalTime() {
-    const now = new Date();
-
-    const formatted = now.toLocaleString("en-GB", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
-
-    document.getElementById("currentTime").textContent = formatted;
-  }
-
-  updateOperationalTime();
-  setInterval(updateOperationalTime, 60000);
-</script>
-  
-<script>
-setTimeout(() => {
-  const amber = document.getElementById("amberAlerts");
-
-  amber.innerHTML = `
-    <p>
-      <strong>Dispatch queue pressure rising.</strong>
-      Bay C03 outbound flow affected by delayed vehicle turnaround.
-      Monitor before midday peak.
-    </p>
-
-    <p class="live-note">
-      Updated just now from Dispatch Queue
-    </p>
-  `;
-}, 5000);
-</script>
-  
-</body>
-</html>
-
-
-
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hold Dashboard — Strata Estates</title>
-  <link rel="stylesheet" href="style.css?v=27" />
+  <link rel="stylesheet" href="style.css?v=29" />
 </head>
 
 <body>
@@ -443,170 +17,323 @@ setTimeout(() => {
         <p class="sidebar-entity">Strata Estates</p>
       </div>
 
-     <nav class="sidebar-nav">
-  <a href="estates-dashboard.html" class="active">Sites Dashboard</a>
-  <a href="group-dashboard.html">Group Dashboard</a>
+      <nav class="sidebar-nav">
 
-  <p class="sidebar-section-label">Managed Sites</p>
-  <a href="millbrook-yard.html">Millbrook Yard</a>
-  <a href="oakfield-depot.html">Oakfield Depot</a>
-  <a href="old-works-unit-7.html">Old Works Unit 7</a>
-  <a href="south-meadow-storage.html">South Meadow Storage</a>       
-  <p class="sidebar-section-label">Governance</p>
-  <a href="strata-estates-operational-points.html">Operational Points</a>
-  <a href="strata-estates-scheduled-updates.html">Scheduled Updates</a>
-  <a href="#">Emergency Response Pack <span>In Development</span></a>
-  <a href="#">QR Management <span>In Development</span></a>
-       <p class="sidebar-section-label">Platform</p>
-  <a href="#">Reports <span>In Development</span></a>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Operations</p>
+          <a href="estates-dashboard.html" class="active">Entity Dashboard</a>
+          <a href="group-dashboard.html">Group Dashboard</a>
+          <a href="strata-estates-operational-points.html">Operational Points</a>
+        </div>
+
+        <div class="sidebar-group">
+          <p class="sidebar-label">Managed Sites</p>
+          <a href="millbrook-yard.html">Millbrook Yard</a>
+          <a href="oakfield-depot.html">Oakfield Depot</a>
+          <a href="old-works-unit-7.html">Old Works Unit 7</a>
+          <a href="south-meadow-storage.html">South Meadow Storage</a>
+        </div>
+
+        <div class="sidebar-group">
+          <p class="sidebar-label">Platform Governance</p>
+          <a href="strata-estates-scheduled-updates.html">Scheduled Updates</a>
+          <a href="#">Emergency Response Pack <span>In Development</span></a>
+          <a href="#">QR Management <span>In Development</span></a>
+        </div>
+
+        <p class="sidebar-section-label">Platform</p>
+
+        <a href="#">Reports <span>In Development</span></a>
         <a href="#">Audit Trail <span>In Development</span></a>
         <a href="#">Settings <span>In Development</span></a>
-        <a href="#">Hold Signal <span>In Development</span></a>     
-</nav>
+        <a href="#">Hold Signal <span>In Development</span></a>
 
-  <div class="sidebar-operational-time">
-    <p class="sidebar-time-label">Operational time</p>
-    <p id="currentTime">Loading current time…</p>
-  </div>
+      </nav>
 
-  </aside>
+      <div class="sidebar-operational-time">
+        <p class="sidebar-time-label">Operational time</p>
+        <p id="currentTime">Loading current time…</p>
+      </div>
+    </aside>
 
     <main class="dashboard-main">
 
-      <p class="breadcrumb">Hold / Group Dashboard / Strata Estates</p>
+      <div class="dashboard-header">
+        <p class="dashboard-breadcrumb">
+          Hold / Group Dashboard / Strata Estates
+        </p>
 
-      <section class="page-header">
-        <p class="eyebrow">Group View</p>
-        <h2>Strata Estates</h2>
-        <p>Managed under Hold Group Governance</p>
+        <div class="dashboard-title-row">
+          <div>
+            <h1>Strata Estates</h1>
+            <p class="dashboard-subtitle">
+              Managed under Hold Group Governance
+            </p>
+          </div>
+
+          <span class="dashboard-status-pill">
+            Operations Hub
+          </span>
+        </div>
+      </div>
+
+      <section class="alert-grid">
+
+        <article class="dashboard-card alert-card amber-alerts">
+          <p class="section-kicker">Amber alerts</p>
+          <h2>Operational watch</h2>
+          <span class="alert-pill amber-pill">2 Active</span>
+          <p class="section-intro">
+            Items affecting today’s estate activity that require awareness or follow-up.
+          </p>
+
+          <div id="amberAlerts">
+            <p>East service lane drainage survey in progress — visitor parking temporarily redirected.</p>
+            <p>Water hygiene inspection pending — North Wing plant room.</p>
+          </div>
+        </article>
+
+        <article class="dashboard-card alert-card red-alerts">
+          <p class="section-kicker">Red alerts</p>
+          <h2>Immediate attention</h2>
+          <span class="alert-pill red-pill">0 Active</span>
+          <p class="section-intro">
+            Items requiring urgent operational response.
+          </p>
+
+          <div id="redAlerts">
+            <p>No red alerts currently active.</p>
+          </div>
+        </article>
+
       </section>
 
-      <header class="dashboard-header">
-        <div>
-          <p class="dashboard-label">Operations Hub</p>
-          <h1>Dashboard</h1>
-        </div>
-      </header>
+      <section class="dashboard-layer">
+        <div class="top-shift-grid">
 
-      <section class="notice-panel">
-  <p class="eyebrow">Contractor Works Advisory</p>
+          <section class="dashboard-card operational-attention">
+            <p class="section-kicker">Start of shift</p>
+            <h2>Today’s operational attention</h2>
+            <p class="section-intro">
+              Current estate conditions, contractor works and compliance items affecting today’s activity.
+            </p>
 
-  <h3>
-    <a href="scan-east-service-lane-contractor.html" class="inline-link">
-      East service lane drainage survey
-    </a>
-  </h3>
+            <div class="attention-item">
+              <h3>East service lane drainage survey</h3>
+              <p>
+                Contractor drainage investigation remains active near the east service lane.
+                Temporary visitor rerouting remains in place.
+              </p>
+              <p class="next-action">
+                <strong>Next action:</strong> Estates review due following contractor site report.
+              </p>
+            </div>
 
-  <p>
-    Drainage survey works are in progress near the east service lane.
-    Visitor parking is temporarily redirected to the north compound.
-  </p>
-</section>
+            <div class="attention-item">
+              <h3>Water hygiene inspection pending</h3>
+              <p>
+                North Wing plant room inspection remains due this week under statutory compliance schedule.
+              </p>
+            </div>
 
-      <section class="stats-grid">
-        <div class="stat-card">
-          <h3>Buildings Managed</h3>
-          <p>24 Active</p>
-        </div>
+            <div class="attention-item">
+              <h3>Boundary map update requested</h3>
+              <p>
+                Estate drawing revision pending following recent service trench works near shared access boundary.
+              </p>
+            </div>
+          </section>
 
-        <div class="stat-card">
-          <h3>Contractor Permits</h3>
-          <p>6 Live</p>
-        </div>
+          <section class="dashboard-card shift-flow">
+            <p class="section-kicker">Estate operations</p>
+            <h2>Current operational flow</h2>
+            <p class="section-intro">
+              Live estate activity, contractor movement and operational site conditions during the current shift.
+            </p>
 
-        <div class="stat-card">
-          <h3>Compliance Reviews</h3>
-          <p>4 Due</p>
-        </div>
+            <div class="flow-item">
+              <h3>Contractor activity</h3>
+              <p>
+                Drainage survey works active at Millbrook Yard east service lane.
+              </p>
+            </div>
 
-        <div class="stat-card">
-          <h3>Open Estate Risks</h3>
-          <p>2 Flagged</p>
+            <div class="flow-item">
+              <h3>Site access</h3>
+              <p>
+                Temporary vehicle rerouting remains active near contractor working area.
+              </p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Compliance activity</h3>
+              <p>
+                Fire evacuation review and water hygiene inspection both remain active this week.
+              </p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Shift continuity</h3>
+              <p>
+                Overnight estates review confirmed no escalation required following contractor works handover.
+              </p>
+            </div>
+          </section>
+
         </div>
       </section>
 
-      <section class="content-grid">
+      <section class="dashboard-card expected-movements">
+        <p class="section-kicker">Operational workload</p>
+        <h2>Today’s expected movements</h2>
+        <p class="section-intro">
+          Planned contractor activity, estate checks and compliance follow-up expected during the current shift.
+        </p>
 
-     <details class="panel collapsible-panel">
-  <summary>
-  <p class="eyebrow">Portfolio Overview</p>
-  <h3>Managed Sites</h3>
-  </summary>
+        <div class="movement-table">
 
-  <p>
-    Four active estate environments managed under shared governance oversight,
-    covering contractor activity, utilities, access routes, statutory compliance
-    and operational land management.
-  </p>
-     </details>
+          <div class="movement-row">
+            <span class="movement-time">07:00–09:00</span>
+            <span class="movement-detail">
+              Contractor arrival and drainage survey setup activity.
+            </span>
+          </div>
 
-        <details class="panel collapsible-panel">
-  <summary>
-  <p class="eyebrow">Operational Governance</p>
-  <h3>Operational Points</h3>
-  </summary>
-    
-  <p>
-    Operational QR points are managed across all estate sites through
-    centralised portfolio oversight and site-specific governance controls.
-  </p>
-        </details>
-        
-        <details class="panel collapsible-panel">
-  <summary>
-          <p class="eyebrow">Governance Focus</p>
-          <h3>Current Review Items</h3>
-  </summary>
-    
-          <ul class="activity-list">
-            <li>
-              <strong>Fire evacuation review due</strong>
-              <span>Main Building — This Week</span>
-            </li>
-            <li>
-              <strong>Contractor RAMS awaiting approval</strong>
-              <span>Roof Access Works</span>
-            </li>
-            <li>
-              <strong>Water hygiene inspection pending</strong>
-              <span>North Wing Plant Room</span>
-            </li>
-            <li>
-  <strong>
-  <a href="estates-boundary-maps.html" class="inline-link">
-    Boundary map update requested
-  </a>
-</strong>
+          <div class="movement-row">
+            <span class="movement-time">09:00–11:30</span>
+            <span class="movement-detail">
+              Site inspection activity across operational estate environments.
+            </span>
+          </div>
 
-<span>
-  Recent service trench works — carried forward pending revised estate drawing confirmation
-</span>
-</li>
-          </ul>
-        </details>
+          <div class="movement-row">
+            <span class="movement-time">11:30–13:00</span>
+            <span class="movement-detail">
+              Planned compliance review follow-up and contractor coordination.
+            </span>
+          </div>
 
+          <div class="movement-row">
+            <span class="movement-time">Afternoon</span>
+            <span class="movement-detail">
+              Estate documentation updates and operational review carry-forward assessment.
+            </span>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card operational-capability">
+        <p class="section-kicker">Shift capability</p>
+        <h2>Current operational capability</h2>
+        <p class="section-intro">
+          Workforce, access control and operational support currently available to sustain today’s estate activity.
+        </p>
+
+        <div class="capability-grid">
+
+          <div class="capability-card">
+            <h3>Workforce</h3>
+            <ul>
+              <li>Estates management cover confirmed</li>
+              <li>Contractor supervision available on-site</li>
+              <li>Visitor access coordination active</li>
+            </ul>
+          </div>
+
+          <div class="capability-card">
+            <h3>Infrastructure & access</h3>
+            <ul>
+              <li>Temporary rerouting active at east service lane</li>
+              <li>Operational signage deployed</li>
+              <li>Shared access controls operating normally</li>
+            </ul>
+          </div>
+
+          <div class="capability-card">
+            <h3>Operational support</h3>
+            <ul>
+              <li>Drainage contractor on-site this morning</li>
+              <li>Water hygiene inspection pending</li>
+              <li>Boundary drawing review awaiting confirmation</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card operational-overview">
+        <p class="section-kicker">Platform overview</p>
+        <h2>Operational overview</h2>
+
+        <div class="overview-inline">
+
+          <div class="overview-item">
+            <span class="overview-label">Buildings Managed</span>
+            <span class="overview-value">24 Active</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Contractor Permits</span>
+            <span class="overview-value">6 Live</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Compliance Reviews</span>
+            <span class="overview-value">4 Due</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Open Estate Risks</span>
+            <span class="overview-value">2 Flagged</span>
+          </div>
+
+        </div>
       </section>
 
     </main>
   </div>
+
+  <footer class="footer">
+    Powered by IdexQR<sup>®</sup>
+  </footer>
+
   <script>
-  function updateOperationalTime() {
-    const now = new Date();
+    function updateOperationalTime() {
+      const now = new Date();
 
-    const formatted = now.toLocaleString("en-GB", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+      const formatted = now.toLocaleString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
 
-    document.getElementById("currentTime").textContent = formatted;
-  }
+      document.getElementById("currentTime").textContent = formatted;
+    }
 
-  updateOperationalTime();
-  setInterval(updateOperationalTime, 60000);
-</script>
+    updateOperationalTime();
+    setInterval(updateOperationalTime, 60000);
+  </script>
+
+  <script>
+    setTimeout(() => {
+      const amber = document.getElementById("amberAlerts");
+
+      amber.innerHTML = `
+        <p>
+          <strong>Contractor access update received.</strong>
+          East service lane drainage team now on-site. Visitor parking diversion remains active.
+        </p>
+
+        <p class="live-note">
+          Updated just now from Millbrook Yard Operational Point
+        </p>
+      `;
+    }, 5000);
+  </script>
+
 </body>
 </html>
