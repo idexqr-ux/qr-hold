@@ -3,6 +3,18 @@
  --hold-operational-blue: #48616d;
 }
 
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--hold-operational-blue);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
 .live-note {
   margin-top: 0.4rem;
   font-size: 0.78rem;
