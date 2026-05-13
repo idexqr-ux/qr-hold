@@ -1,6 +1,6 @@
 /* OPERATIONAL OVERVIEW */
 :root {
-  --hold-operational-blue: #587380;
+ --hold-operational-blue: #48616d;
 }
 
 .operational-overview {
@@ -138,7 +138,11 @@
   color: var(--hold-operational-blue);
 }
 
-.dashboard-card h2,
+.dashboard-card h2 {
+  color: #2f3e46;
+  font-weight: 700;
+}
+
 .dashboard-card h3 {
   color: var(--hold-operational-blue);
 }
@@ -149,6 +153,11 @@
   border-radius: 24px;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.dashboard-card p,
+.dashboard-card li {
+  color: #4a4a4a;
 }
 
 .top-shift-grid {
