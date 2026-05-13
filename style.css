@@ -3,6 +3,44 @@
  --hold-operational-blue: #48616d;
 }
 
+.dashboard-header {
+  margin-bottom: 1.8rem;
+}
+
+.dashboard-breadcrumb {
+  font-size: 0.82rem;
+  color: #748086;
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-title-row h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2f3e46;
+}
+
+.dashboard-subtitle {
+  margin-top: 0.25rem;
+  font-style: italic;
+  color: #667276;
+}
+
+.dashboard-status-pill {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: #edf4f1;
+  color: var(--hold-operational-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .section-intro {
   text-align: center;
   font-style: italic;
