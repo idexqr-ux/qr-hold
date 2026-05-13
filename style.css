@@ -284,6 +284,18 @@
  letter-spacing: 0.01em;
 }
 
+/* Alert card emphasis — must sit after .dashboard-card */
+
+.dashboard-card.alert-card.amber-alerts {
+  border: 2px solid #d1a24c;
+  border-left: 8px solid #c8912f;
+}
+
+.dashboard-card.alert-card.red-alerts {
+  border: 2px solid #c97d7d;
+  border-left: 8px solid #a94442;
+}
+
 .top-shift-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
