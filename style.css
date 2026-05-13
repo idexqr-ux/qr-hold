@@ -133,8 +133,14 @@
 
 .flow-item p,
 .attention-item p {
-  margin-top: 0.45rem;
-  margin-bottom: 1rem;
+ text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.next-action {
+  text-align: left;
 }
 
 .section-intro {
