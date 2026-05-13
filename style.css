@@ -42,6 +42,13 @@
   margin-top: 1rem;
 }
 
+.flow-item h3,
+.attention-item h3,
+.capability-card h3 {
+  color: var(--hold-operational-blue);
+  font-weight: 700;
+}
+
 .workflow-card {
   background: #ffffff;
   border: 1px solid rgba(84, 84, 84, 0.08);
