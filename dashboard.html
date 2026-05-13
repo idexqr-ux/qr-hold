@@ -402,11 +402,29 @@ function escalateForklift() {
 
   <script>
 function moveDispatchToAmber() {
+
   const amber = document.getElementById("amberAlerts");
 
-  amber.innerHTML += `
-    <p><strong>Dispatch queue pressure rising.</strong> Bay C03 outbound flow affected by delayed vehicle turnaround. Monitor before midday peak.</p>
+  amber.innerHTML = `
+    <p>
+      <strong>Dispatch queue pressure rising.</strong>
+      Bay C03 outbound flow affected by delayed vehicle turnaround.
+      Monitor before midday peak.
+    </p>
   `;
+
+  setTimeout(() => {
+    amber.innerHTML = `
+      <p>
+        Surface water build-up near outbound route — estates inspection pending.
+      </p>
+
+      <p>
+        Forklift 03 under temporary restriction — monitor dispatch recovery.
+      </p>
+    `;
+  }, 10000);
+
 }
 </script>
 </body>
