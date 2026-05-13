@@ -1,3 +1,91 @@
+/* Logistics dashboard shift orientation */
+@media (max-width: 900px) {
+
+  .top-shift-grid,
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movement-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.capability-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1rem;
+  border: 1px solid rgba(84, 84, 84, 0.08);
+}
+
+.movement-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.movement-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid rgba(84, 84, 84, 0.08);
+}
+
+.movement-time {
+  font-weight: 600;
+  color: #3f5f69;
+}
+
+.attention-item,
+.flow-item {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(84, 84, 84, 0.08);
+}
+
+.attention-item:first-child,
+.flow-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.section-intro {
+  margin-bottom: 1.25rem;
+  color: #545454;
+  line-height: 1.5;
+}
+
+.section-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #587380;
+}
+
+.dashboard-card {
+  background: #f8faf8;
+  border: 1px solid rgba(84, 84, 84, 0.12);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.top-shift-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+/* Logistics dashboard shift orientation */
+
 .map-details {
   margin: 1rem 0 1.5rem;
 }
