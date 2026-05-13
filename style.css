@@ -1981,3 +1981,26 @@ h2 {
   display: inline-block;
   margin: 0.2rem auto 0;
 }
+
+/* FINAL SIDEBAR LINK FIX */
+
+.sidebar-nav .sidebar-group {
+  display: block;
+}
+
+.sidebar-nav .sidebar-group a {
+  display: block !important;
+  width: 100%;
+  padding: 0.45rem 0 !important;
+  margin: 0;
+  border-radius: 0;
+  background: transparent !important;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #556266 !important;
+  text-decoration: none;
+}
+
+.sidebar-nav .sidebar-group a:hover {
+  color: var(--hold-operational-blue) !important;
+}
