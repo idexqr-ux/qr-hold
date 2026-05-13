@@ -19,13 +19,13 @@
 
 .amber-alerts {
   background: #fff4dc;
-  border: 1px solid #e3b75f;
+  border: 2px solid #d1a24c;
   border-top: 8px solid #c8912f;
 }
 
 .red-alerts {
   background: #fbeaea;
-  border: 1px solid #d58b8b;
+  border: 2px solid #d1a24c;
   border-top: 8px solid #a94442;
 }
 
