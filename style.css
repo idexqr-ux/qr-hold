@@ -49,6 +49,11 @@
   line-height: 1.65;
 }
 
+.alert-card .section-intro {
+  color: #434343;
+  font-weight: 500;
+}
+
 .alert-pill {
   display: inline-block;
   padding: 0.28rem 0.7rem;
