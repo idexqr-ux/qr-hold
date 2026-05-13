@@ -11,17 +11,30 @@
 }
 
 .alert-card {
-  border-left: 6px solid transparent;
+  position: relative;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .amber-alerts {
-  border-left: 6px solid #c8912f;
-  background: #fcf8ef;
+  background: #fff4dc;
+  border: 1px solid #e3b75f;
+  border-top: 8px solid #c8912f;
 }
 
 .red-alerts {
-  border-left: 6px solid #a94442;
-  background: #faf1f1;
+  background: #fbeaea;
+  border: 1px solid #d58b8b;
+  border-top: 8px solid #a94442;
+}
+
+#amberAlerts p,
+#redAlerts p {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  padding: 0.75rem 0.9rem;
+  margin: 0.7rem 0;
 }
 
 .amber-alerts h2 {
