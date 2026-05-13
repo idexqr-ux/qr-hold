@@ -3,6 +3,14 @@
  --hold-operational-blue: #48616d;
 }
 
+.section-intro {
+  text-align: center;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
 .operational-overview {
   margin-top: 2rem;
 }
@@ -133,7 +141,6 @@
 
 .flow-item p,
 .attention-item p {
- text-align: center;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
