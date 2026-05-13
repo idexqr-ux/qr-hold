@@ -3,6 +3,17 @@
  --hold-operational-blue: #48616d;
 }
 
+.demo-alert-button {
+  margin: 0 0 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #d1a24c;
+  background: #fff8ea;
+  color: #8a6118;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .dashboard-header {
   margin-bottom: 1.8rem;
 }
