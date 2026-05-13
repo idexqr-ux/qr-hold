@@ -97,7 +97,32 @@
           <h1>Dashboard</h1>
         </div>
       </header>
-           
+
+<section class="alert-grid">
+
+  <article class="dashboard-card alert-card amber-alerts">
+    <p class="section-kicker">Amber alerts</p>
+    <h2>Operational watch</h2>
+    <p class="section-intro">Items affecting today’s shift that require awareness or follow-up.</p>
+
+    <div id="amberAlerts">
+      <p>Surface water build-up near outbound route — estates inspection pending.</p>
+      <p>Forklift 03 under temporary restriction — monitor dispatch recovery.</p>
+    </div>
+  </article>
+
+  <article class="dashboard-card alert-card red-alerts">
+    <p class="section-kicker">Red alerts</p>
+    <h2>Immediate attention</h2>
+    <p class="section-intro">Items requiring urgent operational response.</p>
+
+    <div id="redAlerts">
+      <p>No red alerts currently active.</p>
+    </div>
+  </article>
+
+</section>
+      
       <section class="dashboard-panels">
        
         <!-- SHIFT ORIENTATION LAYER -->
@@ -322,6 +347,24 @@
   <footer class="footer">
     Powered by IdexQR<sup>®</sup>
   </footer>
+  
+<button onclick="escalateForklift()">Demo: escalate Forklift 03</button>
+
+<script>
+function escalateForklift() {
+  const amber = document.getElementById("amberAlerts");
+  const red = document.getElementById("redAlerts");
+
+  amber.innerHTML = `
+    <p>Surface water build-up near outbound route — estates inspection pending.</p>
+  `;
+
+  red.innerHTML = `
+    <p><strong>Forklift 03 breakdown reported.</strong> Outbound dispatch capacity reduced. Temporary hire decision required.</p>
+  `;
+}
+</script>
+  
   <script>
   function updateOperationalTime() {
     const now = new Date();
