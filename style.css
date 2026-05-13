@@ -3,6 +3,19 @@
  --hold-operational-blue: #48616d;
 }
 
+.sidebar-group {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hold-operational-blue);
+  font-weight: 700;
+}
+
 .section-intro {
   text-align: center;
   max-width: 85%;
