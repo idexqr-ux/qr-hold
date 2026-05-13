@@ -3,6 +3,14 @@
  --hold-operational-blue: #48616d;
 }
 
+.section-intro {
+  text-align: center;
+  font-style: italic;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: #667276;
+}
+
 .alert-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
