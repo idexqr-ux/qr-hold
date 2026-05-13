@@ -399,10 +399,9 @@ function escalateForklift() {
   updateOperationalTime();
   setInterval(updateOperationalTime, 60000);
 </script>
-
-  <script>
-function moveDispatchToAmber() {
-
+  
+<script>
+setTimeout(() => {
   const amber = document.getElementById("amberAlerts");
 
   amber.innerHTML = `
@@ -411,21 +410,13 @@ function moveDispatchToAmber() {
       Bay C03 outbound flow affected by delayed vehicle turnaround.
       Monitor before midday peak.
     </p>
+
+    <p class="live-note">
+      Updated just now from Dispatch Queue
+    </p>
   `;
-
-  setTimeout(() => {
-    amber.innerHTML = `
-      <p>
-        Surface water build-up near outbound route — estates inspection pending.
-      </p>
-
-      <p>
-        Forklift 03 under temporary restriction — monitor dispatch recovery.
-      </p>
-    `;
-  }, 10000);
-
-}
+}, 5000);
 </script>
+  
 </body>
 </html>
