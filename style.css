@@ -131,6 +131,12 @@
   padding-top: 0;
 }
 
+.flow-item p,
+.attention-item p {
+  margin-top: 0.45rem;
+  margin-bottom: 1rem;
+}
+
 .section-intro {
   margin-bottom: 1.25rem;
   color: #545454;
@@ -165,6 +171,8 @@
 .dashboard-card p,
 .dashboard-card li {
   color: #4a4a4a;
+ line-height: 1.65;
+ letter-spacing: 0.01em;
 }
 
 .top-shift-grid {
