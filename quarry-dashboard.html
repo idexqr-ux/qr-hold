@@ -19,562 +19,319 @@
 
       <nav class="sidebar-nav">
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Operations</p>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Operations</p>
+          <a href="quarry-dashboard.html" class="active">Entity Dashboard</a>
+          <a href="group-dashboard.html">Group Dashboard</a>
+          <a href="quarry-operational-points.html">Operational Points</a>
+        </div>
 
-    <a href="quarry-dashboard.html" class="active">Entity Dashboard</a>
-    <a href="group-dashboard.html">Group Dashboard</a>
-    <a href="strata-logistics-operational-review.html">Operational Points</a>
-  </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Operational Access</p>
+          <a href="quarry-operational-points.html">Operational Points</a>
+        </div>
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Operational Access</p>
-    <a href="quarry-operational-points.html">Operational Points</a>
-    
-  </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Equipment Governance</p>
+          <a href="quarry-stockyard.html">Stockyard</a>
+          <a href="quarry-weighbridge.html">Weighbridge</a>
+          <a href="quarry-crusher.html">Crusher</a>
+          <a href="forklift-08.html">Forklift 08</a>
+        </div>
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Governance</p>
-    
-  </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Safety & Compliance</p>
+          <a href="quarry-emergency-response.html">Emergency Response Pack</a>
+          <a href="quarry-fuel-hazard-store.html">Fuel / Hazard Store</a>
+        </div>
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Equipment Governance</p>
-    <a href="quarry-stockyard.html">Stockyard</a>
-    <a href="quarry-weighbridge.html">Weighbridge</a>
-    <a href="quarry-crusher.html">Crusher</a>
-     <a href="forklift-08.html">Forklift 08</a>
-  </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Platform Governance</p>
+          <a href="quarry-qr-management.html">QR Management</a>
+          <a href="quarry-environmental-monitoring.html">Environmental Monitoring</a>
+          <a href="quarry-scheduled-updates.html">Scheduled Updates</a>
+        </div>
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Safety & Compliance</p>    
-      <a href="quarry-emergency-response.html">Emergency Response Pack</a>
-    <a href="quarry-fuel-hazard-store.html">Stockyard</a>
-    </div>
+        <p class="sidebar-section-label">Platform</p>
 
-  <div class="sidebar-group">
-    <p class="sidebar-label">Platform Governance</p>
-    <a href="quarry-qr-management.html">QR Management</a>
-    <a href="quarry-environmental-monitoring.html">Environmental Monitoring</a>
-   <a href="quarry-scheduled-updates.html">Scheduled Updates</a>
-    <a href="quarry-operational-points.html">Operational Points</a>
-   
-  </div>
+        <a href="#">Reports <span>In Development</span></a>
+        <a href="#">Audit Trail <span>In Development</span></a>
+        <a href="#">Settings <span>In Development</span></a>
+        <a href="#">Hold Signal <span>In Development</span></a>
 
-  <p class="sidebar-section-label">Platform</p>
+      </nav>
 
-  <a href="#">Reports <span>In Development</span></a>
-  <a href="#">Audit Trail <span>In Development</span></a>
-  <a href="#">Settings <span>In Development</span></a>
-  <a href="#">Hold Signal <span>In Development</span></a>
-
-</nav>
-      
-  <div class="sidebar-operational-time">
-    <p class="sidebar-time-label">Operational time</p>
-    <p id="currentTime">Loading current time…</p>
-  </div>
- 
-  </aside>
+      <div class="sidebar-operational-time">
+        <p class="sidebar-time-label">Operational time</p>
+        <p id="currentTime">Loading current time…</p>
+        <p class="sidebar-sync-note">
+          Some operational updates may appear later in low-signal areas.
+        </p>
+      </div>
+    </aside>
 
     <main class="dashboard-main">
 
       <div class="dashboard-header">
-
-  <p class="dashboard-breadcrumb">
-    Hold / Group Dashboard / Strata Aggregates
-  </p>
-
-  <div class="dashboard-title-row">
-    <div>
-      <h1>Strata Aggregates</h1>
-      <p class="dashboard-subtitle">
-        Managed under Hold Group Governance
-      </p>
-    </div>
-
-    <span class="dashboard-status-pill">
-      Operations Hub
-    </span>
-  </div>
-
-</div>
-      
-<section class="alert-grid">
-
-  <article class="dashboard-card alert-card amber-alerts">
-    <p class="section-kicker">Amber alerts</p>
-    <h2>Operational watch</h2>
-    <p class="section-intro">
-    <span class="alert-pill amber-pill">2 Active</span>
-    <p class="section-intro">Items affecting today’s shift that require awareness or follow-up.</p>
-
-    <div id="amberAlerts">
-      <p>Surface water build-up near outbound route — estates inspection pending.</p>
-      <p>Forklift 03 under temporary restriction — monitor dispatch recovery.</p>
-    </div>
-  </article>
-
-  <article class="dashboard-card alert-card red-alerts">
-    <p class="section-kicker">Red alerts</p>
-    <h2>Immediate attention</h2>
-    <p class="section-intro">
-    <span class="alert-pill red-pill">1 Active</span>
-
-    <p class="section-intro">Items requiring urgent operational response.</p>
-
-    <div id="redAlerts">
-      <p>No red alerts currently active.</p>
-    </div>
-  </article>
-
-</section>
-
-      <button class="demo-alert-button" onclick="moveDispatchToAmber()">
-  Demo: move dispatch issue to amber
-</button>
-      
-      <section class="dashboard-panels">
-       
-        <!-- SHIFT ORIENTATION LAYER -->
-
-<section class="dashboard-layer">
-
-  <div class="top-shift-grid">
-
-    <!-- TODAY'S OPERATIONAL ATTENTION -->
-
-    <section class="dashboard-card operational-attention">
-      <p class="section-kicker">Start of shift</p>
-      <h2>Today’s operational attention</h2>
-      <p class="section-intro">
-        Current operational conditions, restrictions and active issues affecting today’s shift.
-      </p>
-
-      <div class="attention-item">
-        <h3>Surface water build-up near outbound route</h3>
-        <p>
-          Heavy overnight rainfall has reduced drainage flow near the south loading lane,
-          causing standing surface water and slower outbound vehicle movement.
+        <p class="dashboard-breadcrumb">
+          Hold / Group Dashboard / Strata Aggregates
         </p>
-        <p class="next-action">
-          <strong>Next action:</strong> Estates inspection due this morning (time TBC).
-        </p>
+
+        <div class="dashboard-title-row">
+          <div>
+            <h1>Strata Aggregates</h1>
+            <p class="dashboard-subtitle">
+              Managed under Hold Group Governance
+            </p>
+          </div>
+
+          <span class="dashboard-status-pill">
+            Operations Hub
+          </span>
+        </div>
       </div>
 
-      <div class="attention-item">
-        <h3>Forklift 03 under temporary restriction</h3>
-        <p>
-          Hydraulic inspection pending. Temporary routing adjustments remain active
-          during peak outbound loading.
+      <section class="alert-grid">
+
+        <article class="dashboard-card alert-card amber-alerts">
+          <p class="section-kicker">Amber alerts</p>
+          <h2>Operational watch</h2>
+          <span class="alert-pill amber-pill">2 Active</span>
+          <p class="section-intro">
+            Items affecting today’s shift that require awareness or follow-up.
+          </p>
+
+          <div id="amberAlerts">
+            <p>Lower stockyard surface advisory — use designated plant routes pending inspection.</p>
+            <p>Weighbridge calibration due within 3 days — monitor ticketing accuracy.</p>
+          </div>
+        </article>
+
+        <article class="dashboard-card alert-card red-alerts">
+          <p class="section-kicker">Red alerts</p>
+          <h2>Immediate attention</h2>
+          <span class="alert-pill red-pill">0 Active</span>
+          <p class="section-intro">
+            Items requiring urgent operational response.
+          </p>
+
+          <div id="redAlerts">
+            <p>No red alerts currently active.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="dashboard-layer">
+        <div class="top-shift-grid">
+
+          <section class="dashboard-card operational-attention">
+            <p class="section-kicker">Start of shift</p>
+            <h2>Today’s operational attention</h2>
+            <p class="section-intro">
+              Current quarry conditions, restrictions and active issues affecting today’s shift.
+            </p>
+
+            <div class="attention-item">
+              <h3>Lower stockyard surface conditions</h3>
+              <p>
+                Overnight rainfall is affecting lower stockyard ground conditions.
+                Use designated plant routes until the ground inspection is completed.
+              </p>
+              <p class="next-action">
+                <strong>Next action:</strong> Ground inspection due this morning.
+              </p>
+            </div>
+
+            <div class="attention-item">
+              <h3>Crusher plant service scheduled</h3>
+              <p>
+                Crusher plant service is scheduled for tomorrow. Throughput may need adjusting during preparation.
+              </p>
+            </div>
+
+            <div class="attention-item">
+              <h3>Dust suppression audit pending</h3>
+              <p>
+                Environmental monitoring review remains due this week.
+              </p>
+            </div>
+          </section>
+
+          <section class="dashboard-card shift-flow">
+            <p class="section-kicker">Quarry flow</p>
+            <h2>Current shift flow</h2>
+            <p class="section-intro">
+              Live quarry movement, plant activity and material flow during the current shift.
+            </p>
+
+            <div class="flow-item">
+              <h3>Extraction face</h3>
+              <p>Primary extraction area operating under normal supervision.</p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Crusher throughput</h3>
+              <p>Crusher operating with service preparation noted for tomorrow.</p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Stockyard movement</h3>
+              <p>Lower stockyard routes restricted following overnight rainfall.</p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Shift continuity</h3>
+              <p>Previous shift cached three records during intermittent signal. Two updates remain pending sync.</p>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card expected-movements">
+        <p class="section-kicker">Operational workload</p>
+        <h2>Today’s expected movements</h2>
+        <p class="section-intro">
+          Planned quarry, stockyard and outbound activity expected during the current shift.
         </p>
-      </div>
 
-      <div class="attention-item">
-        <h3>Dispatch route adjustment</h3>
-        <p>
-          Bay C03 operating reduced dispatch volume during shutter maintenance works.
-          Temporary forklift diversion route active via the north aisle.
+        <div class="movement-table">
+
+          <div class="movement-row">
+            <span class="movement-time">07:00–09:00</span>
+            <span class="movement-detail">Ground condition review and plant route confirmation.</span>
+          </div>
+
+          <div class="movement-row">
+            <span class="movement-time">09:00–11:30</span>
+            <span class="movement-detail">Primary extraction and crusher feed activity.</span>
+          </div>
+
+          <div class="movement-row">
+            <span class="movement-time">11:30–13:00</span>
+            <span class="movement-detail">Weighbridge ticketing and outbound aggregate movements.</span>
+          </div>
+
+          <div class="movement-row">
+            <span class="movement-time">Afternoon</span>
+            <span class="movement-detail">Stockyard review and environmental monitoring follow-up.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card operational-capability">
+        <p class="section-kicker">Shift capability</p>
+        <h2>Current operational capability</h2>
+        <p class="section-intro">
+          Workforce, plant and operational support currently available to sustain today’s quarry shift.
         </p>
-      </div>
-    </section>
 
-    <!-- CURRENT SHIFT FLOW -->
+        <div class="capability-grid">
 
-    <section class="dashboard-card shift-flow">
-      <p class="section-kicker">Warehouse flow</p>
-      <h2>Current shift flow</h2>
-      <p class="section-intro">
-        Live operational movement and warehouse activity during the current shift.
-      </p>
+          <div class="capability-card">
+            <h3>Workforce</h3>
+            <ul>
+              <li>Quarry supervisor cover confirmed</li>
+              <li>Loading shovel operator available</li>
+              <li>Weighbridge cover confirmed for morning movements</li>
+            </ul>
+          </div>
 
-      <div class="flow-item">
-        <h3>Inbound movement</h3>
-        <p>
-          Morning intake running steadily. Peak aggregate arrivals expected between 10:00–11:30.
-        </p>
-      </div>
+          <div class="capability-card">
+            <h3>Plant & equipment</h3>
+            <ul>
+              <li>Crusher operational with service scheduled tomorrow</li>
+              <li>Forklift 08 available for stockyard support</li>
+              <li>Fuel / hazard store access under normal control</li>
+            </ul>
+          </div>
 
-      <div class="flow-item">
-        <h3>Outbound dispatch</h3>
-        <p>
-          Recovery loading continuing through early shift following overnight backlog reduction.
-          Four delayed consignments remain active for morning dispatch.
-        </p>
-      </div>
+          <div class="capability-card">
+            <h3>Operational support</h3>
+            <ul>
+              <li>Ground inspection due this morning</li>
+              <li>Dust suppression audit pending this week</li>
+              <li>Environmental monitoring record awaiting update</li>
+            </ul>
+          </div>
 
-      <div class="flow-item">
-        <h3>Yard flow</h3>
-        <p>
-          Temporary one-way routing active around Bay C03 during maintenance works.
-          Minor outbound slowing expected during peak movement periods.
-        </p>
-      </div>
+        </div>
+      </section>
 
-      <div class="flow-item">
-        <h3>Shift continuity</h3>
-        <p>
-          Night shift reduced delayed outbound backlog from 14 loads to 4 following
-          extended overnight recovery loading.
-        </p>
-        <p class="next-action">
-          <strong>Day shift focus:</strong> Prioritise remaining consignments before midday intake peak.
-        </p>
-      </div>
+      <section class="dashboard-card operational-overview">
+        <p class="section-kicker">Platform overview</p>
+        <h2>Operational overview</h2>
 
-    </section>
+        <div class="overview-inline">
 
-  </div>
-</section>
+          <div class="overview-item">
+            <span class="overview-label">Operational Points</span>
+            <span class="overview-value">18 Active</span>
+          </div>
 
+          <div class="overview-item">
+            <span class="overview-label">Plant Inspections</span>
+            <span class="overview-value">4 Due This Week</span>
+          </div>
 
-<!-- EXPECTED MOVEMENTS -->
+          <div class="overview-item">
+            <span class="overview-label">Compliance Alerts</span>
+            <span class="overview-value">2 Open</span>
+          </div>
 
-<section class="dashboard-card expected-movements">
-  <p class="section-kicker">Operational workload</p>
-  <h2>Today’s expected movements</h2>
-  <p class="section-intro">
-    Planned inbound and outbound operational activity expected during the current shift.
-  </p>
+          <div class="overview-item">
+            <span class="overview-label">Environmental Checks</span>
+            <span class="overview-value">1 Pending</span>
+          </div>
 
-  <div class="movement-table">
+        </div>
+      </section>
 
-    <div class="movement-row">
-      <span class="movement-time">07:00–09:00</span>
-      <span class="movement-detail">
-        Recovery loading continuing from overnight shift backlog reduction.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">10:00–11:30</span>
-      <span class="movement-detail">
-        Peak aggregate intake expected across inbound bays.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">11:30–13:00</span>
-      <span class="movement-detail">
-        Increased outbound dispatch activity expected following morning intake.
-      </span>
-    </div>
-
-    <div class="movement-row">
-      <span class="movement-time">Afternoon</span>
-      <span class="movement-detail">
-        Reduced yard congestion expected following completion of peak loading period.
-      </span>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SHIFT OPERATIONAL CAPABILITY -->
-
-<section class="dashboard-card operational-capability">
-  <p class="section-kicker">Shift capability</p>
-  <h2>Current operational capability</h2>
-  <p class="section-intro">
-    Workforce, equipment and operational support currently available to sustain today’s shift.
-  </p>
-
-  <div class="capability-grid">
-
-    <!-- WORKFORCE -->
-
-    <div class="capability-card">
-      <h3>Workforce</h3>
-
-      <ul>
-        <li>Supervisor cover confirmed for early shift</li>
-        <li>Reduced forklift-certified availability until 09:30</li>
-        <li>Agency induction completed for two temporary operatives</li>
-      </ul>
-    </div>
-
-    <!-- EQUIPMENT -->
-
-    <div class="capability-card">
-      <h3>Equipment & vehicles</h3>
-
-      <ul>
-        <li>Forklift 03 operating under temporary restriction</li>
-        <li>Temporary forklift hire under review</li>
-        <li>Yard marshal vehicle unavailable pending maintenance review</li>
-      </ul>
-    </div>
-
-    <!-- SUPPORT -->
-
-    <div class="capability-card">
-      <h3>Operational support</h3>
-
-      <ul>
-        <li>Maintenance lead on-site from 08:15</li>
-        <li>Estates inspection pending (time TBC)</li>
-        <li>Drainage review to determine temporary ground reinforcement needs</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-       
-<!-- OPERATIONAL OVERVIEW -->
-
-<section class="dashboard-card operational-overview">
-  <p class="section-kicker">Platform overview</p>
-  <h2>Operational overview</h2>
-
-  <div class="overview-inline">
-
-    <div class="overview-item">
-      <span class="overview-label">Operational Points</span>
-      <span class="overview-value">10 Active</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">QR Deployments</span>
-      <span class="overview-value">10 / 10 Live</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">Scheduled Updates</span>
-      <span class="overview-value">2 Pending</span>
-    </div>
-
-    <div class="overview-item">
-      <span class="overview-label">Review Queue</span>
-      <span class="overview-value">3 Due This Week</span>
-    </div>
-
-  </div>
-</section>
-        
     </main>
   </div>
 
   <footer class="footer">
     Powered by IdexQR<sup>®</sup>
   </footer>
-  
-<button onclick="escalateForklift()">Demo: escalate Forklift 03</button>
 
-<script>
-function escalateForklift() {
-  const amber = document.getElementById("amberAlerts");
-  const red = document.getElementById("redAlerts");
-
-  amber.innerHTML = `
-    <p>Surface water build-up near outbound route — estates inspection pending.</p>
-  `;
-
-  red.innerHTML = `
-    <p><strong>Forklift 03 breakdown reported.</strong> Outbound dispatch capacity reduced. Temporary hire decision required.</p>
-  `;
-}
-</script>
-  
   <script>
-  function updateOperationalTime() {
-    const now = new Date();
+    function updateOperationalTime() {
+      const now = new Date();
 
-    const formatted = now.toLocaleString("en-GB", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+      const formatted = now.toLocaleString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
 
-    document.getElementById("currentTime").textContent = formatted;
-  }
+      document.getElementById("currentTime").textContent = formatted;
+    }
 
-  updateOperationalTime();
-  setInterval(updateOperationalTime, 60000);
-</script>
-  
-<script>
-setTimeout(() => {
-  const amber = document.getElementById("amberAlerts");
+    updateOperationalTime();
+    setInterval(updateOperationalTime, 60000);
+  </script>
 
-  amber.innerHTML = `
-    <p>
-      <strong>Dispatch queue pressure rising.</strong>
-      Bay C03 outbound flow affected by delayed vehicle turnaround.
-      Monitor before midday peak.
-    </p>
-
-    <p class="live-note">
-      Updated just now from Dispatch Queue
-    </p>
-  `;
-}, 5000);
-</script>
-  
-</body>
-</html>
-
-
-
-    
-
-  <div class="sidebar-operational-time">
-  <p class="sidebar-time-label">Operational time</p>
-  <p id="currentTime">Loading current time…</p>
-  <p class="sidebar-sync-note">
-    Some operational updates may appear later in low-signal areas.
-  </p>
-</div>
-
-  </aside>
-
-    <main class="dashboard-main">
-
-      <p class="breadcrumb">Hold / Group Dashboard / Strata Aggregates</p>
-
-      <section class="page-header">
-        <p class="eyebrow">Entity View</p>
-        <h2>Strata Aggregates</h2>
-        <p>Managed under Hold Group Governance</p>
-      </section>
-
-      <header class="dashboard-header">
-        <div>
-          <p class="dashboard-label">Operations Hub</p>
-          <h1>Dashboard</h1>
-        </div>
-      </header>
-
-      <section class="notice-panel">
-  <p class="eyebrow">Site Conditions</p>
-  <h3>Lower stockyard surface advisory</h3>
-  <p>
-    Overnight rainfall is affecting lower stockyard surface conditions.
-    Use designated plant routes until the ground inspection is completed.
-  </p>
-</section>
-
-      <section class="stats-grid">
-        <div class="stat-card">
-          <h3>Operational Points</h3>
-          <p>18 Active</p>
-        </div>
-        
-<div class="stat-card feature-highlight">
-  <h3>Site Connectivity</h3>
-  <p>Intermittent Signal</p>
-  <small>
-    3 records cached locally<br>
-    2 updates pending sync<br>
-    Last successful sync: 09:42
-  </small>
-</div>
-
-        <div class="stat-card">
-          <h3>Plant Inspections</h3>
-          <p>4 Due This Week</p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Compliance Alerts</h3>
-          <p>2 Open</p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Environmental Checks</h3>
-          <p>1 Pending</p>
-        </div>
-      </section>
-
-      <section class="content-grid">
-
-        <details class="panel collapsible-panel">
-  <summary>
-          <p class="eyebrow">Quarry Operations</p>
-          <h3>Operational Areas</h3>
-  </summary>
-
-          <div class="workflow-list">
-            <div class="workflow-item">
-              <strong>Primary Extraction Face</strong>
-              <span>Inspection Zone</span>
-            </div>
-
-  <div class="workflow-list">
-  <a href="quarry-weighbridge.html" class="workflow-item workflow-link">
-    <strong>Weighbridge Station</strong>
-    <span>Calibration, ticketing & vehicle flow</span>
-  </a>
-</div>
-
-  <a href="quarry-stockyard.html" class="workflow-item workflow-link">
-    <strong>Aggregate Stockyard</strong>
-    <span>Inventory, valuation & landowner rights</span>
-  </a>
-
-  <a href="quarry-crusher.html" class="workflow-item workflow-link">
-    <strong>Crusher Plant</strong>
-    <span>Maintenance, capacity & leased-site constraints</span>
-  </a>
-
-  <a href="quarry-fuel-hazard-store.html" class="workflow-item workflow-link">
-    <strong>Fuel / Hazard Store</strong>
-    <span>Environmental control, spill response & access governance</span>
-  </a>
-
-</details>
-          
-         <details class="panel collapsible-panel">
-  <summary>
-          <p class="eyebrow">Governance Focus</p>
-          <h3>Current Review Items</h3>
-  </summary>
-
-          <ul class="activity-list">
-            <li>
-              <strong>Weighbridge Calibration Due</strong>
-              <span>3 Days</span>
-            </li>
-            <li>
-              <strong>Crusher Plant Service Scheduled</strong>
-              <span>Tomorrow</span>
-            </li>
-            <li>
-              <strong>Dust Suppression Audit Pending</strong>
-              <span>This Week</span>
-            </li>
-            <li>
-              <strong>Operator Certificate Expiring</strong>
-              <span>14 Days</span>
-            </li>
-          </ul>
-         </details>
-
-      </section>
-
-    </main>
-  </div>
   <script>
-  function updateOperationalTime() {
-    const now = new Date();
+    setTimeout(() => {
+      const amber = document.getElementById("amberAlerts");
 
-    const formatted = now.toLocaleString("en-GB", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+      amber.innerHTML = `
+        <p>
+          <strong>Stockyard surface condition updated.</strong>
+          Lower route remains usable for designated plant only pending ground inspection.
+        </p>
 
-    document.getElementById("currentTime").textContent = formatted;
-  }
+        <p class="live-note">
+          Updated just now from Stockyard Operational Point
+        </p>
+      `;
+    }, 5000);
+  </script>
 
-  updateOperationalTime();
-  setInterval(updateOperationalTime, 60000);
-</script>
 </body>
 </html>
