@@ -133,6 +133,10 @@
   </article>
 
 </section>
+
+      <button class="demo-alert-button" onclick="moveDispatchToAmber()">
+  Demo: move dispatch issue to amber
+</button>
       
       <section class="dashboard-panels">
        
@@ -394,6 +398,16 @@ function escalateForklift() {
 
   updateOperationalTime();
   setInterval(updateOperationalTime, 60000);
+</script>
+
+  <script>
+function moveDispatchToAmber() {
+  const amber = document.getElementById("amberAlerts");
+
+  amber.innerHTML += `
+    <p><strong>Dispatch queue pressure rising.</strong> Bay C03 outbound flow affected by delayed vehicle turnaround. Monitor before midday peak.</p>
+  `;
+}
 </script>
 </body>
 </html>
