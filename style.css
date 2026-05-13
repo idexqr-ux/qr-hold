@@ -15,15 +15,43 @@
 }
 
 .amber-alerts {
-  border-left-color: #c8912f;
+  border-left: 6px solid #c8912f;
+  background: #fcf8ef;
 }
 
 .red-alerts {
-  border-left-color: #a94442;
+  border-left: 6px solid #a94442;
+  background: #faf1f1;
+}
+
+.amber-alerts h2 {
+  color: #9a6b18;
+}
+
+.red-alerts h2 {
+  color: #8d3432;
 }
 
 .alert-card p {
   line-height: 1.65;
+}
+
+.alert-pill {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.amber-pill {
+  background: #f3e1b8;
+  color: #8a6118;
+}
+
+.red-pill {
+  background: #ebc9c9;
+  color: #8d3432;
 }
 
 @media (max-width: 900px) {
