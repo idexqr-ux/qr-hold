@@ -1,3 +1,36 @@
+/* OPERATIONAL OVERVIEW */
+
+.operational-overview {
+  margin-top: 2rem;
+}
+
+.overview-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.overview-item {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(84, 84, 84, 0.08);
+  min-width: 180px;
+}
+
+.overview-label {
+  display: block;
+  font-size: 0.82rem;
+  color: #587380;
+  margin-bottom: 0.2rem;
+}
+
+.overview-value {
+  font-weight: 600;
+  color: #3f4f4f;
+}
+
 /* Logistics dashboard shift orientation */
 .workflow-grid {
   display: grid;
