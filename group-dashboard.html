@@ -17,167 +17,325 @@
         <p class="sidebar-entity">The Strata Group</p>
       </div>
 
-     <nav class="sidebar-nav">
-  <a href="group-dashboard.html" class="active">The Strata Group Dashboard</a>
-  <a href="dashboard.html">Strata Logistics</a>
-  <a href="quarry-dashboard.html">Strata Aggregates</a>
-  <a href="estates-dashboard.html">Strata Estates</a>
-  <a href="#">Alerts & Risks <span>In Development</span></a>
-  <a href="#">Reports <span>In Development</span></a>
-  <a href="#">Settings <span>In Development</span></a>
-  <a href="#">Hold Signal <span>In Development</span></a>
-  </nav>
+      <nav class="sidebar-nav">
+        <div class="sidebar-group">
+          <p class="sidebar-label">Group View</p>
+          <a href="group-dashboard.html" class="active">Group Dashboard</a>
+          <a href="dashboard.html">Strata Logistics</a>
+          <a href="quarry-dashboard.html">Strata Aggregates</a>
+          <a href="estates-dashboard.html">Strata Estates</a>
+        </div>
 
-  <div class="sidebar-operational-time">
-    <p class="sidebar-time-label">Operational time</p>
-    <p id="currentTime">Loading current time…</p>
-  </div>
+        <div class="sidebar-group">
+          <p class="sidebar-label">Platform</p>
+          <a href="#">Alerts & Risks <span>In Development</span></a>
+          <a href="#">Reports <span>In Development</span></a>
+          <a href="#">Settings <span>In Development</span></a>
+          <a href="#">Hold Signal <span>In Development</span></a>
+        </div>
+      </nav>
 
-  </aside>
+      <div class="sidebar-operational-time">
+        <p class="sidebar-time-label">Operational time</p>
+        <p id="currentTime">Loading current time…</p>
+      </div>
+    </aside>
 
     <main class="dashboard-main">
-      <section class="page-header">
-        <p class="eyebrow">The Strata Group View</p>
-        <h2>The Strata Group Dashboard</h2>
-        <p>
-          Central visibility across all managed Strata entities, helping leadership monitor operational
-          risk, compliance, reviews, and governance without removing local management control.
+
+      <div class="dashboard-header">
+        <p class="dashboard-breadcrumb">
+          Hold / The Strata Group
         </p>
-      </section>
 
-      <section class="stats-grid" aria-label="Group overview">
-
-  <article class="stat-card">
-    <span>Managed entities</span>
-    <strong>3</strong>
-    <p>Logistics, Aggregates & Estates</p>
-  </article>
-
-  <article class="stat-card">
-    <span>Estate portfolio sites</span>
-    <strong>4</strong>
-    <p>Operational environments under governance</p>
-  </article>
-
-  <article class="stat-card warning">
-    <span>Operational reviews</span>
-    <strong>12</strong>
-    <p>Across access, infrastructure and compliance</p>
-  </article>
-
-  <article class="stat-card">
-    <span>Governed QR points</span>
-    <strong>Active</strong>
-    <p>Connected operational guidance across sites</p>
-  </article>
-
-</section>
-
-      <section class="content-grid">
-        <article class="panel large-panel">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Entity Oversight</p>
-              <h3>Managed Strata Group</h3>
-            </div>
+        <div class="dashboard-title-row">
+          <div>
+            <h1>The Strata Group Dashboard</h1>
+            <p class="dashboard-subtitle">
+              Group-level visibility across operational entities without removing local control.
+            </p>
           </div>
 
-         <div class="entity-list">
+          <span class="dashboard-status-pill">
+            Group Oversight
+          </span>
+        </div>
+      </div>
 
-  <a href="dashboard.html" class="entity-row entity-active">
-  <div>
-    <strong>Strata Logistics</strong>
-    <p>Distribution, dispatch, intake and equipment governance.</p>
-    <small>Warehousing &amp; Logistics Compliance</small>
-  </div>
+      <section class="alert-grid">
 
-  <div class="entity-meta">
-    <span class="status-pill status-active">Healthy</span>
-    <span class="entity-link-text">Open dashboard →</span>
-  </div>
-</a>
+        <article class="dashboard-card alert-card amber-alerts">
+          <p class="section-kicker">Amber alerts</p>
+          <h2>Group operational watch</h2>
+          <span class="alert-pill amber-pill">3 Active</span>
 
-          <a href="quarry-dashboard.html" class="entity-row entity-review">
-  <div>
-    <strong>Strata Aggregates</strong>
-    <p>Extraction, weighbridge, plant and site safety.</p>
-    <small>Quarrying & Plant Compliance</small>
-  </div>
+          <p class="section-intro">
+            Items affecting one or more Strata entities that require awareness or follow-up.
+          </p>
 
-  <div class="entity-meta">
-    <span class="status-pill status-review">Attention</span>
-    <span class="entity-link-text">Open dashboard →</span>
-  </div>
-</a>
-
-<a href="estates-dashboard.html" class="entity-row entity-active">
-  <div>
-    <strong>Strata Estates</strong>
-    <p>Buildings, contractors, inspections and statutory notices.</p>
-    <small>Property, Contractor & Statutory Compliance</small>
-  </div>
-
-  <div class="entity-meta">
-    <span class="status-pill status-active">Healthy</span>
-    <span class="entity-link-text">Open dashboard →</span>
-  </div>       
-</a>
-
-</div>
-</article>
-</section>
-          
-      <section class="content-grid">
-        <article class="panel">
-          <p class="eyebrow">Governance View</p>
-          <h3>What leadership can see</h3>
-
-          <ul class="check-list">
-            <li>Which entities are up to date</li>
-            <li>Which reviews are overdue</li>
-            <li>Which risks have been escalated</li>
-            <li>Which works may need insurer notification</li>
-            <li>Which staff qualifications are expiring</li>
-          </ul>
+          <div id="amberAlerts">
+            <p><strong>Strata Logistics:</strong> Dispatch queue pressure being monitored before midday peak.</p>
+            <p><strong>Strata Aggregates:</strong> Lower stockyard surface advisory active pending inspection.</p>
+            <p><strong>Strata Estates:</strong> East service lane drainage survey affecting visitor parking.</p>
+          </div>
         </article>
 
-        <article class="panel">
-          <p class="eyebrow">Local Control</p>
-          <h3>What entity managers keep</h3>
+        <article class="dashboard-card alert-card red-alerts">
+          <p class="section-kicker">Red alerts</p>
+          <h2>Immediate group attention</h2>
+          <span class="alert-pill red-pill">0 Active</span>
 
-          <ul class="check-list">
-            <li>Day-to-day site ownership</li>
-            <li>Local operational records</li>
-            <li>Staff-facing scan views</li>
-            <li>Entity-specific procedures</li>
-            <li>QR point management</li>
-          </ul>
+          <p class="section-intro">
+            Items requiring urgent leadership awareness or immediate operational response.
+          </p>
+
+          <div id="redAlerts">
+            <p>No red alerts currently active.</p>
+          </div>
         </article>
+
       </section>
 
-      <footer class="page-footer">
-        <p>Hold — governed operational visibility across connected entities.</p>
-      </footer>
+      <section class="dashboard-layer">
+        <div class="top-shift-grid">
+
+          <section class="dashboard-card operational-attention">
+            <p class="section-kicker">Group picture</p>
+            <h2>Today’s operational attention</h2>
+
+            <p class="section-intro">
+              Current operational conditions across Strata entities that may affect flow, compliance or continuity.
+            </p>
+
+            <div class="attention-item">
+              <h3>Logistics — dispatch recovery</h3>
+              <p>
+                Outbound recovery continues following overnight backlog reduction.
+                Dispatch pressure remains visible but managed locally.
+              </p>
+            </div>
+
+            <div class="attention-item">
+              <h3>Aggregates — stockyard conditions</h3>
+              <p>
+                Overnight rainfall is affecting lower stockyard routes.
+                Designated plant movement remains in place pending ground inspection.
+              </p>
+            </div>
+
+            <div class="attention-item">
+              <h3>Estates — contractor access</h3>
+              <p>
+                Drainage survey works remain active at Millbrook Yard.
+                Visitor parking diversion remains in place.
+              </p>
+            </div>
+          </section>
+
+          <section class="dashboard-card shift-flow">
+            <p class="section-kicker">Cross-entity flow</p>
+            <h2>Current group flow</h2>
+
+            <p class="section-intro">
+              A high-level view of how each operational environment is functioning today.
+            </p>
+
+            <div class="flow-item">
+              <h3>Strata Logistics</h3>
+              <p>
+                Warehouse flow active with dispatch recovery and temporary routing awareness.
+              </p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Strata Aggregates</h3>
+              <p>
+                Quarry activity continuing with stockyard condition monitoring and environmental checks pending.
+              </p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Strata Estates</h3>
+              <p>
+                Portfolio activity active across contractor works, access coordination and compliance reviews.
+              </p>
+            </div>
+
+            <div class="flow-item">
+              <h3>Group continuity</h3>
+              <p>
+                No group-wide operational stoppage reported. Local managers retain control of live site decisions.
+              </p>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card expected-movements">
+        <p class="section-kicker">Leadership view</p>
+        <h2>Entities needing awareness</h2>
+
+        <p class="section-intro">
+          Entity-level conditions that may require leadership context, resource support or later review.
+        </p>
+
+        <div class="entity-list">
+
+          <a href="dashboard.html" class="entity-row entity-active">
+            <div>
+              <strong>Strata Logistics</strong>
+              <p>Dispatch recovery, intake flow and equipment availability under local management.</p>
+              <small>Warehousing & Logistics Compliance</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-review">Watch</span>
+              <span class="entity-link-text">Open dashboard →</span>
+            </div>
+          </a>
+
+          <a href="quarry-dashboard.html" class="entity-row entity-review">
+            <div>
+              <strong>Strata Aggregates</strong>
+              <p>Stockyard surface conditions, crusher service planning and environmental monitoring.</p>
+              <small>Quarrying & Plant Compliance</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-review">Attention</span>
+              <span class="entity-link-text">Open dashboard →</span>
+            </div>
+          </a>
+
+          <a href="estates-dashboard.html" class="entity-row entity-active">
+            <div>
+              <strong>Strata Estates</strong>
+              <p>Contractor works, site access, water hygiene and estate compliance reviews.</p>
+              <small>Property, Contractor & Statutory Compliance</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-active">Managed</span>
+              <span class="entity-link-text">Open dashboard →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card operational-capability">
+        <p class="section-kicker">Group capability</p>
+        <h2>Current governance pressure</h2>
+
+        <p class="section-intro">
+          Group-level indicators showing where operational capacity, compliance or governance attention is currently concentrated.
+        </p>
+
+        <div class="capability-grid">
+
+          <div class="capability-card">
+            <h3>Operational capacity</h3>
+            <ul>
+              <li>Local management cover confirmed across all entities</li>
+              <li>Logistics dispatch recovery remains locally managed</li>
+              <li>Aggregates plant support active pending inspection follow-up</li>
+            </ul>
+          </div>
+
+          <div class="capability-card">
+            <h3>Compliance pressure</h3>
+            <ul>
+              <li>Estates water hygiene inspection pending</li>
+              <li>Aggregates environmental monitoring awaiting update</li>
+              <li>Logistics review queue contains active follow-up items</li>
+            </ul>
+          </div>
+
+          <div class="capability-card">
+            <h3>Leadership context</h3>
+            <ul>
+              <li>No immediate group-wide intervention required</li>
+              <li>Amber items visible for trend awareness</li>
+              <li>Entity dashboards remain source of operational detail</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card operational-overview">
+        <p class="section-kicker">Group overview</p>
+        <h2>Portfolio overview</h2>
+
+        <div class="overview-inline">
+
+          <div class="overview-item">
+            <span class="overview-label">Managed Entities</span>
+            <span class="overview-value">3 Active</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Estate Sites</span>
+            <span class="overview-value">4 Managed</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Operational Reviews</span>
+            <span class="overview-value">12 Open</span>
+          </div>
+
+          <div class="overview-item">
+            <span class="overview-label">Governed QR Points</span>
+            <span class="overview-value">Active</span>
+          </div>
+
+        </div>
+      </section>
+
     </main>
   </div>
+
+  <footer class="footer">
+    Powered by IdexQR<sup>®</sup>
+  </footer>
+
   <script>
-  function updateOperationalTime() {
-    const now = new Date();
+    function updateOperationalTime() {
+      const now = new Date();
 
-    const formatted = now.toLocaleString("en-GB", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+      const formatted = now.toLocaleString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
 
-    document.getElementById("currentTime").textContent = formatted;
-  }
+      document.getElementById("currentTime").textContent = formatted;
+    }
 
-  updateOperationalTime();
-  setInterval(updateOperationalTime, 60000);
-</script>
+    updateOperationalTime();
+    setInterval(updateOperationalTime, 60000);
+  </script>
+
+  <script>
+    setTimeout(() => {
+      const amber = document.getElementById("amberAlerts");
+
+      amber.innerHTML += `
+        <p>
+          <strong>Strata Estates:</strong>
+          Millbrook Yard contractor access update received. Parking diversion remains active.
+        </p>
+
+        <p class="live-note">
+          Updated just now from Estates Dashboard
+        </p>
+      `;
+    }, 5000);
+  </script>
+
 </body>
 </html>
