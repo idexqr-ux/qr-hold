@@ -96,58 +96,6 @@
 
       </section>
 
-      <section class="dashboard-card expected-movements">
-  <p class="section-kicker">Audit visibility</p>
-  <h2>Operational audit status</h2>
-
-  <p class="section-intro">
-    Group-level view of audit activity across Strata entities without removing local operational ownership.
-  </p>
-
-  <div class="entity-list">
-
-    <a href="strata-logistics-operational-audit.html" class="entity-row entity-active">
-      <div>
-        <strong>Strata Logistics</strong>
-        <p>Dispatch scan continuity, forklift inspections and training verification.</p>
-        <small>Logistics operational audit</small>
-      </div>
-
-      <div class="entity-meta">
-        <span class="status-pill status-active">Active</span>
-        <span class="entity-link-text">Open audit →</span>
-      </div>
-    </a>
-
-    <a href="strata-aggregates-operational-audit.html" class="entity-row entity-review">
-      <div>
-        <strong>Strata Aggregates</strong>
-        <p>Environmental monitoring, plant inspection and weighbridge verification.</p>
-        <small>Aggregates operational audit</small>
-      </div>
-
-      <div class="entity-meta">
-        <span class="status-pill status-review">Review</span>
-        <span class="entity-link-text">Open audit →</span>
-      </div>
-    </a>
-
-    <a href="strata-estates-operational-audit.html" class="entity-row entity-active">
-      <div>
-        <strong>Strata Estates</strong>
-        <p>Contractor control, utility records and estate access governance.</p>
-        <small>Estates operational audit</small>
-      </div>
-
-      <div class="entity-meta">
-        <span class="status-pill status-active">Active</span>
-        <span class="entity-link-text">Open audit →</span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
       <section class="dashboard-layer">
         <div class="top-shift-grid">
 
@@ -234,7 +182,7 @@
 
         <div class="entity-list">
 
-          <a href="dashboard.html" class="entity-row entity-active">
+          <a href="strata-logistics-dashboard.html" class="entity-row entity-active">
             <div>
               <strong>Strata Logistics</strong>
               <p>Dispatch recovery, intake flow and equipment availability under local management.</p>
@@ -247,7 +195,7 @@
             </div>
           </a>
 
-          <a href="quarry-dashboard.html" class="entity-row entity-review">
+          <a href="strata-aggregates-dashboard.html" class="entity-row entity-review">
             <div>
               <strong>Strata Aggregates</strong>
               <p>Stockyard surface conditions, crusher service planning and environmental monitoring.</p>
@@ -260,7 +208,7 @@
             </div>
           </a>
 
-          <a href="estates-dashboard.html" class="entity-row entity-active">
+          <a href="strata-estates-dashboard.html" class="entity-row entity-active">
             <div>
               <strong>Strata Estates</strong>
               <p>Contractor works, site access, water hygiene and estate compliance reviews.</p>
@@ -270,6 +218,58 @@
             <div class="entity-meta">
               <span class="status-pill status-active">Managed</span>
               <span class="entity-link-text">Open dashboard →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="dashboard-card expected-movements">
+        <p class="section-kicker">Audit visibility</p>
+        <h2>Operational audit status</h2>
+
+        <p class="section-intro">
+          Group-level view of audit activity across Strata entities without removing local operational ownership.
+        </p>
+
+        <div class="entity-list">
+
+          <a href="strata-logistics-operational-audit.html" class="entity-row entity-active">
+            <div>
+              <strong>Strata Logistics</strong>
+              <p>Dispatch scan continuity, forklift inspections and training verification.</p>
+              <small>Logistics operational audit</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-active">Active</span>
+              <span class="entity-link-text">Open audit →</span>
+            </div>
+          </a>
+
+          <a href="strata-aggregates-operational-audit.html" class="entity-row entity-review">
+            <div>
+              <strong>Strata Aggregates</strong>
+              <p>Environmental monitoring, plant inspection and weighbridge verification.</p>
+              <small>Aggregates operational audit</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-review">Review</span>
+              <span class="entity-link-text">Open audit →</span>
+            </div>
+          </a>
+
+          <a href="strata-estates-operational-audit.html" class="entity-row entity-active">
+            <div>
+              <strong>Strata Estates</strong>
+              <p>Contractor control, utility records and estate access governance.</p>
+              <small>Estates operational audit</small>
+            </div>
+
+            <div class="entity-meta">
+              <span class="status-pill status-active">Active</span>
+              <span class="entity-link-text">Open audit →</span>
             </div>
           </a>
 
@@ -372,22 +372,6 @@
     setInterval(updateOperationalTime, 60000);
   </script>
 
-  <script>
-    setTimeout(() => {
-      const amber = document.getElementById("amberAlerts");
-
-      amber.innerHTML += `
-        <p>
-          <strong>Strata Estates:</strong>
-          Millbrook Yard contractor access update received. Parking diversion remains active.
-        </p>
-
-        <p class="live-note">
-          Updated just now from Estates Dashboard
-        </p>
-      `;
-    }, 5000);
-  </script>
-
 </body>
 </html>
+
