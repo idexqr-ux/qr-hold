@@ -372,6 +372,28 @@
     setInterval(updateOperationalTime, 60000);
   </script>
 
+<script>
+  const sidebar = document.querySelector('.sidebar');
+
+  if (sidebar) {
+
+    const savedSidebarScroll =
+      localStorage.getItem('holdSidebarScroll');
+
+    if (savedSidebarScroll !== null) {
+      sidebar.scrollTop = savedSidebarScroll;
+    }
+
+    sidebar.addEventListener('scroll', () => {
+      localStorage.setItem(
+        'holdSidebarScroll',
+        sidebar.scrollTop
+      );
+    });
+
+  }
+</script>
+  
 </body>
 </html>
 
