@@ -2099,3 +2099,25 @@ h2 {
     color: #34464d !important;
   }
 }
+
+@media (max-width: 1180px) {
+  .sidebar {
+    width: 300px;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .sidebar-nav .sidebar-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #2f434c;
+    letter-spacing: 0.1em;
+  }
+
+  .sidebar-nav .sidebar-group a {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
