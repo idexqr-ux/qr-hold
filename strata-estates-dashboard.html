@@ -320,23 +320,43 @@
   </script>
 
   <script>
-setTimeout(() => {
-  const amber = document.getElementById("amberAlerts");
+  function updateAmberCount() {
 
-  amber.innerHTML += `
-    <p>
-      <strong>Millbrook Yard:</strong>
-      Contractor drainage team now on-site.
-      Visitor parking diversion remains active.
-    </p>
+    const amber = document.getElementById("amberAlerts");
 
-    <p class="live-note">
-      Updated just now from East Service Lane Operational Point
-    </p>
-  `;
-}, 5000);
+    const alerts =
+      amber.querySelectorAll("p:not(.live-note)");
+
+    const amberCount =
+      document.querySelector(".amber-pill");
+
+    amberCount.textContent =
+      `${alerts.length} Active`;
+  }
+
+  updateAmberCount();
+
+  setTimeout(() => {
+
+    const amber =
+      document.getElementById("amberAlerts");
+
+    amber.innerHTML += `
+      <p>
+        <strong>Strata Estates:</strong>
+        Millbrook Yard contractor access update received.
+        Parking diversion remains active.
+      </p>
+
+      <p class="live-note">
+        Updated just now from Estates Dashboard
+      </p>
+    `;
+
+    updateAmberCount();
+
+  }, 5000);
 </script>
-
 <script>
   const sidebar = document.querySelector('.sidebar');
 
