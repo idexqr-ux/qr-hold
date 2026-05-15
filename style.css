@@ -2121,3 +2121,18 @@ h2 {
     line-height: 1.6;
   }
 }
+
+/* Contractor / scan card centring refinement */
+
+.wrap .scan-shell {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.wrap .scan-card {
+  margin-left: auto;
+  margin-right: auto;
+}
