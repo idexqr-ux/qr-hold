@@ -3,106 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pallet Accepted — Hold</title>
-  <meta name="description" content="Accepted pallet workflow confirmation for Strata Logistics." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Strata Logistics — Accepted Pallet Record</title>
+  <meta
+    name="description"
+    content="A Strata Logistics accepted pallet record showing delivery receipt, pallet verification, storage routing and system sync status."
+  />
+  <link rel="stylesheet" href="style.css?v=36" />
 </head>
 
 <body>
   <main class="wrap" id="top">
- <a class="text-link" href="strata-logistics-dashboard.html">← Back to Dashboard</a>
 
-    <header class="hero page-hero">
-      <p class="eyebrow">Strata Logistics / Goods In</p>
-      <h1>Delivery accepted.</h1>
-      <p class="sub">
-        Pallet NW-0428-A has been received, logged, and moved into the warehouse workflow.
+    <a class="text-link" href="strata-logistics-dashboard.html">← Back to Dashboard</a>
+
+    <div class="dashboard-header">
+      <p class="dashboard-breadcrumb">
+        Hold / Strata Logistics / Accepted Pallet Record
       </p>
-    </header>
 
-    <section class="panel">
-      <span class="status-pill">Accepted</span>
+      <div class="dashboard-title-row">
+        <div>
+          <h1>Accepted Pallet Record</h1>
+          <p class="dashboard-subtitle">
+            Delivery receipt, pallet verification and storage routing confirmation.
+          </p>
+        </div>
 
-      <h2>Acceptance Record</h2>
+        <span class="dashboard-status-pill">
+          Accepted
+        </span>
+      </div>
+    </div>
 
-      <div class="detail-grid">
-  <p>
-    <strong>Delivery Ref</strong>
-    <span class="value value-key">DEL-1042</span>
-  </p>
+    <section class="dashboard-card operational-overview">
+      <p class="section-kicker">Acceptance record</p>
+      <h2>Pallet NW-0428-A</h2>
 
-  <p>
-    <strong>Supplier</strong>
-    <span class="value">Alpha Components Ltd</span>
-  </p>
+      <div class="overview-inline">
 
-  <p>
-  <strong>Pallet ID</strong>
-  <span class="value value-key">NW-0428-A</span>
-</p>
+        <div class="overview-item">
+          <span class="overview-label">Delivery Ref</span>
+          <span class="overview-value">DEL-1042</span>
+        </div>
 
-  <p>
-   <strong>Assigned Zone</strong>
-<span class="value">B12</span>
-  </p>
+        <div class="overview-item">
+          <span class="overview-label">Supplier</span>
+          <span class="overview-value">Alpha Components Ltd</span>
+        </div>
 
-  <p>
-    <strong>Accepted By</strong>
-    <span class="value">Warehouse Operative</span>
-  </p>
+        <div class="overview-item">
+          <span class="overview-label">Assigned Zone</span>
+          <span class="overview-value">B12</span>
+        </div>
 
-  <p>
-    <strong>Timestamp</strong>
-    <span class="value">08:42</span>
-  </p>
+        <div class="overview-item">
+          <span class="overview-label">Accepted Time</span>
+          <span class="overview-value">08:42</span>
+        </div>
 
-  <p>
-    <strong>Robotic Unit</strong>
-<span class="value value-key">R-03 assigned</span>
-  </p>
-</div>
+      </div>
     </section>
 
-    <section class="panel soft-panel">
-      <h2>Workflow Progress</h2>
+    <section class="dashboard-card">
+      <p class="section-kicker">Workflow progress</p>
+      <h2>Inbound processing status</h2>
 
-      <ol class="workflow-list">
-        <li><strong>Received</strong> — pallet scan confirmed</li>
-        <li><strong>Queued for Robotic Collection</strong> — unit R-03 assigned</li>
-        <li><strong>Storage Route Generated</strong> — destination Bay B12</li>
-        <li><strong>Business Systems Sync</strong> — inventory and finance records updated</li>
-      </ol>
+      <div class="attention-item">
+        <h3>1. Received</h3>
+        <p>Pallet scan confirmed against delivery reference DEL-1042.</p>
+      </div>
+
+      <div class="attention-item">
+        <h3>2. Queued for robotic collection</h3>
+        <p>Robotic unit R-03 assigned for movement to storage zone B12.</p>
+      </div>
+
+      <div class="attention-item">
+        <h3>3. Storage route generated</h3>
+        <p>Destination route created for downstream warehouse movement.</p>
+      </div>
+
+      <div class="attention-item">
+        <h3>4. Business systems sync</h3>
+        <p>Inventory and finance records updated following receipt confirmation.</p>
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Integration Status</h2>
+    <section class="dashboard-card">
+      <p class="section-kicker">Integration status</p>
+      <h2>Connected records</h2>
 
-      <div class="detail-grid">
-  <p>
-    <strong>Inventory</strong>
-    <span class="value">Updated</span>
-  </p>
+      <div class="overview-inline">
 
-  <p>
-    <strong>Purchase Order</strong>
-    <span class="value">Matched</span>
-  </p>
+        <div class="overview-item">
+          <span class="overview-label">Inventory</span>
+          <span class="overview-value">Updated</span>
+        </div>
 
-  <p>
-    <strong>Finance System</strong>
-    <span class="value">Synced</span>
-  </p>
+        <div class="overview-item">
+          <span class="overview-label">Purchase Order</span>
+          <span class="overview-value">Matched</span>
+        </div>
 
-  <p>
-    <strong>Robotic Unit</strong>
-    <span class="value">R-03 assigned</span>
-  </p>
-</div>
+        <div class="overview-item">
+          <span class="overview-label">Finance System</span>
+          <span class="overview-value">Synced</span>
+        </div>
+
+        <div class="overview-item">
+          <span class="overview-label">Robotic Unit</span>
+          <span class="overview-value">R-03 Assigned</span>
+        </div>
+
+      </div>
     </section>
-    
+
   </main>
+
   <footer class="footer">
-  Powered by IdexQR<sup>®</sup>
- </footer>
+    Powered by IdexQR<sup>®</sup>
+  </footer>
 </body>
 </html>
