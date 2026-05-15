@@ -2055,3 +2055,22 @@ h2 {
   display: inline-block;
   margin: 0.2rem auto 0;
 }
+
+/* Tablet dashboard layout correction */
+
+@media (max-width: 1180px) {
+  .top-shift-grid,
+  .capability-grid,
+  .dashboard-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    min-width: 0;
+  }
+
+  .expected-movements {
+    clear: both;
+    margin-top: 1.5rem;
+  }
+}
