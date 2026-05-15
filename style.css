@@ -2074,3 +2074,9 @@ h2 {
     margin-top: 1.5rem;
   }
 }
+
+/* Remembered sidebar position support */
+.sidebar {
+  max-height: 100vh;
+  overflow-y: auto;
+}
