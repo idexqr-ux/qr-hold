@@ -411,43 +411,61 @@ function escalateForklift() {
   setInterval(updateOperationalTime, 60000);
 </script>
 
-  <script>
-  function updateAmberCount() {
-
+ <script>
+  function updateAlertCounts() {
     const amber = document.getElementById("amberAlerts");
+    const red = document.getElementById("redAlerts");
 
-    const alerts =
-      amber.querySelectorAll("p:not(.live-note)");
+    const amberCount = document.querySelector(".amber-pill");
+    const redCount = document.querySelector(".red-pill");
 
-    const amberCount =
-      document.querySelector(".amber-pill");
+    if (amber && amberCount) {
+      const amberAlerts = amber.querySelectorAll("p:not(.live-note)");
+      amberCount.textContent = `${amberAlerts.length} Active`;
+    }
 
-    amberCount.textContent =
-      `${alerts.length} Active`;
+    if (red && redCount) {
+      const redAlerts = red.querySelectorAll("p:not(.live-note)");
+      redCount.textContent = `${redAlerts.length} Active`;
+    }
   }
 
-  updateAmberCount();
+  updateAlertCounts();
 
   setTimeout(() => {
-
-    const amber =
-      document.getElementById("amberAlerts");
+    const amber = document.getElementById("amberAlerts");
 
     amber.innerHTML += `
       <p>
-      <strong>Dispatch queue pressure rising.</strong>
-      Bay C03 outbound flow affected by delayed vehicle turnaround.
-      Monitor before midday peak.
-    </p>
+        <strong>Dispatch queue pressure rising.</strong>
+        Bay C03 outbound flow affected by delayed vehicle turnaround.
+        Monitor before midday peak.
+      </p>
 
       <p class="live-note">
-      Updated just now from Dispatch Queue
-    </p>
+        Updated just now from Dispatch Queue
+      </p>
     `;
 
-    updateAmberCount();
-
+    updateAlertCounts();
   }, 5000);
+
+  setTimeout(() => {
+    const red = document.getElementById("redAlerts");
+
+    red.innerHTML = `
+      <p>
+        <strong>Battery leakage reported.</strong>
+        Forklift Charging Station isolated pending Facilities response.
+      </p>
+
+      <p class="live-note">
+        Updated just now from Equipment Governance
+      </p>
+    `;
+
+    updateAlertCounts();
+  }, 9000);
 </script>
 
 
