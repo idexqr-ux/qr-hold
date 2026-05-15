@@ -410,46 +410,46 @@ function escalateForklift() {
   updateOperationalTime();
   setInterval(updateOperationalTime, 60000);
 </script>
-  
-<script>
-setTimeout(() => {
-  const amber = document.getElementById("amberAlerts");
 
-  amber.innerHTML = `
-    <p>
+  <script>
+  function updateAmberCount() {
+
+    const amber = document.getElementById("amberAlerts");
+
+    const alerts =
+      amber.querySelectorAll("p:not(.live-note)");
+
+    const amberCount =
+      document.querySelector(".amber-pill");
+
+    amberCount.textContent =
+      `${alerts.length} Active`;
+  }
+
+  updateAmberCount();
+
+  setTimeout(() => {
+
+    const amber =
+      document.getElementById("amberAlerts");
+
+    amber.innerHTML += `
+      <p>
       <strong>Dispatch queue pressure rising.</strong>
       Bay C03 outbound flow affected by delayed vehicle turnaround.
       Monitor before midday peak.
     </p>
 
-    <p class="live-note">
+      <p class="live-note">
       Updated just now from Dispatch Queue
     </p>
-  `;
-}, 5000);
+    `;
+
+    updateAmberCount();
+
+  }, 5000);
 </script>
 
-<script>
-  const sidebar = document.querySelector('.sidebar');
 
-  if (sidebar) {
-
-    const savedSidebarScroll =
-      localStorage.getItem('holdSidebarScroll');
-
-    if (savedSidebarScroll !== null) {
-      sidebar.scrollTop = savedSidebarScroll;
-    }
-
-    sidebar.addEventListener('scroll', () => {
-      localStorage.setItem(
-        'holdSidebarScroll',
-        sidebar.scrollTop
-      );
-    });
-
-  }
-</script>
-  
 </body>
 </html>
