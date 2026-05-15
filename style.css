@@ -2136,3 +2136,21 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* iPad scan-card centring */
+
+@media (max-width: 1180px) {
+  .wrap .scan-shell {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrap .scan-card {
+    width: min(100%, 620px);
+    max-width: calc(100vw - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
