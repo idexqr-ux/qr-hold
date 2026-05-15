@@ -1995,6 +1995,9 @@ h2 {
 }
 
 /* FINAL SIDEBAR LINK FIX */
+.sidebar-nav a {
+  color: #44525a;
+}
 
 .sidebar-nav .sidebar-group {
   display: block;
