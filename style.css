@@ -971,6 +971,22 @@ h2 {
   line-height: 1.15;
 }
 
+.soft-panel {
+  text-align: center;
+}
+
+.soft-panel h2,
+.soft-panel p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.soft-panel p {
+  border-bottom: 0;
+  max-width: 760px;
+}
+
 .panel {
   padding: 24px;
 }
