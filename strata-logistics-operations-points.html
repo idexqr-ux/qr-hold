@@ -48,12 +48,15 @@
   <div class="panel qr-map-panel">
     <h3>Operational Points Map</h3>
 
-    <figure class="map-card">
-      <img
-        class="safety-map"
-        src="images/strata-logistics-operational-oversight-map.png"
-        alt="Strata Logistics operational oversight map showing Bay A12, Bay C03, Hold Area B, forklift movement, pedestrian routes and dispatch flow."
-      />
+    <div class="map-focus-wrap">
+  <img
+    class="safety-map"
+    src="images/strata-logistics-operational-oversight-map.png"
+    alt="Strata Logistics operational oversight map."
+  />
+
+  <span id="mapFocusMarker" class="map-focus-marker bay-a12-marker"></span>
+</div>
 
       <figcaption>
         Operational points shown in context across the Strata Logistics site.
@@ -123,12 +126,17 @@
 <script>
   const focusRows = document.querySelectorAll(".map-focus-row");
   const focusNote = document.getElementById("mapFocusNote");
+  const marker = document.getElementById("mapFocusMarker");
 
   focusRows.forEach((row) => {
     row.addEventListener("click", () => {
       focusRows.forEach((item) => item.classList.remove("active"));
       row.classList.add("active");
+
       focusNote.textContent = row.dataset.focus;
+
+      marker.className = "map-focus-marker";
+      marker.classList.add(row.dataset.marker);
     });
   });
 </script>
