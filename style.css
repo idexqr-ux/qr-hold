@@ -280,6 +280,10 @@
   text-decoration: underline;
 }
 
+.compact-scan-view {
+  max-width: 760px;
+  margin: 0 auto;
+}
 /* ==============================
    STRATA AGGREGATES
    ============================== */
