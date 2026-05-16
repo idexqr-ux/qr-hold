@@ -46,64 +46,85 @@
 <section class="dashboard-panels">
 
   <div class="panel qr-map-panel">
-    <h3>Operational Points Map</h3>
+  <h3>Operational Points Map</h3>
 
+  <figure class="map-card">
     <div class="map-focus-wrap">
-  <img
-    class="safety-map"
-    src="images/strata-logistics-operational-oversight-map.png"
-    alt="Strata Logistics operational oversight map."
-  />
+      <img
+        class="safety-map"
+        src="images/strata-logistics-operational-oversight-map.png"
+        alt="Strata Logistics operational oversight map."
+      />
 
-  <span id="mapFocusMarker" class="map-focus-marker bay-a12-marker"></span>
+      <span id="mapFocusMarker" class="map-focus-marker bay-a12-marker"></span>
+    </div>
+
+    <figcaption>
+      Operational points shown in context across the Strata Logistics site.
+    </figcaption>
+  </figure>
+
+  <p class="map-note">
+    QR-linked operational points are shown within the live site flow map.
+  </p>
 </div>
 
-      <figcaption>
-        Operational points shown in context across the Strata Logistics site.
-      </figcaption>
-    </figure>
+<div class="panel">
+  <h3>Active Operational Points</h3>
 
-    <p class="map-note">
-      QR-linked operational points are shown within the live site flow map.
-    </p>
-  </div>
+  <button
+    class="map-focus-row active"
+    type="button"
+    data-focus="Bay A12 — Goods In / Inbound Zone"
+    data-marker="bay-a12-marker"
+  >
+    <span>
+      <strong>Bay A12</strong>
+      <small>Receiving Active</small>
+    </span>
+  </button>
 
-  <div class="panel">
-    <h3>Active Operational Points</h3>
+  <button
+    class="map-focus-row"
+    type="button"
+    data-focus="Bay C03 — Dispatch / Outbound Zone"
+    data-marker="bay-c03-marker"
+  >
+    <span>
+      <strong>Bay C03</strong>
+      <small>Dispatch Pressure</small>
+    </span>
+  </button>
 
-    <button class="map-focus-row active" type="button" data-focus="Bay A12 — Goods In / Inbound Zone">
-      <span>
-        <strong>Bay A12</strong>
-        <small>Receiving Active</small>
-      </span>
-    </button>
+  <button
+    class="map-focus-row"
+    type="button"
+    data-focus="Hold Area B — Review / Exception Zone"
+    data-marker="hold-area-b-marker"
+  >
+    <span>
+      <strong>Hold Area B</strong>
+      <small>Review Pending</small>
+    </span>
+  </button>
 
-    <button class="map-focus-row" type="button" data-focus="Bay C03 — Dispatch / Outbound Zone">
-      <span>
-        <strong>Bay C03</strong>
-        <small>Dispatch Pressure</small>
-      </span>
-    </button>
+  <button
+    class="map-focus-row"
+    type="button"
+    data-focus="Forklift 03 — Equipment / Movement Control"
+    data-marker="forklift-03-marker"
+  >
+    <span>
+      <strong>Forklift 03</strong>
+      <small>Review Overdue</small>
+    </span>
+  </button>
 
-    <button class="map-focus-row" type="button" data-focus="Hold Area B — Review / Exception Zone">
-      <span>
-        <strong>Hold Area B</strong>
-        <small>Review Pending</small>
-      </span>
-    </button>
-
-    <button class="map-focus-row" type="button" data-focus="Forklift 03 — Equipment / Movement Control">
-      <span>
-        <strong>Forklift 03</strong>
-        <small>Review Overdue</small>
-      </span>
-    </button>
-
-    <p id="mapFocusNote" class="map-note">
-      Bay A12 — Goods In / Inbound Zone
-    </p>
-  </div>
-
+  <p id="mapFocusNote" class="map-note">
+    Bay A12 — Goods In / Inbound Zone
+  </p>
+</div>
+    
   <div class="panel">
     <h3>Point Categories</h3>
     <p>Goods In — Bay A12 and receiving checks</p>
