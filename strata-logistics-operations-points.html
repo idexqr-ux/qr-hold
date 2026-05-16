@@ -45,56 +45,60 @@
 
       <section class="dashboard-panels">
 
-        <div class="panel qr-map-panel">
-          <h3>QR Deployment Map</h3>
+  <div class="panel qr-map-panel">
+    <h3>Operational Points Map</h3>
 
-          <div class="warehouse-map">
-            <a href="bay-a12.html" class="map-point bay-a12">Bay A12</a>
-            <span class="map-point bay-b04">Bay B04</span>
-            <a href="forklift-03.html" class="map-point forklift-03">Forklift 03</a>
-            <a href="strata-logistics-forklift-04.html" class="map-point forklift-04">Forklift 04</a>
-            <span class="map-point loading-bay">Loading Bay C03</span>
-            <a href="fire-exit-east.html" class="map-point fire-exit-east">Fire Exit East</a>
-            </div>
+    <figure class="map-card">
+      <img
+        class="safety-map"
+        src="images/strata-logistics-operational-oversight-map.png"
+        alt="Strata Logistics operational oversight map showing Bay A12, Bay C03, Hold Area B, forklift movement, pedestrian routes and dispatch flow."
+      />
 
-          <p class="map-note">QR locations shown for Northgate Warehouse demo.</p>
-        </div>
+      <figcaption>
+        Operational points shown in context across the Strata Logistics site.
+      </figcaption>
+    </figure>
 
-        <div class="panel">
-          <h3>Active Operational Points</h3>
+    <p class="map-note">
+      QR-linked operational points are shown within the live site flow map.
+    </p>
+  </div>
 
-          <p>
-            <a href="bay-a12.html">Bay A12</a>
-            <span class="status-pill status-active">Active</span>
-          </p>
+  <div class="panel">
+    <h3>Active Operational Points</h3>
 
-          <p>
-            Bay B04
-            <span class="status-pill status-review">Scheduled Update</span>
-          </p>
+    <p>
+      <a href="strata-logistics-bay-a12.html">Bay A12</a>
+      <span class="status-pill status-active">Receiving Active</span>
+    </p>
 
-          <p>
-            <a href="forklift-03.html">Forklift 03</a>
-            <span class="status-pill status-overdue">Review Overdue</span>
-          </p>
+    <p>
+      <a href="strata-logistics-bay-c03.html">Bay C03</a>
+      <span class="status-pill status-review">Dispatch Pressure</span>
+    </p>
 
-          <p>
-            Loading Bay 4
-            <span class="status-pill status-active">Active</span>
-          </p>
-        </div>
+    <p>
+      <a href="strata-logistics-hold-area-b.html">Hold Area B</a>
+      <span class="status-pill status-pending">Review Pending</span>
+    </p>
 
-        <div class="panel">
-          <h3>Point Categories</h3>
-          <p>Storage Bays — 3 active</p>
-          <p>Equipment — 2 records</p>
-          <p>Process Stations — 2 points</p>
-          <p>Safety Points — held for later</p>
-          <p>Dispatch Points — 1 active</p>
-        </div>
+    <p>
+      <a href="strata-logistics-forklift-03.html">Forklift 03</a>
+      <span class="status-pill status-overdue">Review Overdue</span>
+    </p>
+  </div>
 
-      </section>
+  <div class="panel">
+    <h3>Point Categories</h3>
+    <p>Goods In — Bay A12 and receiving checks</p>
+    <p>Dispatch — Bay C03 and outbound staging</p>
+    <p>Hold / Review — Hold Area B and Overflow Area C</p>
+    <p>Equipment — Forklift records and charging area</p>
+    <p>Safety — exits, muster point and pedestrian routes</p>
+  </div>
 
+</section>
     </main>
   </div>
   <footer class="footer">
