@@ -543,6 +543,10 @@ body {
     linear-gradient(180deg, #f8f7f3 0%, #eef3f0 100%);
 }
 
+body {
+  letter-spacing: 0.01em;
+}
+
 a {
   color: inherit;
 }
@@ -655,11 +659,24 @@ h1 {
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 
+.primary-button,
+.secondary-button,
+.quiet-button {
+  letter-spacing: 0.02em;
+}
+
 .primary-button {
   background: #d8e4df;
   color: var(--ink);
   border: 1px solid var(--celadon);
 }
+
+.primary-button {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 8px 20px rgba(72, 97, 109, 0.10);
+}
+
 .secondary-button {
   background: rgba(255, 255, 255, 0.65);
   color: var(--ink);
