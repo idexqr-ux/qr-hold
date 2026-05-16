@@ -502,7 +502,7 @@
 }
 
 /* ==============================
-   BAY A12 — RECIEVED 
+   BAY A12 — RECEIVED 
    TEMP BUILD SECTION
    (To refactor into shared/global later)
 ============================== */
@@ -762,6 +762,15 @@ h2 {
 
 .feature-card.compact h3 {
   margin-bottom: 0;
+}
+
+.grid .card {
+  text-align: center;
+}
+
+.grid .card .quiet-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-section {
