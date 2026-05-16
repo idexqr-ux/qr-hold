@@ -177,24 +177,13 @@
 }
 
 .sidebar-group a {
-  font-size: 0.92rem;
-  color: #556266;
-  line-height: 1.45;
-}
-
-.sidebar-group a:hover {
-  color: var(--hold-operational-blue);
-}
-
-.sidebar-nav span {
-  color: #8a9498;
-  font-size: 0.78rem;
-}
-
-.sidebar-group a {
   display: block;
   padding: 0.42rem 0.55rem;
   border-radius: 10px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #556266;
+  text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
 }
 
@@ -208,6 +197,11 @@
   background-color: rgba(201, 213, 208, 0.32);
   color: #1f2d2a;
   font-weight: 600;
+}
+
+.sidebar-nav span {
+  color: #8a9498;
+  font-size: 0.78rem;
 }
 
 .section-intro {
