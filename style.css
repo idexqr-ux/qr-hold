@@ -971,6 +971,19 @@ h2 {
   line-height: 1.15;
 }
 
+.governance-panel,
+.reflection-panel {
+  text-align: center;
+}
+
+.governance-panel p,
+.reflection-panel p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 0;
+}
+
 .soft-panel {
   text-align: center;
 }
