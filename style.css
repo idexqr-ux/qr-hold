@@ -264,6 +264,25 @@
   color: #5f4b00;
   font-size: 0.95rem;
   line-height: 1.5;
+  text-align: center;
+}
+
+.page-header,
+.asset-alias,
+.offline-banner,
+.map-details {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header,
+.asset-alias {
+  text-align: center;
+}
+
+.map-details {
+  margin-top: 1.5rem;
 }
 
 .stat-card.feature-highlight {
