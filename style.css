@@ -191,6 +191,25 @@
   font-size: 0.78rem;
 }
 
+.sidebar-group a {
+  display: block;
+  padding: 0.42rem 0.55rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.sidebar-group a:hover {
+  background-color: rgba(201, 213, 208, 0.22);
+  color: #2f434c;
+  padding-left: 0.85rem;
+}
+
+.sidebar-group a.active {
+  background-color: rgba(201, 213, 208, 0.32);
+  color: #1f2d2a;
+  font-weight: 600;
+}
+
 .section-intro {
   text-align: center;
   max-width: 85%;
