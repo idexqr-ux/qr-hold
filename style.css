@@ -323,6 +323,31 @@
   font-size: 0.9rem;
 }
 
+.map-focus-row {
+  display: flex;
+  width: 100%;
+  margin: 0.65rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.map-focus-row small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
+.map-focus-row.active {
+  background: rgba(201, 213, 208, 0.38);
+  border-color: #9fb8ad;
+}
+
 .status-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
