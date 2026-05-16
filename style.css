@@ -172,12 +172,6 @@
 }
 
 @media (max-width: 900px) {
-  .workflow-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
 
   .top-shift-grid,
   .capability-grid {
