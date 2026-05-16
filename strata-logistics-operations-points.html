@@ -66,28 +66,41 @@
   </div>
 
   <div class="panel">
-    <h3>Active Operational Points</h3>
+   <div class="panel">
+  <h3>Active Operational Points</h3>
 
-    <p>
-      <a href="strata-logistics-bay-a12.html">Bay A12</a>
-      <span class="status-pill status-active">Receiving Active</span>
-    </p>
+  <button class="map-focus-row active" type="button" data-focus="Bay A12 — Goods In / Inbound Zone">
+    <span>
+      <strong>Bay A12</strong>
+      <small>Receiving Active</small>
+    </span>
+  </button>
 
-    <p>
-      <a href="strata-logistics-bay-c03.html">Bay C03</a>
-      <span class="status-pill status-review">Dispatch Pressure</span>
-    </p>
+  <button class="map-focus-row" type="button" data-focus="Bay C03 — Dispatch / Outbound Zone">
+    <span>
+      <strong>Bay C03</strong>
+      <small>Dispatch Pressure</small>
+    </span>
+  </button>
 
-    <p>
-      <a href="strata-logistics-hold-area-b.html">Hold Area B</a>
-      <span class="status-pill status-pending">Review Pending</span>
-    </p>
+  <button class="map-focus-row" type="button" data-focus="Hold Area B — Review / Exception Zone">
+    <span>
+      <strong>Hold Area B</strong>
+      <small>Review Pending</small>
+    </span>
+  </button>
 
-    <p>
-      <a href="strata-logistics-forklift-03.html">Forklift 03</a>
-      <span class="status-pill status-overdue">Review Overdue</span>
-    </p>
-  </div>
+  <button class="map-focus-row" type="button" data-focus="Forklift 03 — Equipment / Movement Control">
+    <span>
+      <strong>Forklift 03</strong>
+      <small>Review Overdue</small>
+    </span>
+  </button>
+
+  <p id="mapFocusNote" class="map-note">
+    Bay A12 — Goods In / Inbound Zone
+  </p>
+</div>
 
   <div class="panel">
     <h3>Point Categories</h3>
@@ -104,5 +117,19 @@
   <footer class="footer">
   Powered by IdexQR<sup>®</sup>
  </footer>
+
+<script>
+  const focusRows = document.querySelectorAll(".map-focus-row");
+  const focusNote = document.getElementById("mapFocusNote");
+
+  focusRows.forEach((row) => {
+    row.addEventListener("click", () => {
+      focusRows.forEach((item) => item.classList.remove("active"));
+      row.classList.add("active");
+      focusNote.textContent = row.dataset.focus;
+    });
+  });
+</script>
+   
 </body>
 </html>
