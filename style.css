@@ -1011,15 +1011,16 @@ h2 {
 }
 
 .panel p {
-  margin: 0;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(221, 227, 223, 0.72);
+  margin: 0 0 1rem;
+  padding: 0;
+  border-bottom: 0;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.55;
 }
 
-.panel p:last-child {
-  border-bottom: 0;
+.panel .hero-actions {
+  margin-top: 1.2rem;
+  justify-content: center;
 }
 
 .panel a {
