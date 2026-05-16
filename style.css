@@ -2016,3 +2016,16 @@ h2 {
   font-size: 0.76rem;
   line-height: 1.35;
 }
+
+.sidebar-disabled {
+  color: #8a9498 !important;
+  cursor: default;
+  pointer-events: none;
+  background: transparent !important;
+  padding-left: 0.65rem !important;
+}
+
+.sidebar-disabled:hover {
+  background: transparent !important;
+  color: #8a9498 !important;
+}
