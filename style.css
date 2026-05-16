@@ -1796,11 +1796,8 @@ h2 {
 /* ==============================
    SIDEBAR
    ============================== */
-
 .sidebar {
   min-height: 100vh;
-  max-height: 100vh;
-  overflow-y: auto;
   padding: 32px 24px;
   border-right: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.72);
