@@ -572,6 +572,7 @@ h2,
 h3 {
   color: var(--ink);
   font-weight: normal;
+  letter-spacing: -0.02em;
 }
 
 h1 {
