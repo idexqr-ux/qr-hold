@@ -1,8 +1,6 @@
-/* OPERATIONAL OVERVIEW */
-:root {
- --hold-operational-blue: #48616d;
-}
-
+/* ==============================
+   OPERATIONAL OVERVIEW / ALERTS
+   ============================== */
 .back-link {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -33,18 +31,8 @@
   cursor: pointer;
 }
 
-
-
 .map-details {
   margin: 1rem 0 1.5rem;
-}
-
-.section-intro {
-  text-align: center;
-  font-style: italic;
-  line-height: 1.65;
-  letter-spacing: 0.01em;
-  color: #667276;
 }
 
 .alert-grid {
@@ -126,16 +114,6 @@
   }
 }
 
-
-
-.section-intro {
-  text-align: center;
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.65;
-}
-
 .operational-overview {
   margin-top: 2rem;
 }
@@ -166,8 +144,6 @@
   font-weight: 600;
   color: #3f4f4f;
 }
-
-
 
 .flow-item h3,
 .attention-item h3,
@@ -264,25 +240,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.next-action {
-  text-align: left;
-}
-
-.section-intro {
-  margin-bottom: 1.25rem;
-  color: #545454;
-  line-height: 1.5;
-}
-
-.section-kicker {
-  margin: 0 0 0.35rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--hold-operational-blue);
-}
-
 
 .map-details summary {
   cursor: pointer;
