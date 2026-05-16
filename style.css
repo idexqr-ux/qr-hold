@@ -1847,7 +1847,7 @@ h2 {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0.52rem 0.65rem;
+  padding: 0.65rem 0.65rem;
   border-radius: 10px;
   background: transparent;
   color: #3f4d54;
@@ -1944,4 +1944,12 @@ h2 {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+}
+
+.sidebar-group a span {
+  display: block;
+  margin-top: 0.28rem;
+  color: #8a9498;
+  font-size: 0.76rem;
+  line-height: 1.35;
 }
