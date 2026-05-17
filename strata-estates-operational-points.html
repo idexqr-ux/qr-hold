@@ -11,8 +11,7 @@
 <body>
   <div class="dashboard-layout">
 
-    <div id="hold-sidebar"
-         data-sidebar="sidebar-entity.html"></div>
+    <div id="hold-sidebar" data-sidebar="sidebar-estates.html"></div>
 
     <main class="dashboard-main">
 
@@ -148,26 +147,8 @@
     }
   }
 </script>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const activeSite = params.get("site");
 
-  if (activeSite) {
-    const grid = document.querySelector(".dashboard-panels");
-    const selectedCard = document.querySelector(`[data-site="${activeSite}"]`);
-
-    if (grid && selectedCard) {
-      grid.prepend(selectedCard);
-    }
-
-    const activeSidebarLink = document.querySelector(`[data-site-link="${activeSite}"]`);
-
-    if (activeSidebarLink) {
-      activeSidebarLink.classList.add("active");
-    }
-  }
-</script>
   <script src="sidebar.js?v=1"></script>
-  <script src="clock.js?v=2"></script
+  <script src="clock.js?v=2"></script>
 </body>
 </html>
