@@ -518,6 +518,11 @@
   margin-top: 1.5rem;
 }
 
+.page-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .stat-card.feature-highlight {
   border-left: 4px solid #7b9e87;
   background: #f7fbf8;
