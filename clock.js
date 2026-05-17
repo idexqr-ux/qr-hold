@@ -1,13 +1,11 @@
 function updateOperationalTime() {
   const clock = document.getElementById("currentTime");
 
-  if (!clock) {
-    return;
-  }
+  if (!clock) return;
 
   const now = new Date();
 
-  const formatted = now.toLocaleString("en-GB", {
+  clock.textContent = now.toLocaleString("en-GB", {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -15,11 +13,13 @@ function updateOperationalTime() {
     hour: "2-digit",
     minute: "2-digit"
   });
-
-  clock.textContent = formatted;
 }
 
-setTimeout(() => {
+function startOperationalClock() {
   updateOperationalTime();
   setInterval(updateOperationalTime, 60000);
-}, 300);
+}
+
+window.addEventListener("load", () => {
+  setTimeout(startOperationalClock, 500);
+});
