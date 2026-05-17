@@ -6,7 +6,7 @@
   .dashboard-layout {
     display: grid;
     grid-template-columns: 300px minmax(0, 1fr);
-    align-items: start;
+    align-items: stretch;
   }
 
   .sidebar {
