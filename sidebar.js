@@ -1,9 +1,11 @@
-fetch("sidebar.html")
-  .then(response => response.text())
-  .then(html => {
-    const sidebar = document.getElementById("hold-sidebar");
+const sidebarTarget = document.getElementById("hold-sidebar");
 
-    if (sidebar) {
-      sidebar.innerHTML = html;
-    }
-  });
+if (sidebarTarget) {
+  const sidebarFile = sidebarTarget.dataset.sidebar || "sidebar.html";
+
+  fetch(sidebarFile)
+    .then(response => response.text())
+    .then(html => {
+      sidebarTarget.innerHTML = html;
+    });
+}
