@@ -55,27 +55,26 @@
   </figure>
 
 <div class="map-focus-controls">
-  <button class="map-focus-row active" type="button">
+  <button class="map-focus-row active" type="button" data-map-target="bay-a12">
     <strong>Bay A12</strong>
     <small>Goods-in and intake movement point</small>
   </button>
 
-  <button class="map-focus-row" type="button">
+  <button class="map-focus-row" type="button" data-map-target="bay-c03">
     <strong>Bay C03</strong>
     <small>Dispatch bay and driver collection point</small>
   </button>
 
-  <button class="map-focus-row" type="button">
+  <button class="map-focus-row" type="button" data-map-target="hold-area-b">
     <strong>Hold Area B</strong>
     <small>Temporary hold area for reviewed movement</small>
   </button>
 
-  <button class="map-focus-row" type="button">
+  <button class="map-focus-row" type="button" data-map-target="forklift-03">
     <strong>Forklift 03</strong>
     <small>Forklift movement and equipment point</small>
   </button>
 </div>
-     
 </section>
       
       </main>
@@ -87,5 +86,26 @@
 
   <script src="sidebar.js?v=1"></script>
   <script src="clock.js?v=2"></script>
+
+<script>
+  const mapButtons = document.querySelectorAll("[data-map-target]");
+  const mapMarkers = document.querySelectorAll("[data-map-point]");
+
+  mapButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.mapTarget;
+
+      mapButtons.forEach((item) => item.classList.remove("active"));
+      mapMarkers.forEach((marker) => marker.classList.remove("active"));
+
+      button.classList.add("active");
+
+      const marker = document.querySelector(`[data-map-point="${target}"]`);
+      if (marker) {
+        marker.classList.add("active");
+      }
+    });
+  });
+</script>  
 </body>
 </html>
