@@ -10,7 +10,7 @@
     content="Operational oversight map for Strata Logistics showing goods-in flow, dispatch routing, hold areas and operational movement zones."
   />
 
-  <link rel="stylesheet" href="style.css?v=24" />
+  <link rel="stylesheet" href="style.css?v=42" />
   <link rel="stylesheet" href="sidebar.css?v=1" />
 </head>
 
@@ -20,7 +20,6 @@
      <div id="hold-sidebar" data-sidebar="sidebar-logistics.html"></div>
 
     <main class="dashboard-main">
-
     <section class="page-hero">
       <p class="eyebrow">Hold / Strata Logistics</p>
 
@@ -32,33 +31,30 @@
       </p>
     </section>
 
-    <section class="dashboard-card">
+   <section class="dashboard-card">
   <p class="section-kicker">Operational map</p>
   <h2>Logistics site overview</h2>
 
   <figure class="map-card">
-    <img
-      class="safety-map"
-      src="images/strata-logistics-operational-oversight-map.png"
-      alt="Strata Logistics operational oversight map."
-    />
+    <div class="map-focus-wrap">
+      <img
+        class="safety-map"
+        src="images/strata-logistics-operational-oversight-map.png"
+        alt="Strata Logistics operational oversight map."
+      />
 
-    <a class="map-pin logistics-pin goods-in"
-       href="strata-logistics-goods-in.html">
-      Goods In
-    </a>
+      <span class="map-focus-marker bay-a12-marker"></span>
+      <span class="map-focus-marker bay-c03-marker"></span>
+      <span class="map-focus-marker hold-area-b-marker"></span>
+      <span class="map-focus-marker forklift-03-marker"></span>
+    </div>
 
-    <a class="map-pin logistics-pin bay-c03"
-       href="strata-logistics-bay-c03.html">
-      Bay C03
-    </a>
-
-    <a class="map-pin logistics-pin forklift"
-       href="strata-logistics-forklift-03.html">
-      Forklift 03
-    </a>
+    <figcaption>
+      Operational routing, dispatch, hold area and forklift movement points.
+    </figcaption>
   </figure>
 </section>
+      
       </main>
   </div>
 
