@@ -1,1 +1,10 @@
+@media (min-width: 900px) {
 
+  .sidebar {
+    transform: translateX(0) !important;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+}
