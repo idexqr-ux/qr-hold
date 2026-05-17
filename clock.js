@@ -1,7 +1,9 @@
 function updateOperationalTime() {
   const clock = document.getElementById("currentTime");
 
-  if (!clock) return;
+  if (!clock) {
+    return;
+  }
 
   const now = new Date();
 
@@ -17,5 +19,7 @@ function updateOperationalTime() {
   clock.textContent = formatted;
 }
 
-updateOperationalTime();
-setInterval(updateOperationalTime, 60000);
+setTimeout(() => {
+  updateOperationalTime();
+  setInterval(updateOperationalTime, 60000);
+}, 300);
