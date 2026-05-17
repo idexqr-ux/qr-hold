@@ -312,26 +312,6 @@
   </footer>
 
   <script>
-    function updateOperationalTime() {
-      const now = new Date();
-
-      const formatted = now.toLocaleString("en-GB", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
-      });
-
-      document.getElementById("currentTime").textContent = formatted;
-    }
-
-    updateOperationalTime();
-    setInterval(updateOperationalTime, 60000);
-  </script>
-
-  <script>
   function updateAmberCount() {
 
     const amber = document.getElementById("amberAlerts");
@@ -368,6 +348,6 @@
 
   }, 5000);
 </script>
-  
+  <script src="clock.js"></script>
 </body>
 </html>
