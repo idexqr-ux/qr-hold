@@ -1,4 +1,22 @@
 /* ==============================
+   SIDEBAR
+   ============================== */
+@media (min-width: 901px) {
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+/* ==============================
    OPERATIONAL OVERVIEW / ALERTS
    ============================== */
 .back-link {
@@ -1932,7 +1950,3 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
-
-/* ==============================
-   SIDEBAR
-   ============================== */
