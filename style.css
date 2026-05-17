@@ -591,6 +591,14 @@
   pointer-events: none;
 }
 
+.map-focus-marker {
+  display: none;
+}
+
+.map-focus-marker.active {
+  display: block;
+}
+
 .bay-a12-marker {
   left: 24%;
   top: 42%;
