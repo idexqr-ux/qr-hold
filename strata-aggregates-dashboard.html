@@ -10,6 +10,27 @@
 
 <body>
   <div class="dashboard-layout">
+    <div id="hold-sidebar" data-sidebar="sidebar-aggregates.html"></div>
+    <main class="dashboard-main">
+      <div class="dashboard-header">
+
+        <p class="dashboard-breadcrumb">
+  Strata Aggregates Dashboard
+</p>
+
+        <div class="dashboard-title-row">
+          <div>
+            <h1>Operational Snapshot</h1>
+            <p class="dashboard-subtitle">
+  Current operational conditions, environmental monitoring and governance visibility.
+</p>
+          </div>
+
+          <span class="dashboard-status-pill">
+            Operations Hub
+          </span>
+        </div>
+      </div>
 
     <aside class="sidebar">
       <div class="sidebar-brand">
@@ -88,24 +109,7 @@
 
     <main class="dashboard-main">
 
-      <div class="dashboard-header">
-        <p class="dashboard-breadcrumb">
-  Strata Aggregates Dashboard
-</p>
-
-        <div class="dashboard-title-row">
-          <div>
-            <h1>Operational Snapshot</h1>
-            <p class="dashboard-subtitle">
-  Current operational conditions, environmental monitoring and governance visibility.
-</p>
-          </div>
-
-          <span class="dashboard-status-pill">
-            Operations Hub
-          </span>
-        </div>
-      </div>
+     
 
       <section class="alert-grid">
 
@@ -305,10 +309,7 @@
     </main>
   </div>
 
-  <footer class="footer">
-    Powered by IdexQR<sup>®</sup>
-  </footer>
-
+  
   <script>
   function updateAmberCount() {
 
@@ -346,6 +347,11 @@
 
   }, 5000);
 </script>
-  <script src="clock.js"></script>
+ <footer class="footer">
+  Powered by IdexQR<sup>®</sup>
+</footer>
+
+<script src="sidebar.js?v=1"></script>
+<script src="clock.js?v=2"></script>
 </body>
 </html>
