@@ -1,3 +1,27 @@
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(247, 246, 242, 0.96) 0%,
+      rgba(247, 246, 242, 0.92) 100%
+    );
+
+  backdrop-filter: blur(10px);
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  margin-bottom: 1.8rem;
+}
+
+.dashboard-title-row h1 {
+  margin-bottom: 0.35rem;
+}
+
 /* ==============================
    SIDEBAR
    ============================== */
@@ -2055,6 +2079,7 @@ h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 0.35rem; 
 }
 
 .dashboard-subtitle {
@@ -2062,6 +2087,7 @@ h2 {
   color: #667276;
   font-style: italic;
   text-align: center;
+  max-width: 760px; 
 }
 
 .dashboard-status-pill {
