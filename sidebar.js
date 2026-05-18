@@ -7,5 +7,23 @@ if (sidebarTarget) {
     .then(response => response.text())
     .then(html => {
       sidebarTarget.innerHTML = html;
+
+      const sidebar = sidebarTarget.querySelector(".sidebar");
+
+      if (sidebar) {
+        const savedSidebarScroll =
+          localStorage.getItem("holdSidebarScroll");
+
+        if (savedSidebarScroll !== null) {
+          sidebar.scrollTop = savedSidebarScroll;
+        }
+
+        sidebar.addEventListener("scroll", () => {
+          localStorage.setItem(
+            "holdSidebarScroll",
+            sidebar.scrollTop
+          );
+        });
+      }
     });
 }
