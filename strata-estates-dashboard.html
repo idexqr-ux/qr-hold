@@ -312,28 +312,12 @@
 
   }, 5000);
 </script>
-<script>
-  const sidebar = document.querySelector('.sidebar');
 
-  if (sidebar) {
-
-    const savedSidebarScroll =
-      localStorage.getItem('holdSidebarScroll');
-
-    if (savedSidebarScroll !== null) {
-      sidebar.scrollTop = savedSidebarScroll;
-    }
-
-    sidebar.addEventListener('scroll', () => {
-      localStorage.setItem(
-        'holdSidebarScroll',
-        sidebar.scrollTop
-      );
-    });
-
-  }
-</script>
-   
-   
+ <footer class="footer">
+    Powered by IdexQR<sup>®</sup>
+  </footer>
+  <script src="sidebar.js?v=1"></script>
+<script src="clock.js?v=2"></script>
 </body>
-</html>
+</html>   
+   
