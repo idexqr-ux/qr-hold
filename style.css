@@ -2202,3 +2202,24 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.dashboard-header h1 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.dashboard-header .dashboard-subtitle {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.dashboard-header .asset-alias {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.dashboard-title-row {
+  gap: 0.45rem;
+}
