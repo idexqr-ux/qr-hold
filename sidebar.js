@@ -2,6 +2,7 @@ const sidebarTarget = document.getElementById("hold-sidebar");
 
 if (sidebarTarget) {
   const sidebarFile = sidebarTarget.dataset.sidebar || "sidebar.html";
+  const scrollKey = `holdSidebarScroll:${sidebarFile}`;
 
   fetch(sidebarFile)
     .then(response => response.text())
@@ -11,18 +12,16 @@ if (sidebarTarget) {
       const sidebar = sidebarTarget.querySelector(".sidebar");
 
       if (sidebar) {
-        const savedSidebarScroll =
-          localStorage.getItem("holdSidebarScroll");
+        requestAnimationFrame(() => {
+          const savedSidebarScroll = localStorage.getItem(scrollKey);
 
-        if (savedSidebarScroll !== null) {
-          sidebar.scrollTop = savedSidebarScroll;
-        }
+          if (savedSidebarScroll !== null) {
+            sidebar.scrollTop = Number(savedSidebarScroll);
+          }
+        });
 
         sidebar.addEventListener("scroll", () => {
-          localStorage.setItem(
-            "holdSidebarScroll",
-            sidebar.scrollTop
-          );
+          localStorage.setItem(scrollKey, sidebar.scrollTop);
         });
       }
     });
