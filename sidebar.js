@@ -11,18 +11,30 @@ if (sidebarTarget) {
 
       const sidebar = sidebarTarget.querySelector(".sidebar");
 
-      if (sidebar) {
-        requestAnimationFrame(() => {
-          const savedSidebarScroll = localStorage.getItem(scrollKey);
+      if (!sidebar) return;
 
-          if (savedSidebarScroll !== null) {
-            sidebar.scrollTop = Number(savedSidebarScroll);
-          }
-        });
+      const restoreScroll = () => {
+        const saved = sessionStorage.getItem(scrollKey);
 
-        sidebar.addEventListener("scroll", () => {
-          localStorage.setItem(scrollKey, sidebar.scrollTop);
+        if (saved !== null) {
+          sidebar.scrollTop = Number(saved);
+        }
+      };
+
+      requestAnimationFrame(() => {
+        restoreScroll();
+
+        setTimeout(restoreScroll, 50);
+      });
+
+      sidebar.addEventListener("scroll", () => {
+        sessionStorage.setItem(scrollKey, sidebar.scrollTop);
+      });
+
+      sidebar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          sessionStorage.setItem(scrollKey, sidebar.scrollTop);
         });
-      }
+      });
     });
 }
