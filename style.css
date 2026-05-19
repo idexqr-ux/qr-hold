@@ -1,3 +1,29 @@
+.qr-map-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.qr-glow {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(217, 164, 65, 0.28);
+}
+
+.qr-glow.active {
+  box-shadow:
+    0 0 0 10px rgba(217, 164, 65, 0.18),
+    0 0 24px rgba(217, 164, 65, 0.95);
+}
+
+.qr-est-001 { left: 20%; top: 25%; }
+.qr-est-002 { left: 59%; top: 26%; }
+.qr-est-003 { left: 76%; top: 58%; }
+.qr-est-004 { left: 45%; top: 75%; }
+
 .hold-textarea {
   width: 100%;
   margin-top: 1rem;
