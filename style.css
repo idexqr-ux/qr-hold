@@ -2273,3 +2273,9 @@ h2 {
 .dashboard-title-row {
   gap: 0.45rem;
 }
+
+.detail-list span,
+.workflow-list span {
+  margin-left: 0.35rem;
+  color: var(--muted);
+}
