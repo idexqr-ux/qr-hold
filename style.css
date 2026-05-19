@@ -2,6 +2,12 @@
   display: none !important;
 }
 
+.qr-map-wrap {
+  position: relative;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+}
+
 .qr-map-overlay {
   position: absolute;
   inset: 0;
@@ -18,9 +24,10 @@
 }
 
 .qr-glow.active {
+  background: rgba(217, 164, 65, 0.55);
   box-shadow:
-    0 0 0 10px rgba(217, 164, 65, 0.18),
-    0 0 24px rgba(217, 164, 65, 0.95);
+    0 0 0 10px rgba(217, 164, 65, 0.22),
+    0 0 28px rgba(217, 164, 65, 1);
 }
 
 .qr-est-001 { left: 20%; top: 25%; }
