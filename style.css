@@ -14,15 +14,6 @@
   pointer-events: none;
 }
 
-.qr-glow {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  border-radius: 999px;
-  transform: translate(-50%, -50%);
-  background: rgba(217, 164, 65, 0.28);
-}
-
 .qr-glow.active {
   background: rgba(217, 164, 65, 0.55);
   box-shadow:
