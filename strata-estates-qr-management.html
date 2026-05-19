@@ -77,65 +77,216 @@
 
         <article class="panel">
 
-          <p class="eyebrow">QR Estate</p>
+  <p class="eyebrow">QR Estate</p>
 
-          <h3>Active Deployment Register</h3>
+  <h3>Active Deployment Register</h3>
 
-          <p>
-            Each QR code is linked to a managed operational entity within Hold.
-            Codes can be reviewed, reissued or retired as part of the estate governance workflow.
-          </p>
+  <p>
+    Each QR code is linked to a managed operational entity within Hold.
+    Codes can be reviewed, reissued or retired as part of the estate governance workflow.
+  </p>
 
-          <ul class="activity-list">
+  <ul class="activity-list">
 
-            <li>
-              <strong>QR-EST-001 — Utility Isolation Point</strong>
-              <span>Restricted operational guidance · Last scan 08:41 · Condition good</span>
+    <li>
+      <strong>QR-EST-001 — Utility Isolation Point</strong>
+      <span>
+        Restricted operational guidance · Last scan 08:41 · Condition good
+      </span>
 
-               <div class="button-row">
-                <a class="button" href="images/strata-estates-oakfield-depot-site-map.png">
-                  View QR Location
-                </a>              
-              </div>
-            </li>
+      <div class="button-row">
+        <button type="button" class="quiet-button" data-action="qr-est-001">
+          View QR Location
+        </button>
+      </div>
+    </li>
 
-            <li>
-              <strong>QR-EST-002 — Contractor Works Access</strong>
-              <span>Permit guidance enabled · Last scan 07:58 · Condition good</span>
+    <li>
+      <strong>QR-EST-002 — Contractor Works Access</strong>
+      <span>
+        Permit guidance enabled · Last scan 07:58 · Condition good
+      </span>
 
-               <div class="button-row">
-                <a class="button" href="images/strata-estates-oakfield-depot-site-map.png">
-                  View QR Location
-                </a>              
-              </div>
-            </li>
+      <div class="button-row">
+        <button type="button" class="quiet-button" data-action="qr-est-002">
+          View QR Location
+        </button>
+      </div>
+    </li>
 
-            <li>
-              <strong>QR-EST-003 — Drainage Inspection Chamber</strong>
-              <span>Inspection guidance active · Last scan yesterday · Surface wear reported</span>
-              
-                 <div class="button-row">
-                <a class="button" href="images/strata-estates-oakfield-depot-site-map.png">
-                  View QR Location
-                </a>
-                 </div>
-            </li>
-               
-            <li>
-              <strong>QR-EST-004 — Access Guidance Point</strong>
-              <span>Visitor guidance enabled · Last scan 08:14 · Condition good</span>
+    <li>
+      <strong>QR-EST-003 — Drainage Inspection Chamber</strong>
+      <span>
+        Inspection guidance active · Last scan yesterday · Surface wear reported
+      </span>
 
-              <div class="button-row">
-                <a class="button" href="images/strata-estates-oakfield-depot-site-map.png">
-                  View QR Location
-                </a>
-                
-              </div>
-            </li>
+      <div class="button-row">
+        <button type="button" class="quiet-button" data-action="qr-est-003">
+          View QR Location
+        </button>
+      </div>
+    </li>
 
-          </ul>
+    <li>
+      <strong>QR-EST-004 — Access Guidance Point</strong>
+      <span>
+        Visitor guidance enabled · Last scan 08:14 · Condition good
+      </span>
 
-        </article>
+      <div class="button-row">
+        <button type="button" class="quiet-button" data-action="qr-est-004">
+          View QR Location
+        </button>
+      </div>
+    </li>
+
+  </ul>
+
+</article>
+
+<!-- QR-EST-001 -->
+
+<article class="panel action-result-card" id="qr-est-001-card" hidden>
+
+  <div class="action-result-header">
+
+    <span class="status-pill status-review">
+      QR-EST-001 — Utility Isolation Point
+    </span>
+
+    <button class="card-close" type="button" aria-label="Close action card">
+      ×
+    </button>
+
+  </div>
+
+  <p>
+    Utility Isolation Point highlighted on the Oakfield Depot QR location map.
+  </p>
+
+  <div class="qr-map-wrap">
+
+    <img
+      src="images/strata-estates-oakfield-depot-site-map.png"
+      alt="Oakfield Depot site map showing QR estate points."
+      class="map-image"
+    />
+
+    <div class="qr-map-overlay">
+      <div class="qr-glow qr-est-001 active"></div>
+    </div>
+
+  </div>
+
+</article>
+
+<!-- QR-EST-002 -->
+
+<article class="panel action-result-card" id="qr-est-002-card" hidden>
+
+  <div class="action-result-header">
+
+    <span class="status-pill status-review">
+      QR-EST-002 — Contractor Works Access
+    </span>
+
+    <button class="card-close" type="button" aria-label="Close action card">
+      ×
+    </button>
+
+  </div>
+
+  <p>
+    Contractor Works Access point highlighted on the Oakfield Depot QR location map.
+  </p>
+
+  <div class="qr-map-wrap">
+
+    <img
+      src="images/strata-estates-oakfield-depot-site-map.png"
+      alt="Oakfield Depot site map showing QR estate points."
+      class="map-image"
+    />
+
+    <div class="qr-map-overlay">
+      <div class="qr-glow qr-est-002 active"></div>
+    </div>
+
+  </div>
+
+</article>
+
+<!-- QR-EST-003 -->
+
+<article class="panel action-result-card" id="qr-est-003-card" hidden>
+
+  <div class="action-result-header">
+
+    <span class="status-pill status-review">
+      QR-EST-003 — Drainage Inspection Chamber
+    </span>
+
+    <button class="card-close" type="button" aria-label="Close action card">
+      ×
+    </button>
+
+  </div>
+
+  <p>
+    Drainage Inspection Chamber highlighted on the Oakfield Depot QR location map.
+  </p>
+
+  <div class="qr-map-wrap">
+
+    <img
+      src="images/strata-estates-oakfield-depot-site-map.png"
+      alt="Oakfield Depot site map showing QR estate points."
+      class="map-image"
+    />
+
+    <div class="qr-map-overlay">
+      <div class="qr-glow qr-est-003 active"></div>
+    </div>
+
+  </div>
+
+</article>
+
+<!-- QR-EST-004 -->
+
+<article class="panel action-result-card" id="qr-est-004-card" hidden>
+
+  <div class="action-result-header">
+
+    <span class="status-pill status-review">
+      QR-EST-004 — Access Guidance Point
+    </span>
+
+    <button class="card-close" type="button" aria-label="Close action card">
+      ×
+    </button>
+
+  </div>
+
+  <p>
+    Access Guidance Point highlighted on the Oakfield Depot QR location map.
+  </p>
+
+  <div class="qr-map-wrap">
+
+    <img
+      src="images/strata-estates-oakfield-depot-site-map.png"
+      alt="Oakfield Depot site map showing QR estate points."
+      class="map-image"
+    />
+
+    <div class="qr-map-overlay">
+      <div class="qr-glow qr-est-004 active"></div>
+    </div>
+
+  </div>
+
+</article>
 
         <article class="panel">
 
