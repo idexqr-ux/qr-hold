@@ -73,41 +73,52 @@
 
       </section>
 
-      <section class="content-grid">
-<article class="panel action-result-card" id="qr-location-card" hidden>
+     <section class="content-grid">
 
-  <div class="action-result-header">
-    <span class="status-pill status-review" id="qr-location-title">
-      QR Location
-    </span>
+  <!-- Shared QR Location Map -->
 
-    <button class="card-close" type="button" aria-label="Close action card">
-      ×
-    </button>
-  </div>
+  <article class="panel action-result-card" id="qr-location-card" hidden>
 
-  <p id="qr-location-description">
-    Selected QR point highlighted on the Oakfield Depot QR location map.
-  </p>
+    <div class="action-result-header">
 
-  <div class="qr-map-wrap">
-    <img
-      src="images/strata-estates-oakfield-depot-site-map.png"
-      alt="Oakfield Depot site map showing QR estate points."
-      class="map-image"
-    />
+      <span class="status-pill status-review" id="qr-location-title">
+        QR Location
+      </span>
 
-    <div class="qr-map-overlay">
-      <div class="qr-glow qr-est-001"></div>
-      <div class="qr-glow qr-est-002"></div>
-      <div class="qr-glow qr-est-003"></div>
-      <div class="qr-glow qr-est-004"></div>
+      <button class="card-close" type="button" aria-label="Close action card">
+        ×
+      </button>
+
     </div>
-  </div>
 
-</article>
- 
-    <article class="panel">
+    <p id="qr-location-description">
+      Selected QR point highlighted on the Oakfield Depot QR location map.
+    </p>
+
+    <div class="qr-map-wrap">
+
+      <img
+        src="images/strata-estates-oakfield-depot-site-map.png"
+        alt="Oakfield Depot site map showing QR estate points."
+        class="map-image"
+      />
+
+      <div class="qr-map-overlay">
+
+        <div class="qr-glow qr-est-001"></div>
+        <div class="qr-glow qr-est-002"></div>
+        <div class="qr-glow qr-est-003"></div>
+        <div class="qr-glow qr-est-004"></div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+  <!-- QR Estate Register -->
+
+  <article class="panel">
 
     <p class="eyebrow">QR Estate</p>
 
@@ -118,8 +129,95 @@
       Codes can be reviewed, reissued or retired as part of the estate governance workflow.
     </p>
 
-   
-   <article class="panel">
+    <ul class="activity-list">
+
+      <li>
+
+        <strong>QR-EST-001 — Utility Isolation Point</strong>
+
+        <span>
+          Restricted operational guidance · Last scan 08:41 · Condition good
+        </span>
+
+        <div class="button-row">
+          <button
+            type="button"
+            class="quiet-button"
+            data-qr="qr-est-001"
+            data-title="QR-EST-001 — Utility Isolation Point">
+            View QR Location
+          </button>
+        </div>
+
+      </li>
+
+      <li>
+
+        <strong>QR-EST-002 — Contractor Works Access</strong>
+
+        <span>
+          Permit guidance enabled · Last scan 07:58 · Condition good
+        </span>
+
+        <div class="button-row">
+          <button
+            type="button"
+            class="quiet-button"
+            data-qr="qr-est-002"
+            data-title="QR-EST-002 — Contractor Works Access">
+            View QR Location
+          </button>
+        </div>
+
+      </li>
+
+      <li>
+
+        <strong>QR-EST-003 — Drainage Inspection Chamber</strong>
+
+        <span>
+          Inspection guidance active · Last scan yesterday · Surface wear reported
+        </span>
+
+        <div class="button-row">
+          <button
+            type="button"
+            class="quiet-button"
+            data-qr="qr-est-003"
+            data-title="QR-EST-003 — Drainage Inspection Chamber">
+            View QR Location
+          </button>
+        </div>
+
+      </li>
+
+      <li>
+
+        <strong>QR-EST-004 — Access Guidance Point</strong>
+
+        <span>
+          Visitor guidance enabled · Last scan 08:14 · Condition good
+        </span>
+
+        <div class="button-row">
+          <button
+            type="button"
+            class="quiet-button"
+            data-qr="qr-est-004"
+            data-title="QR-EST-004 — Access Guidance Point">
+            View QR Location
+          </button>
+        </div>
+
+      </li>
+
+    </ul>
+
+  </article>
+
+  <!-- Attention Required -->
+
+  <article class="panel">
 
     <p class="eyebrow">Attention Required</p>
 
