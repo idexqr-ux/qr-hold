@@ -82,9 +82,7 @@
     Report Missing / Used Item
   </button>
 
-  <button type="button" class="quiet-button">
-    Request Replenishment
-  </button>
+  <button type="button" class="quiet-button" data-action="replenishment">Request Replenishment</button>
 
   <button type="button" class="quiet-button">
     Report Expired Item
@@ -105,12 +103,10 @@
 
 </article>
 
-<article
-  class="card action-result-card"
-  id="replenishment-card"
-  hidden>
+<article class="card action-result-card" id="replenishment-card" hidden>
 
   <div class="action-result-header">
+
     <h3>Request Replenishment</h3>
 
     <button
@@ -119,12 +115,14 @@
       aria-label="Close action card">
       ×
     </button>
+
   </div>
 
   <p>
     Record the item required, current stock level and urgency before
     submitting the replenishment request.
   </p>
+
 </article>
 
   <ul class="workflow-list">
