@@ -1,3 +1,14 @@
+.qr-code-image {
+  display: block;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 1rem;
+  padding: 12px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(120, 135, 130, 0.24);
+}
+
 [hidden] {
   display: none !important;
 }
