@@ -47,3 +47,24 @@ document.addEventListener("click", function (event) {
     }
   }
 });
+
+document.addEventListener("click", function (event) {
+  const button = event.target.closest("[data-action]");
+
+  if (button) {
+    const action = button.dataset.action;
+    const card = document.getElementById(action + "-card");
+
+    if (card) {
+      card.hidden = false;
+    }
+  }
+
+  if (event.target.matches(".card-close")) {
+    const card = event.target.closest(".action-result-card");
+
+    if (card) {
+      card.hidden = true;
+    }
+  }
+});
