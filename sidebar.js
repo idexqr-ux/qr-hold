@@ -68,3 +68,33 @@ document.addEventListener("click", function (event) {
     }
   }
 });
+
+document.addEventListener("click", function (event) {
+  const qrButton = event.target.closest("[data-qr]");
+
+  if (qrButton) {
+    const qrClass = qrButton.dataset.qr;
+    const title = qrButton.dataset.title;
+
+    const card = document.getElementById("qr-location-card");
+    const titleEl = document.getElementById("qr-location-title");
+
+    document.querySelectorAll(".qr-glow").forEach(function (marker) {
+      marker.classList.remove("active");
+    });
+
+    const marker = document.querySelector("." + qrClass);
+
+    if (marker) {
+      marker.classList.add("active");
+    }
+
+    if (titleEl) {
+      titleEl.textContent = title;
+    }
+
+    if (card) {
+      card.hidden = false;
+    }
+  }
+});
