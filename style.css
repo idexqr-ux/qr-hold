@@ -1,3 +1,7 @@
+[hidden] {
+  display: none !important;
+}
+
 .qr-map-overlay {
   position: absolute;
   inset: 0;
