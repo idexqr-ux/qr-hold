@@ -146,5 +146,20 @@
   font-size="15">
   QR-EST-004
 </text>
+
+  <style>
+  .qr-marker {
+    fill: #d9a441;
+    stroke: #ffffff;
+    stroke-width: 4;
+    filter: drop-shadow(0 0 8px rgba(217, 164, 65, 0.8));
+  }
+
+  .qr-label {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    fill: #4d5a53;
+  }
+</style>
   
 </svg>
