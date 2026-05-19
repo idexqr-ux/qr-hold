@@ -67,6 +67,48 @@
         </p>
       </article>
 
+      <article class="card">
+
+  <h3>First Aid Actions</h3>
+
+  <p>
+    Use these actions to record checks, report missing items and preserve the audit trail.
+  </p>
+
+  <div class="button-row">
+
+    <button type="button" class="quiet-button" data-action="inspection">
+      Confirm Kit Inspection Complete
+    </button>
+
+    <button type="button" class="quiet-button" data-action="missing-item">
+      Report Missing / Used Item
+    </button>
+
+    <button type="button" class="quiet-button" data-action="replenishment">
+      Request Replenishment
+    </button>
+
+    <button type="button" class="quiet-button" data-action="expired-item">
+      Report Expired Item
+    </button>
+
+    <button type="button" class="quiet-button" data-action="incident-record">
+      Open Incident Reporting Record
+    </button>
+
+    <button type="button" class="quiet-button" data-action="hs-concern">
+      Escalate H&amp;S Concern
+    </button>
+
+    <button type="button" class="quiet-button secondary" data-action="other-first-aid">
+      Other First Aid Issue
+    </button>
+
+  </div>
+
+</article>
+      
      <article class="card action-result-card" id="inspection-card" hidden>
   <div class="action-result-header">
     <h3>Confirm Kit Inspection Complete</h3>
@@ -122,16 +164,7 @@
   </div>
   <p>Use this route where the issue does not fit an existing category but should still be retained in the operational audit trail.</p>
 </article>
-      
-  <ul class="workflow-list">
-    <li>Confirm which first aid item requires replenishment.</li>
-    <li>Record remaining stock level if known.</li>
-    <li>Escalate urgent shortages immediately.</li>
-    <li>Operational replenishment requests are retained within Hold audit history.</li>
-  </ul>
-
-</article>
-
+        
       <article class="card">
         <h3>Inspection History</h3>
         <div class="delivery-list">
