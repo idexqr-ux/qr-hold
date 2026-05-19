@@ -13,6 +13,18 @@ if (sidebarTarget) {
 
       if (!sidebar) return;
 
+      const currentPage = window.location.pathname.split("/").pop();
+
+      sidebar.querySelectorAll("a").forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
       const restoreScroll = () => {
         const saved = sessionStorage.getItem(scrollKey);
 
@@ -23,7 +35,6 @@ if (sidebarTarget) {
 
       requestAnimationFrame(() => {
         restoreScroll();
-
         setTimeout(restoreScroll, 50);
       });
 
@@ -38,15 +49,6 @@ if (sidebarTarget) {
       });
     });
 }
-
-document.addEventListener("click", function (event) {
-  if (event.target.matches(".card-close")) {
-    const card = event.target.closest(".action-result-card");
-    if (card) {
-      card.style.display = "none";
-    }
-  }
-});
 
 document.addEventListener("click", function (event) {
   const button = event.target.closest("[data-action]");
@@ -65,6 +67,7 @@ document.addEventListener("click", function (event) {
 
     if (card) {
       card.hidden = true;
+      card.style.display = "";
     }
   }
 });
@@ -79,7 +82,7 @@ document.addEventListener("click", function (event) {
     const card = document.getElementById("qr-location-card");
     const titleEl = document.getElementById("qr-location-title");
 
-    document.querySelectorAll(".qr-glow").forEach(function (marker) {
+    document.querySelectorAll(".qr-glow").forEach(marker => {
       marker.classList.remove("active");
     });
 
