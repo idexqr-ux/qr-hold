@@ -104,5 +104,47 @@
   font-family="Georgia, serif">
   QR-EST-001
 </text>
+
+<circle
+  cx="520"
+  cy="240"
+  r="12"
+  fill="#d9a441"
+/>
+
+<text
+  x="542"
+  y="246"
+  font-size="15">
+  QR-EST-002
+</text>  
+
+  <circle
+  cx="520"
+  cy="240"
+  r="12"
+  fill="#d9a441"
+/>
+
+<text
+  x="542"
+  y="246"
+  font-size="15">
+  QR-EST-003
+</text>
+
+  <circle
+  cx="520"
+  cy="240"
+  r="12"
+  fill="#d9a441"
+/>
+
+<text
+  x="542"
+  y="246"
+  font-size="15">
+  QR-EST-004
+</text>
   
 </svg>
