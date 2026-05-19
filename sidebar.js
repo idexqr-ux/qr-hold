@@ -38,3 +38,12 @@ if (sidebarTarget) {
       });
     });
 }
+
+document.addEventListener("click", function (event) {
+  if (event.target.matches(".card-close")) {
+    const card = event.target.closest(".action-result-card");
+    if (card) {
+      card.style.display = "none";
+    }
+  }
+});
