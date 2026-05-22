@@ -747,14 +747,7 @@
   box-shadow: 0 0 0 8px rgba(200, 145, 47, 0.22);
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-.map-focus-marker {
-  display: none;
-}
-
-.map-focus-marker.active {
-  display: block;
+  z-index: 5;
 }
 
 .bay-a12-marker {
