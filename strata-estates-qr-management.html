@@ -78,21 +78,24 @@
  <section class="map-layout">
 
   <article class="panel qr-map-panel">
-    <h3>QR Location Map - Oakfield Depot</h3>
+  <h3>QR Location Map - Oakfield Depot</h3>
 
-    <figure class="map-card">
-      <div class="map-focus-wrap">
-  <img
-    src="images/strata-estates-oakfield-depot-site-map.png"
-    alt="Oakfield Depot site map showing QR estate points."
-    class="safety-map"
-  />
+  <figure class="map-card">
+    <div class="map-focus-wrap">
+      <img
+        src="images/strata-estates-oakfield-depot-site-map.png"
+        alt="Oakfield Depot site map showing QR estate points."
+        class="safety-map"
+      />
 
-  <span id="mapFocusMarker"
-    class="map-focus-marker qr-est-001-marker">
-  </span>
-        
-      </article>
+      <span id="mapFocusMarker" class="map-focus-marker qr-est-001-marker"></span>
+    </div>
+
+    <figcaption>
+      Selected QR deployment point highlighted on the Oakfield Depot map.
+    </figcaption>
+  </figure>
+</article>
                
   <article class="panel">
     <p class="eyebrow">QR Estate</p>
@@ -415,11 +418,8 @@
 
 </footer>
 
-<script src="sidebar.js?v=8"></script>
-<script src="clock.js?v=4"></script>
 <script>
   const focusRows = document.querySelectorAll(".map-focus-row");
-  const focusNote = document.getElementById("mapFocusNote");
   const marker = document.getElementById("mapFocusMarker");
 
   focusRows.forEach((row) => {
@@ -427,10 +427,10 @@
       focusRows.forEach((item) => item.classList.remove("active"));
       row.classList.add("active");
 
-      focusNote.textContent = row.dataset.focus;
-
-      marker.className = "map-focus-marker";
-      marker.classList.add(row.dataset.marker);
+      if (marker) {
+        marker.className = "map-focus-marker";
+        marker.classList.add(row.dataset.marker);
+      }
     });
   });
 </script>
