@@ -2319,3 +2319,7 @@ h2 {
   margin-left: 0.35rem;
   color: var(--muted);
 }
+
+.map-layout .qr-map-panel {
+  grid-column: auto !important;
+}
