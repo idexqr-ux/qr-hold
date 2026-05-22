@@ -10,7 +10,6 @@ if (sidebarTarget) {
       sidebarTarget.innerHTML = html;
 
       const sidebar = sidebarTarget.querySelector(".sidebar");
-
       if (!sidebar) return;
 
       const currentPage = window.location.pathname.split("/").pop();
@@ -53,40 +52,28 @@ if (sidebarTarget) {
 document.addEventListener("click", function (event) {
   const button = event.target.closest("[data-action]");
 
-  if (button) {
-    const action = button.dataset.action;
-    const card = document.getElementById(action + "-card");
+  if (!button) return;
 
-    if (card) {
-      card.hidden = false;
-    }
-  }
+  const action = button.dataset.action;
+  const card = document.getElementById(action + "-card");
 
-  if (event.target.matches(".card-close")) {
-    const card = event.target.closest(".action-result-card");
-
-    if (card) {
-      card.hidden = true;
-      card.style.display = "";
-    }
+  if (card) {
+    card.hidden = false;
   }
 });
 
 document.addEventListener("click", function (event) {
-  const qrButton = event.target.closest("[data-qr]");
+  if (!event.target.matches(".card-close")) return;
 
-  if (qrButton) {
-    const qrClass = qrButton.dataset.qr;
-    const title = qrButton.dataset.title;
+  const card = event.target.closest(".action-result-card");
 
-    const card = document.getElementById("qr-location-card");
-    const titleEl = document.getElementById("qr-location-title");
+  if (card) {
+    card.hidden = true;
+    card.style.display = "";
+  }
+});
 
-    document.querySelectorAll(".qr-glow").forEach(marker => {
-      marker.classList.remove("active");
-    });
-
-    document.addEventListener("click", function (event) {
+document.addEventListener("click", function (event) {
   const qrButton = event.target.closest("[data-qr]");
 
   if (!qrButton) return;
