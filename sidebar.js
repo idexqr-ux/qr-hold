@@ -86,18 +86,34 @@ document.addEventListener("click", function (event) {
       marker.classList.remove("active");
     });
 
-    const marker = document.querySelector("." + qrClass);
+    document.addEventListener("click", function (event) {
+  const qrButton = event.target.closest("[data-qr]");
 
-    if (marker) {
-      marker.classList.add("active");
-    }
+  if (!qrButton) return;
 
-    if (titleEl) {
-      titleEl.textContent = title;
-    }
+  const qrClass = qrButton.dataset.qr;
+  const title = qrButton.dataset.title;
 
-    if (card) {
-      card.hidden = false;
-    }
+  const mapScope = qrButton.closest("[data-map-scope]") || document;
+
+  const card = mapScope.querySelector("#qr-location-card");
+  const titleEl = mapScope.querySelector("#qr-location-title");
+
+  mapScope.querySelectorAll(".qr-glow").forEach(marker => {
+    marker.classList.remove("active");
+  });
+
+  const marker = mapScope.querySelector("." + qrClass);
+
+  if (marker) {
+    marker.classList.add("active");
+  }
+
+  if (titleEl) {
+    titleEl.textContent = title;
+  }
+
+  if (card) {
+    card.hidden = false;
   }
 });
