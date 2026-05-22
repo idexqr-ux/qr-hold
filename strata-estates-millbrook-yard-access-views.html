@@ -4,38 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hold — Millbrook Yard Access Views</title>
-  <link rel="stylesheet" href="style.css?v=24" />
-  <link rel="stylesheet" href="sidebar.css?v=1" />
+
+  <link rel="stylesheet" href="style.css?v=30" />
+  <link rel="stylesheet" href="sidebar.css?v=3" />
 </head>
 
 <body>
   <div class="dashboard-layout">
 
-    
-         <div id="hold-sidebar" data-sidebar="sidebar-estates.html"></div>
+    <div id="hold-sidebar" data-sidebar="sidebar-estates.html"></div>
 
     <main class="dashboard-main">
 
-      <p class="breadcrumb">Hold / Group Dashboard / Strata Estates / Millbrook Yard / Access Views</p>
-
-      <section class="page-header">
-        <p class="eyebrow">Role-Aware Access</p>
-        <h2>Millbrook Yard — Access Views</h2>
-        <p>
-          Example of how one estate QR point can surface different information for tenants,
-          contractors and visitors.
+      <header class="dashboard-header">
+        <p class="dashboard-breadcrumb">
+          Strata Estates / Millbrook Yard / Access Views
         </p>
-      </section>
+
+        <div class="dashboard-title-row">
+          <div>
+            <h1>Millbrook Yard — Access Views</h1>
+            <p class="dashboard-subtitle">
+              Visitor, contractor and tenant guidance from one governed QR point.
+            </p>
+          </div>
+
+          <span class="dashboard-status-pill">
+            Role-Aware Access
+          </span>
+        </div>
+      </header>
 
       <section class="stats-grid">
         <div class="stat-card">
           <h3>Access Profiles</h3>
-          <p>3 Active</p>
+          <p>4 Active</p>
         </div>
 
         <div class="stat-card">
           <h3>Linked QR Point</h3>
-          <p>Visitor Guidance</p>
+          <p>MBY-QR-004</p>
         </div>
 
         <div class="stat-card">
@@ -44,25 +52,80 @@
         </div>
 
         <div class="stat-card">
-          <h3>Map Reference</h3>
-          <p>Available</p>
+          <h3>Last Updated</h3>
+          <p>Today 09:20</p>
         </div>
       </section>
 
-      <details class="map-details">
-        <summary>View Millbrook Yard site map</summary>
+      <section class="map-layout">
 
-        <figure class="map-card">
-          <img class="safety-map"
-               src="images/millbrook-yard-site-map.svg"
-               alt="Illustrative Millbrook Yard site map showing tenant units, shared parking, welfare facilities, meter cabinet, contractor entrance and left-turn-only exit." />
-          <figcaption>Shared site layer used to support visitor, contractor and tenant guidance.</figcaption>
-        </figure>
-      </details>
+        <article class="panel qr-map-panel">
+          <h3>Millbrook Yard Site Map</h3>
+
+          <figure class="map-card">
+            <img
+              class="safety-map"
+              src="images/millbrook-yard-site-map.svg"
+              alt="Illustrative Millbrook Yard site map showing tenant units, shared parking, welfare facilities, meter cabinet, contractor entrance and left-turn-only exit."
+            />
+
+            <figcaption>
+              Shared site layer supporting visitor, contractor, tenant and governance guidance.
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Access View</p>
+          <h3>Select Role</h3>
+
+          <button
+            class="map-focus-row active"
+            type="button"
+            data-view="visitor-view"
+          >
+            <span>
+              <strong>Visitor</strong>
+              <small>Parking, movement and short-stay guidance</small>
+            </span>
+          </button>
+
+          <button
+            class="map-focus-row"
+            type="button"
+            data-view="contractor-view"
+          >
+            <span>
+              <strong>Contractor</strong>
+            </span>
+          </button>
+
+          <button
+            class="map-focus-row"
+            type="button"
+            data-view="tenant-view"
+          >
+            <span>
+              <strong>Tenant</strong>
+            </span>
+          </button>
+
+          <button
+            class="map-focus-row"
+            type="button"
+            data-view="governance-view"
+          >
+            <span>
+              <strong>Governance</strong>
+            </span>
+          </button>
+        </article>
+
+      </section>
 
       <section class="content-grid">
 
-        <article class="panel">
+        <article class="panel access-view" id="visitor-view">
           <p class="eyebrow">Visitor View</p>
           <h3>Short-Stay Visitor Guidance</h3>
 
@@ -86,14 +149,14 @@
           </ul>
         </article>
 
-        <article class="panel">
+        <article class="panel access-view" id="contractor-view" hidden>
           <p class="eyebrow">Contractor View</p>
           <h3>Works Access Guidance</h3>
 
           <ul class="activity-list">
             <li>
               <strong>Arrival</strong>
-              <span>Report to estate contact before beginning works or unloading materials.</span>
+              <span>Report to the estate contact before beginning works or unloading materials.</span>
             </li>
             <li>
               <strong>Temporary Parking</strong>
@@ -110,11 +173,7 @@
           </ul>
         </article>
 
-      </section>
-
-      <section class="content-grid">
-
-        <article class="panel">
+        <article class="panel access-view" id="tenant-view" hidden>
           <p class="eyebrow">Tenant View</p>
           <h3>Estate Notices & Responsibilities</h3>
 
@@ -138,7 +197,7 @@
           </ul>
         </article>
 
-        <article class="panel">
+        <article class="panel access-view" id="governance-view" hidden>
           <p class="eyebrow">Manager / Governance View</p>
           <h3>Record Controls</h3>
 
@@ -164,24 +223,77 @@
 
       </section>
 
+      <section class="content-grid">
+        <article class="panel">
+          <p class="eyebrow">Why It Matters</p>
+          <h3>One QR Point, Different Operational Truths</h3>
+
+          <p>
+            One physical QR point can support multiple governed operational experiences without
+            duplicating infrastructure or exposing unnecessary information. Hold keeps the access
+            point simple while controlling what each user group needs to see.
+          </p>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Governance Value</p>
+          <h3>Controlled Visibility</h3>
+
+          <ul class="activity-list">
+            <li>
+              <strong>Role-aware delivery</strong>
+              <span>Different users receive different guidance from the same managed point.</span>
+            </li>
+            <li>
+              <strong>Operational ownership</strong>
+              <span>Guidance remains linked to an approved estate record.</span>
+            </li>
+            <li>
+              <strong>Audit readiness</strong>
+              <span>Updates, review triggers and responsibility remain visible to managers.</span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
     </main>
 
-</div>
+  </div>
 
-<footer class="footer">
+  <footer class="footer">
+    <p>
+      Powered by IdexQR<sup>®</sup>
+    </p>
 
-  <p>
-    Powered by IdexQR<sup>®</sup>
-  </p>
+    <p class="footer-sub">
+      Hold operational governance concepts and workflow designs © 2026 IdexQR. All rights reserved.
+    </p>
+  </footer>
 
-  <p class="footer-sub">
-    Hold operational governance concepts and workflow designs © 2026 IdexQR. All rights reserved.
-  </p>
+  <script src="sidebar.js?v=8"></script>
+  <script src="clock.js?v=4"></script>
 
-</footer>
+  <script>
+    const roleButtons = document.querySelectorAll("[data-view]");
+    const accessViews = document.querySelectorAll(".access-view");
 
-<script src="sidebar.js?v=4"></script>
-<script src="clock.js?v=4"></script>
+    roleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        roleButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        accessViews.forEach((view) => {
+          view.hidden = true;
+        });
+
+        const selectedView = document.getElementById(button.dataset.view);
+
+        if (selectedView) {
+          selectedView.hidden = false;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
