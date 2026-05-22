@@ -75,58 +75,54 @@
   <div class="panel">
     <h3>Point Categories</h3>
 
-  <button
-    class="map-focus-row active"
-    type="button"
-    data-focus="Bay A12 — Goods In / Inbound Zone"
-    data-marker="bay-a12-marker"
-  >
-    <span>
-      <strong>Bay A12</strong>
-      <small>Receiving Active</small>
-    </span>
-  </button>
+<button
+  class="map-focus-row active"
+  type="button"
+  data-label="Bay A12"
+  data-detail="Goods In / Inbound Zone"
+  data-marker="bay-a12-marker"
+>
+  <span>
+    <strong>Bay A12</strong>
+    <small>Goods In / Inbound Zone</small>
+  </span>
+</button>
 
-  <button
-    class="map-focus-row"
-    type="button"
-    data-focus="Bay C03 — Dispatch / Outbound Zone"
-    data-marker="bay-c03-marker"
-  >
-    <span>
-      <strong>Bay C03</strong>
-      <small>Dispatch Pressure</small>
-    </span>
-  </button>
+<button
+  class="map-focus-row"
+  type="button"
+  data-label="Bay C03"
+  data-detail="Dispatch / Outbound Zone"
+  data-marker="bay-c03-marker"
+>
+  <span>
+    <strong>Bay C03</strong>
+  </span>
+</button>
 
-  <button
-    class="map-focus-row"
-    type="button"
-    data-focus="Hold Area B — Review / Exception Zone"
-    data-marker="hold-area-b-marker"
-  >
-    <span>
-      <strong>Hold Area B</strong>
-      <small>Review Pending</small>
-    </span>
-  </button>
+<button
+  class="map-focus-row"
+  type="button"
+  data-label="Hold Area B"
+  data-detail="Review / Exception Zone"
+  data-marker="hold-area-b-marker"
+>
+  <span>
+    <strong>Hold Area B</strong>
+  </span>
+</button>
 
-  <button
-    class="map-focus-row"
-    type="button"
-    data-focus="Forklift 03 — Equipment / Movement Control"
-    data-marker="forklift-03-marker"
-  >
-    <span>
-      <strong>Forklift 03</strong>
-      <small>Review Overdue</small>
-    </span>
-  </button>
-  
-</div>
-  <p id="mapFocusNote" class="map-note">
-    Bay A12 — Goods In / Inbound Zone
-  </p>
+<button
+  class="map-focus-row"
+  type="button"
+  data-label="Forklift 03"
+  data-detail="Equipment / Movement Control"
+  data-marker="forklift-03-marker"
+>
+  <span>
+    <strong>Forklift 03</strong>
+  </span>
+</button>
     
   <div class="panel">
     <h3>Point Categories</h3>
@@ -160,15 +156,27 @@
 
 <script>
   const focusRows = document.querySelectorAll(".map-focus-row");
-  const focusNote = document.getElementById("mapFocusNote");
   const marker = document.getElementById("mapFocusMarker");
 
   focusRows.forEach((row) => {
     row.addEventListener("click", () => {
-      focusRows.forEach((item) => item.classList.remove("active"));
+      focusRows.forEach((item) => {
+        item.classList.remove("active");
+
+        const strong = item.querySelector("strong");
+        const span = item.querySelector("span");
+
+        if (strong && span) {
+          span.innerHTML = `<strong>${item.dataset.label}</strong>`;
+        }
+      });
+
       row.classList.add("active");
 
-      focusNote.textContent = row.dataset.focus;
+      const span = row.querySelector("span");
+      if (span) {
+        span.innerHTML = `<strong>${row.dataset.label}</strong><small>${row.dataset.detail}</small>`;
+      }
 
       marker.className = "map-focus-marker";
       marker.classList.add(row.dataset.marker);
