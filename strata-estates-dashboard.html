@@ -222,59 +222,42 @@
         </div>
       </section>
 
-      <section class="dashboard-card operational-overview">
-        <p class="section-kicker">Operational overview</p>
-        <h2>Operational overview</h2>
+     <section class="dashboard-card operational-overview">
 
-        <div class="overview-inline">
+  <p class="section-kicker">Overview</p>
 
-          <div class="overview-item">
-            <span class="overview-label">Buildings Managed</span>
-            <span class="overview-value">24 Active</span>
-          </div>
+  <h2>Current portfolio position</h2>
 
-          <div class="overview-item">
-            <span class="overview-label">Contractor Permits</span>
-            <span class="overview-value">6 Live</span>
-          </div>
+  <div class="overview-inline">
 
-          <div class="overview-item">
-            <span class="overview-label">Compliance Reviews</span>
-            <span class="overview-value">4 Due</span>
-          </div>
+    <div class="overview-item">
+      <span class="overview-label">Buildings Managed</span>
+      <span class="overview-value">24 Active</span>
+    </div>
 
-          <div class="overview-item">
-            <span class="overview-label">Open Estate Risks</span>
-            <span class="overview-value">2 Flagged</span>
-          </div>
+    <div class="overview-item">
+      <span class="overview-label">Contractor Permits</span>
+      <span class="overview-value">6 Live</span>
+    </div>
 
-        </div>
-      </section>
+    <div class="overview-item">
+      <span class="overview-label">Compliance Reviews</span>
+      <span class="overview-value">4 Due</span>
+    </div>
+
+    <div class="overview-item">
+      <span class="overview-label">Open Site Risks</span>
+      <span class="overview-value">2 Flagged</span>
+    </div>
+
+  </div>
+
+</section>
 
     </main>
   </div>
-  
-  <script>
-    function updateOperationalTime() {
-      const now = new Date();
-
-      const formatted = now.toLocaleString("en-GB", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
-      });
-
-      document.getElementById("currentTime").textContent = formatted;
-    }
-
-    updateOperationalTime();
-    setInterval(updateOperationalTime, 60000);
-  </script>
-
-  <script>
+   
+ <script>
   function updateAmberCount() {
 
     const amber = document.getElementById("amberAlerts");
@@ -298,10 +281,9 @@
 
     amber.innerHTML += `
       <p>
-        <strong>Strata Estates:</strong>
-        Contractor access update received - Millbrook Yard.
-        Parking diversion remains active.
-      </p>
+  Contractor access update received following drainage works review — Millbrook Yard.
+  Temporary parking diversion remains active.
+</p>
 
       <p class="live-note">
         Updated just now from Estates Dashboard
