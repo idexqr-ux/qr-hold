@@ -1,3 +1,22 @@
+@media (max-width: 1024px) {
+
+  .qr-print-preview {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .qr-code-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .qr-print-preview img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
 .dashboard-card h2 {
   color: #435159;
   font-weight: 600;
