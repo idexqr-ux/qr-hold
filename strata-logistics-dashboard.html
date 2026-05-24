@@ -38,38 +38,68 @@
 <section class="alert-grid">
 
   <article class="dashboard-card alert-card amber-alerts">
-    <p class="section-kicker">Amber alerts</p>
-   <span class="alert-title-pill">
-  Site Items Raised
-</span>
 
-    <span class="alert-pill amber-pill">2 Active</span>
+  <p class="section-kicker alert-kicker amber-kicker">
+    Amber Alerts
+  </p>
 
-    <p class="section-intro">
-      Conditions affecting warehouse flow, dispatch capacity or route availability during the current shift.
+  <span class="alert-title-pill">
+    Site Items Raised
+  </span>
+
+  <span class="alert-pill amber-pill">
+    2 Active
+  </span>
+
+  <p class="section-intro">
+    Conditions affecting warehouse flow, dispatch capacity or route availability during the current shift.
+  </p>
+
+  <div id="amberAlerts">
+
+    <p>
+      <strong>South Dispatch Area</strong>
+<span> : Surface water build-up slowing outbound vehicle movement.</span>
     </p>
 
-    <div id="amberAlerts">
-      <p>Surface water build-up slowing outbound vehicle movement — South Dispatch Lane.</p>
-      <p>Forklift 03 operating under temporary restriction during dispatch recovery — Bay C03.</p>
-    </div>
-  </article>
-
-  <article class="dashboard-card alert-card red-alerts">
-    <p class="section-kicker">Red alerts</p>
-    <h2>Shift Items Escalated</h2>
-
-    <span class="alert-pill red-pill">0 Active</span>
-
-    <p class="section-intro">
-      Items requiring immediate operational restriction, isolation or dispatch escalation.
+    <p>
+      <strong>Bay C03</strong>
+      <span> : Forklift 03 operating under temporary restriction during dispatch recovery.</span>
     </p>
 
-    <div id="redAlerts">
-      <p class="live-note">No escalated shift items currently active.</p>
-    </div>
-  </article>
+  </div>
 
+</article>
+
+<article class="dashboard-card alert-card red-alerts">
+
+  <p class="section-kicker alert-kicker red-kicker">
+    Red Alerts
+  </p>
+
+  <span class="alert-title-pill red-title-pill">
+    Shift Items Escalated
+  </span>
+
+  <span class="alert-pill red-pill">
+    0 Active
+  </span>
+
+  <p class="section-intro">
+    Items requiring immediate operational restriction, isolation or dispatch escalation.
+  </p>
+
+  <div id="redAlerts">
+
+    <p>
+      <strong>No Active Escalations</strong>
+      <span> : No shift restrictions or emergency operational escalations currently active.</span>
+    </p>
+
+  </div>
+
+</article>
+  
 </section>
 
             
@@ -323,12 +353,18 @@ function escalateForklift() {
   const red = document.getElementById("redAlerts");
 
   amber.innerHTML = `
-    <p>Surface water build-up near outbound route — estates inspection pending.</p>
-  `;
-
-  red.innerHTML = `
-    <p><strong>Forklift 03 breakdown reported.</strong> Outbound dispatch capacity reduced. Temporary hire decision required.</p>
-  `;
+  <p>
+    <strong>Outbound Route</strong>
+    <span> : Surface water build-up reported — estates inspection pending.</span>
+  </p>
+`;
+  
+ red.innerHTML = `
+  <p>
+    <strong>Forklift 03</strong>
+    <span> : Breakdown reported — outbound dispatch capacity reduced. Temporary hire decision required.</span>
+  </p>
+`;
 }
 </script>
    
