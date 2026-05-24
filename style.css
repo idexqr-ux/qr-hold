@@ -18,9 +18,9 @@
 }
 
 .dashboard-card h2 {
-  font-size: 1.18rem;
+  font-size: 1.26rem;
   font-weight: 600;
-  color: #4b5a61;
+  color: #435159;
 }
 
 .attention-item h3 {
@@ -34,20 +34,13 @@
   font-weight: 600;
 }
 
-.panel h3 {
-  margin-bottom: 16px;
-  font-size: 1.02rem;
-  line-height: 1.25;
-  color: #4b5a61;
-  font-weight: 600;
-}
-
-.card h3 {
-  margin: 12px 0 8px;
+..panel h3,
+.card h3,
+.attention-item h3 {
   font-size: 1.08rem;
   line-height: 1.25;
-  color: #4b5a61;
   font-weight: 600;
+  color: #4b5a61;
 }
 
 .qr-est-001-marker {
