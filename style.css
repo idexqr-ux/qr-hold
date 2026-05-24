@@ -778,10 +778,13 @@
   background: rgba(255, 255, 255, 0.78);
 }
 
-.breadcrumb {
+.dashboard-breadcrumb {
+  margin-bottom: 0.8rem;
+  color: #748086;
   font-size: 0.82rem;
-  color: var(--muted);
-  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .entity-row.entity-active {
@@ -2037,13 +2040,6 @@ h2 {
   display: block;
   text-align: center;
   margin-bottom: 1.8rem;
-}
-
-.dashboard-breadcrumb {
-  margin-bottom: 0.8rem;
-  color: #748086;
-  font-size: 0.82rem;
-  text-align: center;
 }
 
 .dashboard-title-row {
