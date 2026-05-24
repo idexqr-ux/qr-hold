@@ -374,15 +374,15 @@
 }
 
 .amber-alerts {
-  background: #fff4dc;
-  border: 2px solid #d1a24c;
-  border-top: 8px solid #c8912f;
+ background: #f4eee1;
+border: 1px solid #d2b278;
+border-left: 6px solid #b88a3b;
 }
 
 .red-alerts {
-  background: #fbeaea;
-  border: 2px solid #d1a24c;
-  border-top: 8px solid #a94442;
+  background: #f5e8e6;
+border: 1px solid #c89a96;
+border-left: 6px solid #9b5b55;
 }
 
 #amberAlerts p,
@@ -393,8 +393,8 @@
   margin: 0.7rem 0;
 }
 
-.amber-alerts h2 {
-  color: #9a6b18;
+.red-alerts {
+  color: #744743;
 }
 
 .red-alerts h2 {
