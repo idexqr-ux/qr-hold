@@ -2251,14 +2251,6 @@ h2 {
   border-bottom: 1px solid rgba(84, 84, 84, 0.12);
   box-shadow: 0 6px 18px rgba(31, 45, 42, 0.06);
 }
-
-@media (min-width: 901px) {
-  .dashboard-layout {
-    display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
-    align-items: start;
-  }
-
 /* Mobile dashboard stacking */
 
 @media (max-width: 900px) {
