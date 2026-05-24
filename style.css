@@ -1,3 +1,13 @@
+.dashboard-card h2,
+.dashboard-card h3,
+.panel h2,
+.panel h3,
+.card h2,
+.card h3,
+.attention-item h3 {
+  text-transform: capitalize;
+}
+
 @media (max-width: 1024px) {
 
   .qr-print-preview {
