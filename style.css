@@ -359,6 +359,30 @@
   margin: 1rem 0 1.5rem;
 }
 
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.alert-header > div {
+  flex: 1;
+}
+
+.alert-kicker {
+  margin-bottom: 0.45rem;
+}
+
+.amber-kicker {
+  color: #9a6d24;
+}
+
+.red-kicker {
+  color: #9b4b46;
+}
+
 .alert-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
