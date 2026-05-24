@@ -18,12 +18,19 @@
 }
 
 .dashboard-card h2 {
-  color: #435159;
+  font-size: 1.18rem;
   font-weight: 600;
+  color: #4b5a61;
 }
 
-.dashboard-card h3 {
-  color: #4b5a61;
+.attention-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4f5f66;
+}
+
+.timeline-list strong {
+  color: #4f5f66;
   font-weight: 600;
 }
 
